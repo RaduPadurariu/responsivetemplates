@@ -3,6 +3,7 @@ import { HotelAboutCard } from './HotelAboutCard'
 import { HotelHeadTitle } from '../../common/HeadTitle/HotelHeadTitle'
 import './HotelAbout.css'
 import GoToTop from '../../common/GotToTop'
+import { Link } from 'react-router-dom'
 
 export const HotelAbout = () => {
   return (
@@ -23,9 +24,12 @@ export const HotelAbout = () => {
               </h1>
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde ea fugiat ipsam veniam exercitationem, minus quis vel qui porro asperiores iste, enim molestias optio quisquam dolores sit ullam repellat saepe. Corrupti amet</p>
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde ea fugiat ipsam veniam exercitationem, minus quis vel qui porro asperiores iste, enim molestias optio quisquam dolores sit ullam repellat saepe. Corrupti amet</p>
-              <button className='secondary-btn'>
-                Explore More <i className='fas fa-long-arrow-alt-right'></i>
-              </button>
+              <Link to={`/hotel/about`}>
+                <button className='secondary-btn'>
+                  Explore More <i className='fas fa-long-arrow-alt-right'></i>
+                </button>
+              </Link>
+              
             </div>
 
             <div className="row image">

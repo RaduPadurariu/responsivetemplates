@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 export const HotelAboutCard = () => {
@@ -10,9 +11,11 @@ export const HotelAboutCard = () => {
                 <h1>We <span>provide solution</span> to grow your business</h1>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde ea fugiat ipsam veniam exercitationem, minus quis vel qui porro asperiores iste, enim molestias optio quisquam dolores sit ullam repellat saepe. Corrupti amet</p>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde ea fugiat ipsam veniam exercitationem, minus quis vel qui porro asperiores iste, enim molestias optio quisquam dolores sit ullam repellat saepe. Corrupti amet</p>
-                <button className='secondary-btn'>
-                    Explore More <i className='fas fa-long-arrow-alt-right'></i>
-                </button>
+                <Link to={`/hotel/about`}>
+                    <button className='secondary-btn'>
+                        Explore More <i className='fas fa-long-arrow-alt-right'></i>
+                    </button>
+                </Link>
             </div>
             <div className="row image">
                 <div className='image-container'>
