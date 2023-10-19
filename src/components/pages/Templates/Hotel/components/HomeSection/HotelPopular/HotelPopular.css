@@ -1,0 +1,136 @@
+.hotelPopular {
+    position: relative;
+    z-index: 0;
+}
+
+.hotelPopular::after {
+    content: "";
+    width: 100%;
+    height: 270px;
+    background: #eaf8f1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.hotelPopular img {
+    width: 100%;
+}
+
+.hotelPopular .card {
+    margin: 10px;
+}
+
+.hotelPopular .item {
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.hotelPopular .image {
+    position: relative;
+}
+
+.hotelPopular .image i {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    margin: 20px;
+}
+
+.hotelPopular .image i label {
+    margin-left: 10px;
+    font-weight: normal;
+    font-weight: bold;
+}
+
+.hotelPopular .details {
+    text-align: center;
+}
+
+.hotelPopular .rate {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 13px;
+    color: grey;
+}
+
+.hotelPopular .rate i {
+    margin: 2px;
+}
+
+.hotelPopular .cards h2 {
+    font-weight: 500;
+    font-size: 20px;
+    color: #31b675;
+    position: relative;
+    margin: 10px 0 30px 0;
+}
+
+.hotelPopular .cards h2::after {
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    height: 1px;
+    background: black;
+    width: 30px;
+    left:calc(50% - 15px)
+}
+
+.hotelPopular .cards h2::before {
+    position: absolute;
+    content: "";
+    bottom: -20px;
+    height: 1px;
+    width: 60px;
+    background: black;
+    left: calc(50% - 30px);
+}
+
+.hotelPopular .cards h3 {
+    color: #31b675;
+    font-weight: 500;
+}
+
+.hotelPopular .cards h3 span {
+    color: grey;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.hotelPopular .content {
+    margin-bottom: 50px;
+}
+
+/*----- control btn -------*/
+.hotelPopular .control-btn .next,
+.hotelPopular .control-btn .prev {
+    position: absolute;
+    top: 100%;
+    background: none;
+}
+
+.hotelPopular .control-btn .prev {
+    left: calc(50% - 70px);
+}
+
+.hotelPopular .control-btn .next {
+    right: calc(50% - 70px);
+}
+
+.hotelPopular .control-btn .prev i,
+.hotelPopular .control-btn .next i {
+    background: rgba(0, 0, 0, 0.05);
+    color: black;
+    font-size: 15px;
+    transition: 0.5s;
+}
+
+.hotelPopular .control-btn .prev i:hover,
+.hotelPopular .control-btn .next i:hover {
+    background: #31b675;
+    color: white;
+}

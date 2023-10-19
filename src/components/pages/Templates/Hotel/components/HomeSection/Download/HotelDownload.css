@@ -1,0 +1,74 @@
+.hotelDownload {
+    background-color: #31b675;
+    color: white;
+    padding: 50px 0;
+    overflow: hidden;
+}
+
+.hotelDownload .container{
+   display: flex;
+   justify-content: space-between;
+   max-width: calc(83%)
+}
+
+.hotelDownload h1 {
+    font-size: 40px;
+    margin: 15px 0;
+}
+
+.hotelDownload ul {
+    margin: 40px 0;
+}
+
+.hotelDownload ul li {
+    margin: 10px 0;
+}
+
+.hotelDownload .row {
+    max-width: 720px;
+}
+
+.hotelDownload .row img {
+    margin-right: 20px;
+}
+
+.hotelDownload .row2 img {
+    position: absolute;
+    left: 10%;
+    /* right: 20%; */
+}
+
+.hotelDownload .row {
+    position: relative;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .hotelDownload .row2 img {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .hotelDownload .row {
+        width: 100%;
+    }
+
+    .hotelDownload .row2 {
+        display: none;
+    }
+
+    .hotelDownload .row .img {
+        display: flex;
+        /* justify-content: center; */
+        flex-wrap: wrap;
+    }
+
+    .hotelDownload .row img { 
+        margin-bottom: 1rem;
+    }
+
+}
+

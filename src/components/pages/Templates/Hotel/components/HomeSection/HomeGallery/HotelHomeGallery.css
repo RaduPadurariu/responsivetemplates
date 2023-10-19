@@ -1,0 +1,11 @@
+
+.hotelCollection img {
+    filter: grayscale(100%);
+    transition: 0.5s;
+    margin: 0 auto;
+}
+
+.hotelCollection img:hover {
+    filter: grayscale(0);
+}
+

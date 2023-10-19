@@ -1,0 +1,106 @@
+.hotelSingle-page {
+  position: relative;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+.hotelSingle-page .back {
+  position: absolute;
+  top: -70px;
+  right: 7.5%;
+}
+
+.hotelSingle-page .main-content p {
+  margin: 10px 0 20px 0;
+  color: grey;
+}
+
+.hotelSingle-page .main-content .para p {
+  margin-right: 10px;
+}
+
+.hotelSingle-page .main-content h1 {
+  font-size: 30px;
+}
+
+.hotelSingle-page .main-content img {
+  width: 100%;
+  height: auto;
+}
+
+.hotelSingle-page article .box {
+  background-color: #31b675;
+  padding: 30px;
+  color: white;
+  max-width: 340px;
+}
+
+.hotelSingle-page article .box h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.hotelSingle-page article .box2 {
+  margin-top: 40px;
+  background: url("../../images/side-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 180px;
+  position: relative;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 340px;
+}
+
+.hotelSingle-page article .box2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 180px;
+  width: 100%;
+}
+
+.hotelSingle-page article button i {
+  margin-right: 0.3rem;
+}
+
+.hotelSingle-page article p {
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.hotelSingle-page article .box2 p {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  font-size: 14px;
+  line-height: 25px;
+  color: white;
+}
+
+@media screen and (max-width: 1024px) {
+  .hotelSingle-page .flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hotelSingle-page .side-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 0;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .hotelSingle-page .main-content {
+    width: 100%;
+  }
+
+ 
+}

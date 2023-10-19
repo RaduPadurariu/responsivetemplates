@@ -1,0 +1,108 @@
+.homeNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0f172a;
+    position: sticky;
+    top: 0;
+    font-size: 1.2rem;
+    height: 80px;
+}
+
+.active {
+    display: flex;
+}
+
+.homeNav .logo {
+    font-size: 1.5rem;
+    margin: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.homeNav .ul {
+    display: flex;
+    align-items: center;
+    background-color: #0f172a;
+}
+
+.homeNav .ul .li {
+    list-style: none;
+   
+}
+
+.homeNav .ul .li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+.homeNav .ul .li a:hover {
+    background-color: #172554;
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
+    }
+
+.homeNav .menu {
+    display: none;
+    position:absolute;
+    top: 0.75rem;
+    right:0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+.homeNav .menu span {
+    height: 0.4rem;
+    width: 100%;
+    background-color: white;
+    border-radius: 0.2rem ;
+}
+
+.homeNav i {
+    margin-left: 0.4rem;
+}
+
+.homeNav .templateLinks {
+    position: relative;
+
+}
+@media (max-width: 800px) {
+    .homeNav .menu {
+        display: flex;
+    }
+    .homeNav {
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
+
+
+    .homeNav .ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 0.25rem;
+        position: absolute;
+        top: 60px;
+    }
+    .homeNav .ul.open{
+        display: flex;
+    }
+    .homeNav .ul .li {
+        width: 100%;
+        text-align: center;
+    }
+    .homeNav .ul .li a {
+        margin: 0.2rem 0.5rem;
+    }
+}

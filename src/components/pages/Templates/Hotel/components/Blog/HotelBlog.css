@@ -1,0 +1,228 @@
+
+.hotelBlog .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.hotelBlog .items {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  transition: 0.5s ease-in-out;
+  width: 30%;
+  margin: 15px;
+}
+
+.hotelBlog img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.hotelBlog .category {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.hotelBlog .category span {
+  font-size: 14px;
+  color: grey;
+  transition: 0.5s ease-in-out;
+}
+
+.hotelBlog .category label{
+  display: flex;
+  align-items: center;
+  background-color: #31b675;
+  font-size: 13px;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5px;
+  transition: 0.5s ease-in-out;
+  margin-left: 10px;
+}
+
+.hotelBlog .items h3 {
+  margin: 5px 0 10px 0;
+  font-weight: 500;
+  transition: 0.5s ease-in-out;
+}
+
+.hotelBlog .items p {
+  font-size: 14px;
+  color: grey;
+  margin-bottom: 10px;
+  transition: 0.5s ease-in-out;
+}
+
+.hotelBlog .items a {
+  color: black;
+  font-weight: 500;
+  font-size: 14px;
+  transition: 0.5s ease-in-out;
+}
+
+.hotelBlog .items a i {
+  color: #31b675;
+  transition: 0.5s ease-in-out;
+}
+
+.hotelBlog .items:hover {
+  background-color: #31b675;
+  cursor: pointer;
+}
+
+.hotelBlog .items:hover h3,
+.hotelBlog .items:hover span,
+.hotelBlog .items:hover a,
+.hotelBlog .items:hover a i,
+.hotelBlog .items:hover p {
+  color: white;
+}
+
+.hotelBlog .items:hover label {
+  background-color: #fff;
+  color: #31b675;
+  cursor: pointer;
+}
+
+
+/*---------blog single page------*/
+
+.hotelBlog-page {
+  position: relative;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+.hotelBlog-page .back {
+  position: absolute;
+  top: -70px;
+  right: 7.5%;
+}
+
+.hotelBlog-page .main-content p {
+  margin: 10px 0 20px 0;
+  color: grey;
+}
+
+.hotelBlog-page .main-content .para p {
+  margin-right: 10px;
+}
+
+.hotelBlog-page .main-content h1 {
+  font-size: 30px;
+}
+
+.hotelBlog-page .main-content img {
+  width: 100%;
+  height: auto;
+}
+
+.hotelBlog-page article button i {
+  margin-right: 0.3rem;
+}
+
+.hotelBlog-page article p {
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.hotelBlog-page .category-list {
+  color: black;
+}
+
+.hotelBlog-page .category-list h1 {
+  font-size: 30px;
+}
+
+.hotelBlog-page .category-list hr {
+  border: none;
+  border-bottom: 3px dotted #31b675;
+  width: 120px;
+}
+
+.hotelBlog-page .category-list ul {
+  margin-top: 20px;
+}
+
+.hotelBlog-page .category-list ul li {
+  margin-bottom: 15px;
+  transition: 0.5s;
+}
+
+.hotelBlog-page .category-list ul li:hover {
+  color: #31b675;
+  transform: translateX(10px);
+  cursor: pointer;
+}
+
+.hotelBlog-page .category-list i {
+  color: #31b675;
+  margin-right: 20px;
+}
+
+.hotelBlog-page .category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.hotelBlog-page .category label{
+  display: flex;
+  align-items: center;
+  background-color: #31b675;
+  font-size: 13px;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+
+/*---------blog single page------*/
+
+
+/* Responsive */
+
+@media screen and (max-width: 1280px) {
+  .hotelBlog .items {
+      width: 45%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .hotelBlog  .items {
+  width: 95%;
+}
+  .hotelBlog .category label  {
+  text-align: center;
+}
+
+.hotelBlog-page .content {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.hotelBlog-page .side-content {
+  width: 95%;
+  margin: 0 auto 2rem auto;
+  display: flex;
+  justify-content: center;
+}
+
+.hotelBlog-page .main-content {
+  width: 95%;
+}
+
+
+}

@@ -1,0 +1,30 @@
+.hotelWorks {
+    text-align: center;
+}
+
+.hotelWorks img {
+    width: auto;
+    height: auto;
+}
+
+.hotelWorks .box {
+    padding: 40px 20px;
+    background-color: #fff;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+}
+
+.hotelWorks h2 {
+    font-weight: 500;
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.hotelWorks p {
+    font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+.hotelWorks .grid {
+    grid-template-columns: repeat(1, 1fr);
+}
+}

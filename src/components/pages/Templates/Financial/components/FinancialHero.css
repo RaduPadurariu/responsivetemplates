@@ -1,0 +1,75 @@
+.financialHero {
+    background: url('./images/hero.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+}
+
+.financialHero::before {
+    content: '';
+    background-color: var(--overlay);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.financialHero .content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1100px;
+    margin: auto;
+    padding: 1rem;
+}
+
+.financialHero .content p:first-child {
+    font-style: italic;
+    font-size: .9rem;
+}
+
+.financialHero .content p:nth-child(2) {
+    font-size: 1.9rem;
+}
+
+.financialHero .content p:nth-child(3) {
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+
+.financialHero .content p:nth-child(4) {
+    font-size: 2.2rem;
+    font-style: italic;
+}
+
+.financialHero .button {
+    margin: 1rem 0;
+    width: 300px;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    color: #333;
+}
+
+.financialHero .button:hover {
+    background-color: var(--secondary-dark);
+    border: 1px solid var(--secondary-dark);
+}
+
+@media screen and (max-width:1250px) {
+    .financialHero .content{
+        max-width: 90%;
+    }
+    .financialHero .content p:nth-child(3) {
+        font-size: 2.6rem;
+    }
+
+    .financialHero .content p:nth-child(4) {
+        font-size: 1.6rem;
+    }
+}

@@ -1,0 +1,85 @@
+.hotelLogin form div {
+  margin: 10px 0;
+}
+
+.hotelLogin form input {
+  width: 100%;
+  border: 2px solid #ececec;
+  margin-top: 10px;
+}
+
+/* checkbox */
+.hotelLogin form .flex input {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+}
+
+.hotelLogin p {
+  font-size: 13px;
+}
+
+.hotelLogin form label {
+  margin-top: 10px;
+}
+
+.hotelLogin form span {
+  margin-top: 10px;
+  color: crimson;
+  font-size: 13px;
+}
+
+.hotelLogin form button {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.hotelLogin form a {
+  color: blue;
+  font-size: 13px;
+}
+
+.hotelLogin .sign-box {
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  padding: 40px;
+  margin: 0 auto;
+}
+
+
+/*----------show-data---------*/
+
+.login-show-data .sign-box{
+  max-width: 450px;
+  margin: 0 auto;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+  padding: 30px;
+}
+
+.login-show-data h1 {
+  color: #31b675;
+  margin: 0 0 20px 0;
+}
+
+.login-show-data h3 {
+  display: flex;
+}
+
+.login-show-data h3 p {
+  font-weight: 400;
+  margin-left: 5px;
+  word-break: break-all;
+}
+
+.login-show-data .sign-box {
+  margin-top: 50px;
+}
+
+/* show data */
+
+@media screen and (max-width:768px) {
+  .sign-box {
+      width: 80%;
+  }
+}

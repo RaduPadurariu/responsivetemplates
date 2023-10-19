@@ -1,0 +1,58 @@
+.financialDemo {
+    margin: 5rem auto;
+    padding: 1rem;
+    width: 100%;
+}
+
+.financialDemo .container {
+    width: 1240px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 4rem;
+}
+
+.financialDemo .col-1 {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.financialDemo .col-1 p:nth-child(1) {
+    font-size: 1.8rem;
+    font-style: italic;
+}
+
+.financialDemo .col-1 p:nth-child(2) {
+    font-size: 3rem;
+    font-weight: 600;
+    margin: .5rem 0;
+}
+
+.financialDemo .col-1 p:nth-child(3) {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+
+.financialDemo .col-2 {
+    display: flex;
+    justify-content: center;
+   
+}
+
+
+@media screen and (max-width: 1250px) {
+    .financialDemo .container {
+        max-width: 90%;
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+    }
+
+    .financialDemo iframe {
+        width: 100%;
+        /* height: auto; */
+        max-width: 570px;
+        max-height: 320px;
+    }
+}

@@ -1,0 +1,201 @@
+.hotelNavbar {
+    background-color: #222222;
+    top:0;
+    z-index:999;
+    height: 75px;
+    width: 100%;
+    position: sticky;
+}
+
+.hotelNavbar .container {
+    align-items: center;
+    height: 100%;
+}
+
+.hotelNavbar ul li {
+    display: inline-block;
+    transition: all 0.2s ease-out;
+    margin: 0 30px 0 0;
+}
+
+.hotelNavbar ul li a {
+    color: white;
+    font-weight: 100;
+    font-size: 15px;
+    letter-spacing: 1px;
+    transition: all 0.2s ease-out;
+    opacity: 0.8;
+}
+
+.hotelNavbar ul li a:hover {
+    color: #31b675;   
+}
+
+.hotelNavbar .nav-links-mobile {
+    display: none;
+}
+
+.hotelNavbar .menu-icon {
+    display: none;
+}
+
+.hotelNavbar i {
+    color: #fff;
+}
+
+.hotelNavbar .login-area {
+    align-items: center;
+}
+
+.hotelNavbar .login-area a {
+    font-weight: 100;
+    opacity: 0.8;
+    font-size: 13px;
+    color: #fff;
+}
+
+.hotelNavbar .login-area i {
+    margin: 0 5px 0 15px;
+    font-size: 13px;
+    color: #fff;
+}
+
+.hotelNavbar .login-area button {
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 1280px) {
+   
+    .hotelNavbar .login-area {
+        position: absolute;
+        right: 10px;
+        height: 10vh;
+        /* margin-left: 3rem; */
+      }
+      
+    .hotelNavbar {
+        text-align: center;
+    }
+
+    .hotelNavbar .nav-menu {
+        display: block;
+        width: 100%;
+        height: 90vh;
+        position:absolute;
+        top: 75px;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+
+    .hotelNavbar ul li {
+        display: block;
+        margin: 0;
+        line-height: 10vh;
+    }
+
+    .hotelNavbar ul.active {
+        background-color: #31b675;
+        left:0;
+        opacity: 1;
+        transition: 0.5s ease;
+        z-index: 100;
+        
+    }
+
+    .hotelNavbar ul li a {
+        font-weight: 400;
+        opacity: 1;
+    }
+
+    .hotelNavbar .menu-icon {
+        display: block;
+        position: absolute;
+        left: 20px;
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+ 
+    .fa-times {
+        font-size: 2rem;
+      }
+  
+}
+
+@media screen and (max-width: 450px) { 
+    .hotelNavbar .login-area {
+        margin-left: 3rem
+    }
+    .hotelNavbar .login-area button {
+        width: 6rem;
+    }
+}
+
+
+
+/* Header */
+
+.hotelHeader {
+    padding: 40px 0 20px 0;
+    background-color: #fff;
+}
+
+.hotelHeader .box {
+    margin: 0 40px 0 0;
+}
+
+.hotelHeader a {
+    font-size: 13px;
+    color: grey;
+}
+
+.hotelHeader i {
+    font-size: 40px;
+    color: #31b675;
+    margin-right: 10px;
+}
+
+.hotelHeader .text {
+    margin-top: 10px;
+}
+.hotelHeader h4 {
+    line-height: 10px;
+}
+  
+.hotelHeader .contact {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Responsive Header */
+
+@media screen and (max-width: 1024px) {
+    .hotelHeader .container {
+        flex-direction: column;  
+    }
+
+    .hotelHeader .contact div {
+        padding-top: 0.5rem;
+    }
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .hotelHeader .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+  
+    .hotelHeader a {
+        font-size: 13px;
+    }
+    .hotelHeader i {
+        font-size: 30px;
+        margin-right: 5px;
+        margin-top: 10px;
+    }
+}
