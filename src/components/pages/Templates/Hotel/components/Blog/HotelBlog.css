@@ -75,7 +75,7 @@
 
 .hotelBlog .items:hover {
   background-color: #31b675;
-  cursor: pointer;
+  
 }
 
 .hotelBlog .items:hover h3,

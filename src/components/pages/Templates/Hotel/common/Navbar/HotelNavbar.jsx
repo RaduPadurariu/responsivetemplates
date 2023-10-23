@@ -72,7 +72,7 @@ export const HotelNavbar = () => {
                 </div>
                 <div className="text">
                   <h4>Working Hours</h4>
-                  <Link to="/contact">Monday - Sunday: 9.00am to 6.00pm</Link>
+                  <Link to="/hotel/contact">Monday - Sunday: 9.00am to 6.00pm</Link>
                 </div>
               </div>
 
@@ -82,7 +82,7 @@ export const HotelNavbar = () => {
                 </div>
                 <div className="text">
                   <h4>Call Us</h4>
-                  <Link to="/contact">+011 123 4567</Link>
+                  <Link to="/hotel/contact">+011 123 4567</Link>
                 </div>
               </div>
 
@@ -92,7 +92,7 @@ export const HotelNavbar = () => {
                 </div>
                 <div className="text">
                   <h4>Mail Us</h4>
-                  <Link to="/contact">info@example.com</Link>
+                  <Link to="/hotel/contact">info@example.com</Link>
                 </div>
               </div>
             </div>
