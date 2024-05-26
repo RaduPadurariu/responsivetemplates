@@ -1,63 +1,60 @@
 .financialTestimonials {
-    width: 100%;
-    padding: 4rem 0rem;
+  width: 100%;
+  padding: 4rem 0rem;
 }
 
 .financialTestimonials .container {
-    width: 1240px;
-    margin: 4rem auto;
-    
+  width: 1240px;
+  margin: 4rem auto;
 }
 
 .financialTestimonials h2 {
-    font-size: 3rem;
-    text-align: center;
+  font-size: 3rem;
+  text-align: center;
 }
 
 .financialTestimonials .container .content {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 20px;
-    margin: 4rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  margin: 4rem 0;
 }
 
 .financialTestimonials .card {
-    border: 1px solid #eee;
-    border-radius: 8px;
-    box-shadow: 0 3px 10px rgb(0,0,0,.2);
-    padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgb(0, 0, 0, 0.2);
+  padding: 1rem;
 }
 
 .financialTestimonials img {
-    border-radius: 50px;
-    margin-top: -2rem;
+  border-radius: 50px;
+  margin-top: -2rem;
 }
 
-
 .financialTestimonials .card p {
-    color: #787878;
-    font-size: 1.1rem;
-    margin: 12px;
-    
+  color: #787878;
+  font-size: 1.1rem;
+  margin: 12px;
 }
 
 .financialTestimonials .card span {
-    color: var(--primary-color);
-    font-size: 1rem;
-    font-weight: 700;
+  color: var(--primary-color);
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 @media screen and (max-width: 1250px) {
-    .financialTestimonials .container {
-        width: 90%;
-    }
+  .financialTestimonials .container {
+    width: 90%;
+  }
 
-    .financialTestimonials .container .content {
-        grid-template-columns: 1fr;
-    }
+  .financialTestimonials .container .content {
+    grid-template-columns: 1fr;
+  }
 
-    .financialTestimonials .card {
-        max-width: 100%;
-        margin: 1rem;
-    }
+  .financialTestimonials .card {
+    max-width: 100%;
+    margin: 1rem;
+  }
 }

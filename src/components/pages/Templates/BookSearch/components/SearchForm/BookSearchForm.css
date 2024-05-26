@@ -1,0 +1,32 @@
+.bookSearch-form {
+  width: 100%;
+  /* max-width: 680px; */
+}
+
+.bookSearch-form-elem {
+  padding: 1.4rem 2.8rem;
+  border-radius: 3.8rem;
+}
+
+.bookSearch-form-elem .bookSearch-form-control {
+  font-size: 2rem;
+  padding: 0.6rem;
+}
+
+.bookSearch-form-elem .bookSearch-form-control::placeholder {
+  opacity: 0.9;
+}
+
+.bookSearch-form-control {
+  width: 100%;
+}
+
+@media screen and (max-width: 650px) {
+  .bookSearch-form-elem {
+    padding: 0.6rem 1rem;
+  }
+  .bookSearch-form-elem .bookSearch-form-control {
+    font-size: 1.2rem;
+    padding: 0.3rem;
+  }
+}

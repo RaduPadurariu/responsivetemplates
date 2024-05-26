@@ -1,0 +1,28 @@
+.bookHeader .header-content {
+  display: flex;
+  min-height: 75vh;
+  background: linear-gradient(rgba(141, 39, 174, 0.3), rgba(141, 39, 174, 0.5)),
+    url("/images/BookSearch/library-img.jpg") center/cover no-repeat;
+  flex-direction: column;
+  align-items: center;
+}
+.bookHeader .header-title {
+  font-size: 3.2rem;
+}
+.bookHeader .header-text {
+  margin-top: 1rem;
+  margin-bottom: 2.8rem;
+  opacity: 0.8;
+  width: 1024px;
+  text-align: center;
+  max-width: 90%;
+}
+
+@media screen and (max-width: 650px) {
+  .bookHeader .header-text {
+    font-size: 1.2rem;
+  }
+  .bookHeader .header-title {
+    font-size: 2rem;
+  }
+}
