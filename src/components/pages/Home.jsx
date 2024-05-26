@@ -26,15 +26,16 @@ export const Home = () => {
           path="/images/hotel.png"
         />
       </div>
-      <Link
-        to={"https://radupadurariu.netlify.com"}
-        title="Radu Padurariu Portfolio"
-        target="_blank"
-      >
-        <div className="contact" id="contact">
+
+      <div className="contact" id="contact">
+        <Link
+          to={"https://radupadurariu.netlify.app"}
+          title="Radu Padurariu Portfolio"
+          target="_blank"
+        >
           &copy; copyright - Radu Padurariu 2023
-        </div>
-      </Link>
+        </Link>
+      </div>
     </div>
   );
 };
