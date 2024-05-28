@@ -7,17 +7,12 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [searchTerm, setSearchTerm] = useState("the lost world");
-  const [filterTerm, setFilterTerm] = useState("");
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [resultTitle, setResultTitle] = useState("");
+  // Personal books
+  const [filterBooks, setFilterBooks] = useState(MyBookList);
 
-  const filterBooks = MyBookList.filter((el) => {
-    return (
-      el.author.toLowerCase().includes(filterTerm) ||
-      el.title.toLowerCase().includes(filterTerm)
-    );
-  });
   const fetchBooks = useCallback(async () => {
     setLoading(true);
     try {
@@ -65,17 +60,17 @@ const AppProvider = ({ children }) => {
   useEffect(() => {
     fetchBooks();
   }, [searchTerm, fetchBooks]);
+
   return (
     <AppContext.Provider
       value={{
         loading,
         books,
-        filterBooks,
         setSearchTerm,
-        filterTerm,
-        setFilterTerm,
         resultTitle,
         setResultTitle,
+        filterBooks,
+        setFilterBooks,
       }}
     >
       {children}

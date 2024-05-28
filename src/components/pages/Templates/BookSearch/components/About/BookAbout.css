@@ -13,6 +13,7 @@
 
 .about-img img {
   max-width: 520px;
+  width: 100%;
 }
 
 .about-text p {

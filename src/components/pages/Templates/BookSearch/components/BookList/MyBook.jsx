@@ -4,12 +4,14 @@ import { userGlobalContext } from "../../context";
 
 const MyBook = () => {
   const { filterBooks, setResultTitle } = userGlobalContext();
+  useEffect(() => {
+    if (filterBooks.length > 1) {
+      setResultTitle("Your Search Result");
+    } else {
+      setResultTitle("No Search Result Found!");
+    }
+  }, [filterBooks]);
 
-  if (filterBooks.length > 1) {
-    setResultTitle("Your Search Result");
-  } else {
-    setResultTitle("No Search Result Found!");
-  }
   return (
     <>
       {filterBooks.map((myBook) => {

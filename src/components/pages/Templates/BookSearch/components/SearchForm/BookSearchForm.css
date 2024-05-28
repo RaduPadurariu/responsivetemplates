@@ -1,32 +1,108 @@
 .bookSearch-form {
   width: 100%;
-  /* max-width: 680px; */
+  max-width: 800px;
 }
 
 .bookSearch-form-elem {
-  padding: 1.4rem 2.8rem;
-  border-radius: 3.8rem;
+  padding: 2px;
+  border-radius: 4px;
+  font-size: 1.2rem;
 }
 
-.bookSearch-form-elem .bookSearch-form-control {
-  font-size: 2rem;
-  padding: 0.6rem;
+.myBookSearch-form-elem {
+  padding: 2px;
+  border-radius: 4px;
+  font-size: 1.2rem;
+}
+.bookSearch-form-filter {
+  background-color: var(--purple-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  width: 300px;
+  padding: 25px 20px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 4px;
+  max-width: 300px;
 }
 
-.bookSearch-form-elem .bookSearch-form-control::placeholder {
+.bookSearch-form-filter img {
+  width: 15px;
+}
+
+.myBookSearch-form-elem ul {
+  display: none;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  list-style: none;
+  background: #fff;
+  color: #333;
+  width: 100%;
+  border-radius: 4px;
+
+  transition: max-height 0.5s;
+}
+
+.myBookSearch-form-elem ul li {
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.myBookSearch-form-elem ul li:hover {
+  color: white;
+  background-color: var(--purple-color);
+}
+
+.myBookSearch-form-elem .bookSearch-form-control::placeholder {
   opacity: 0.9;
 }
 
-.bookSearch-form-control {
-  width: 100%;
+.myBookSearch-form-elem .openFilter {
+  display: block;
 }
 
-@media screen and (max-width: 650px) {
-  .bookSearch-form-elem {
-    padding: 0.6rem 1rem;
+.bookSearch-form-control {
+  padding: 10px 25px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+
+.bookSearch-form-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 1rem;
+}
+
+.bookSearch-form-elem button {
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 700px) {
+  .myBookSearch-form-elem {
+    flex-direction: column;
+    justify-content: center;
+    max-width: 400px;
+    margin: 0 auto;
   }
-  .bookSearch-form-elem .bookSearch-form-control {
-    font-size: 1.2rem;
-    padding: 0.3rem;
+  .myBookSearch-form-elem ul {
+    top: 190%;
+    left: 0;
+  }
+  .myBookSearch-form-elem ul li {
+    font-size: 1rem;
+  }
+  .bookSearch-form-filter {
+    width: 100%;
+    max-width: 100%;
+  }
+  .bookSearch-form-filter p {
+    font-size: 1rem;
   }
 }

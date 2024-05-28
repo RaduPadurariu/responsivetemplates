@@ -43,10 +43,7 @@
     cursor: pointer;
 }
 
-.bookSearchContainer img {
-    width: 100%;
-    display: block;
-}
+
 
 .bookSearchContainer input {
     border: none;

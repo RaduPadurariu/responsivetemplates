@@ -8,6 +8,11 @@
   margin-left: 6%;
 }
 
+.bookList img {
+  width: 100%;
+  display: block;
+}
+
 .bookList-content {
   display: flex;
   justify-content: center;
