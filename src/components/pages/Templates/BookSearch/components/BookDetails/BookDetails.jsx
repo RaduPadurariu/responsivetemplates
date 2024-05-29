@@ -65,7 +65,7 @@ const BookDetails = () => {
         <button
           type="button"
           className="flex flex-c back-btn"
-          onClick={() => navigate("/bookSearch/book")}
+          onClick={() => navigate("/bookSearch/home/book")}
         >
           <FaArrowLeft size={22} />
           <span className="fs-18 fw-6">Go Back</span>

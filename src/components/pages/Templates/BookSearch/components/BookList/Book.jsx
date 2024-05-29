@@ -37,7 +37,7 @@ const BookItem = ({ book }) => {
         <img src={book.cover_img} alt="cover" />
       </div>
       <div className="book-item-info text-center">
-        <Link to={`/bookSearch/book/${book.id}`} {...book}>
+        <Link to={`/bookSearch/home/book/${book.id}`} {...book}>
           <div className="book-item-info-item title fw-7 fs-18">
             <span>{book.title}</span>
           </div>

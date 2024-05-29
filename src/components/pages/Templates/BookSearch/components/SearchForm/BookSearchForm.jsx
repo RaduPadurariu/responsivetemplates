@@ -10,7 +10,9 @@ const BookSearchForm = () => {
   const searchText = useRef("");
   const navigate = useNavigate();
 
-  useEffect(() => searchText.current.focus(), []);
+  useEffect(() => {
+    searchText.current.focus();
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,7 +24,7 @@ const BookSearchForm = () => {
       setSearchTerm(searchText.current.value);
     }
 
-    navigate("/bookSearch/book");
+    navigate("/bookSearch/home/book");
   };
   return (
     <div className="bookSearch-form">

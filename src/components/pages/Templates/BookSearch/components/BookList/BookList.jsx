@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { userGlobalContext } from "../../context";
 
 import "./BookList.css";
 
 const BookList = ({ children }) => {
-  const { resultTitle } = userGlobalContext();
+  const { resultTitle, searchTerm } = userGlobalContext();
 
   return (
     <section className="bookList">

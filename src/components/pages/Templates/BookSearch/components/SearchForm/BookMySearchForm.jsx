@@ -7,7 +7,7 @@ import CollectionItem from "./CollectionItem";
 import MyBookList from "../BookList/MyBooksList";
 
 const BookMySearchForm = () => {
-  const { setResultTitle, filterBooks, setFilterBooks } = userGlobalContext();
+  const { filterBooks, setFilterBooks } = userGlobalContext();
 
   const [filterTerm, setFilterTerm] = useState("");
   const [collectionName, setCollectionName] = useState("All books");
@@ -45,19 +45,13 @@ const BookMySearchForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let tempSearchTerm = filterTerm.trim();
-    if (tempSearchTerm.replace(/[^\w\s]/gi, "").length === 0) {
-      setResultTitle("Please Enter Something ... ");
-    } else {
-      setResultTitle(""); // Reset resultTitle before searching
-    }
   };
 
   return (
     <div className="bookSearch-form">
       <div className="container">
         <div className="search-form-content flex flex-sb">
-          <form action="" className="bookSearch-form">
+          <form action="" className="bookSearch-form" onSubmit={handleSubmit}>
             <div className="myBookSearch-form-elem flex bg-white">
               <div
                 className="bookSearch-form-filter"

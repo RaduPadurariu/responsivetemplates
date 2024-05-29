@@ -11,7 +11,7 @@ const BookNavbar = () => {
     <nav className="bookNavbar" id="bookNavbar">
       <div className="container navbar-content flex">
         <div className="brand-and-toggler flex flex-sb flex-ac">
-          <Link to="/bookSearch/book" className="navbar-brand flex">
+          <Link to="/bookSearch/home/book" className="navbar-brand flex">
             <img src={logoImg} alt="site logo" />
             <span className="text-uppercase fw-7 fs-16 ls-1">bookhub</span>
           </Link>
@@ -41,7 +41,7 @@ const BookNavbar = () => {
           <ul className="navbar-nav">
             <li className="nav-item">
               <NavLink
-                to="/bookSearch/book"
+                to="/bookSearch/home/book"
                 className="nav-link text-uppercase text-white fs-22 fw-6 ls-1"
                 onClick={handleNavbar}
               >
@@ -50,7 +50,7 @@ const BookNavbar = () => {
             </li>
             <li className="nav-item">
               <NavLink
-                to="/bookSearch/about"
+                to="/bookSearch/home/about"
                 className="nav-link text-uppercase text-white fs-22 fw-6 ls-1"
                 onClick={handleNavbar}
               >

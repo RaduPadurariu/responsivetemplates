@@ -3,7 +3,8 @@ import "./BookList.css";
 import { userGlobalContext } from "../../context";
 
 const MyBook = () => {
-  const { filterBooks, setResultTitle } = userGlobalContext();
+  const { filterBooks, setResultTitle, setSearchTerm, setBooks } =
+    userGlobalContext();
   useEffect(() => {
     if (filterBooks.length > 1) {
       setResultTitle("Your Search Result");
@@ -11,6 +12,10 @@ const MyBook = () => {
       setResultTitle("No Search Result Found!");
     }
   }, [filterBooks]);
+
+  useEffect(() => {
+    setSearchTerm("the lost world");
+  }, []);
 
   return (
     <>

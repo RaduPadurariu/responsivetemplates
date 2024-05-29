@@ -66,6 +66,8 @@ const AppProvider = ({ children }) => {
       value={{
         loading,
         books,
+        setBooks,
+        searchTerm,
         setSearchTerm,
         resultTitle,
         setResultTitle,

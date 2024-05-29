@@ -1999,9 +1999,9 @@ const MyBookList = [
   },
   {
     cover:
-      "/images/BookSearch/mycollections/carteadeacasa/22_Barbu Stefanescu Delavrancea - Fanta-Cella. Nuvele.jpg",
+      "/images/BookSearch/mycollections/carteadeacasa/22_Barbu Stefanescu Delavrancea - Fanta Cella. Nuvele.jpg",
     id: 223,
-    title: "Fanta",
+    title: "Fanta Cella. Nuvele",
     author: "Barbu Stefanescu Delavrancea",
     collection: "Cartea de acasa",
     number: "22",

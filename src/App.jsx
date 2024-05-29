@@ -30,8 +30,13 @@ function App() {
     <>
       <div className="app">
         <Routes>
+          <Route path="*" element={<Navigate to="/" />}></Route>
           <Route path="/" element={<Home />}></Route>
+
+          {/*  Financial */}
           <Route path="/financial" element={<Financial />}></Route>
+
+          {/*  Hotel */}
           <Route path="/hotel" element={<Hotel />}>
             <Route path="/hotel/home" element={<HotelHomePage />}></Route>
             <Route path="/hotel/about" element={<HotelAboutPage />}></Route>
@@ -59,20 +64,30 @@ function App() {
               path="/hotel/register"
               element={<HotelRegisterPage />}
             ></Route>
-            <Route path="*" element={<Navigate to="/hotel/home" />} />
+            <Route path="/hotel/*" element={<Navigate to="/hotel/home" />} />
           </Route>
+
+          {/* Book */}
           <Route path="/bookSearch" element={<BookSearch />}>
-            <Route path="*" element={<Navigate to="/bookSearch/home" />} />
-            <Route path="/bookSearch/home" element={<BookHomePage />}></Route>
-            <Route path="/bookSearch/about" element={<BookAboutPage />}></Route>
             <Route
-              path="/bookSearch/book"
-              element={<BookDisplayPage />}
-            ></Route>
-            <Route
-              path="/bookSearch/book/:id"
-              element={<BookDetails />}
-            ></Route>
+              path="/bookSearch/*"
+              element={<Navigate to="/bookSearch/home" />}
+            />
+            <Route path="/bookSearch/home" element={<BookHomePage />}>
+              <Route
+                path="/bookSearch/home/book"
+                element={<BookDisplayPage />}
+              ></Route>
+              <Route
+                path="/bookSearch/home/book/:id"
+                element={<BookDetails />}
+              ></Route>
+              <Route
+                path="/bookSearch/home/about"
+                element={<BookAboutPage />}
+              ></Route>
+            </Route>
+
             <Route
               path="/bookSearch/myBook"
               element={<BookMyBooksPage />}
