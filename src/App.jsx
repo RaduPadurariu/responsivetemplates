@@ -1,29 +1,28 @@
 import "./App.css";
-import { Home } from "./components/pages/Home";
+import { Home } from "./components/Home";
 import { Routes, Route, Navigate } from "react-router-dom";
 // Financial
-import { Financial } from "./components/pages/Templates/Financial/Financial";
+import { Financial } from "./components/Templates/Financial/Financial";
 // Hotel
-import { Hotel } from "./components/pages/Templates/Hotel/Hotel";
-import { HotelAboutPage } from "./components/pages/Templates/Hotel/components/pages/HotelAboutPage";
-import { HotelHomePage } from "./components/pages/Templates/Hotel/components/pages/HotelHomePage";
-import { HotelGalleryPage } from "./components/pages/Templates/Hotel/components/pages/HotelGalleryPage";
-import { HotelDestinationsPage } from "./components/pages/Templates/Hotel/components/pages/HotelDestinationsPage";
-import { HotelBlogPage } from "./components/pages/Templates/Hotel/components/pages/HotelBlogPage";
-import { HotelBlogSinglePage } from "./components/pages/Templates/Hotel/components/Blog/Hotel-blog-single-page/HotelBlogSinglePage";
-import { HotelTestimonialPage } from "./components/pages/Templates/Hotel/components/pages/HotelTestimonialPage";
-import { HotelContactPage } from "./components/pages/Templates/Hotel/components/pages/HotelContactPage";
-import { HotelLoginPage } from "./components/pages/Templates/Hotel/components/pages/HotelLoginPage";
-import { HotelRegisterPage } from "./components/pages/Templates/Hotel/components/pages/HotelRegisterPage";
-import { HotelSinglePages } from "./components/pages/Templates/Hotel/components/Destinations/SinglePages/HotelSinglePages";
+import { Hotel } from "./components/Templates/Hotel/Hotel";
+import { HotelAboutPage } from "./components/Templates/Hotel/components/pages/HotelAboutPage";
+import { HotelHomePage } from "./components/Templates/Hotel/components/pages/HotelHomePage";
+import { HotelGalleryPage } from "./components/Templates/Hotel/components/pages/HotelGalleryPage";
+import { HotelDestinationsPage } from "./components/Templates/Hotel/components/pages/HotelDestinationsPage";
+import { HotelBlogPage } from "./components/Templates/Hotel/components/pages/HotelBlogPage";
+import { HotelBlogSinglePage } from "./components/Templates/Hotel/components/Blog/Hotel-blog-single-page/HotelBlogSinglePage";
+import { HotelTestimonialPage } from "./components/Templates/Hotel/components/pages/HotelTestimonialPage";
+import { HotelContactPage } from "./components/Templates/Hotel/components/pages/HotelContactPage";
+import { HotelLoginPage } from "./components/Templates/Hotel/components/pages/HotelLoginPage";
+import { HotelRegisterPage } from "./components/Templates/Hotel/components/pages/HotelRegisterPage";
+import { HotelSinglePages } from "./components/Templates/Hotel/components/Destinations/SinglePages/HotelSinglePages";
 // Book Search
-import BookSearch from "./components/pages/Templates/BookSearch/BookSearch";
-import BookHomePage from "./components/pages/Templates/BookSearch/components/pages/BookHomePage";
-import BookList from "./components/pages/Templates/BookSearch/components/BookList/BookList";
-import BookDetails from "./components/pages/Templates/BookSearch/components/BookDetails/BookDetails";
-import BookAboutPage from "./components/pages/Templates/BookSearch/components/pages/BookAboutPage";
-import BookDisplayPage from "./components/pages/Templates/BookSearch/components/pages/BookDisplayPage";
-import BookMyBooksPage from "./components/pages/Templates/BookSearch/components/pages/BookMyBooksPage";
+import BookSearch from "./components/Templates/BookSearch/BookSearch";
+import BookHomePage from "./components/Templates/BookSearch/components/pages/BookHomePage";
+import BookDetails from "./components/Templates/BookSearch/components/BookDetails/BookDetails";
+import BookAboutPage from "./components/Templates/BookSearch/components/pages/BookAboutPage";
+import BookDisplayPage from "./components/Templates/BookSearch/components/pages/BookDisplayPage";
+import BookMyBooksPage from "./components/Templates/BookSearch/components/pages/BookMyBooksPage";
 
 function App() {
   return (

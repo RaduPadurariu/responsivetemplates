@@ -1,8 +1,9 @@
 import React from "react";
 import "./Home.css";
-import { Navbar } from "./Navbar/Navbar";
+
 import { Template } from "./Template";
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar/Navbar";
 
 export const Home = () => {
   return (

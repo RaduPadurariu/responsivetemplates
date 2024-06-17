@@ -1,0 +1,22 @@
+.homeNav_templates {
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease-in;
+  z-index: 2222222222;
+  list-style-type: none;
+  font-size: 1rem;
+}
+
+.homeNav_templates:hover {
+  background-color: var(--icons-color);
+  color: var(--shadow-dark-color);
+  border-radius: 0.3rem;
+}
+
+.homeNav_templates a {
+  display: block;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}

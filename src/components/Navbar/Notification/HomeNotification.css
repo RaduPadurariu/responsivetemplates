@@ -1,0 +1,67 @@
+.homeNav_notification_container {
+  position: absolute;
+  padding: 2rem 1rem;
+  box-shadow: var(--box-shadow);
+  font-size: 1rem;
+  width: 25rem;
+  border-radius: 1rem;
+  right: 0;
+  top: 4.5rem;
+  z-index: 2222222222;
+  background-color: var(--main-bg-color);
+}
+
+.homeNav_notification_container > p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+}
+
+.homeNav_notification_box {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  transition: all 0.3s ease-in;
+}
+
+.homeNav_notification_box:hover {
+  background-color: var(--icons-color);
+  color: var(--shadow-dark-color);
+  border-radius: 0.3rem;
+}
+
+.homeNav_notification_box_img {
+  border-radius: 5rem;
+}
+
+.homeNav_notification_box_info h4 {
+  font-weight: 600;
+}
+
+.homeNav_notification_box_info p {
+  font-size: 15px;
+  /* line-height: 0.3; */
+  position: relative;
+}
+
+.homeNav_notification_box_new {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: aqua;
+}
+
+@media screen and (max-width: 500px) {
+  .homeNav_notification_container {
+    width: 20rem;
+    /* right: -0.3rem; */
+  }
+  .homeNav_notification_box {
+    padding: 0.3rem;
+  }
+  .homeNav_notification_box p {
+    font-size: 12px;
+  }
+}
