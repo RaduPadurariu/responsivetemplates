@@ -1,9 +1,6 @@
 import React, { useState } from "react";
-import { FaUserAlt, FaRegImage, FaUserEdit } from "react-icons/fa";
 import { GrClose } from "react-icons/gr";
-import { MdHelpCenter } from "react-icons/md";
-import { TbDownloadOff, TbDownload } from "react-icons/tb";
-import { Link } from "react-router-dom";
+
 import {
   TiSocialFacebook,
   TiSocialLinkedin,
@@ -13,7 +10,7 @@ import {
   TiArrowSortedDown,
   TiArrowSortedUp,
 } from "react-icons/ti";
-import { NavContact, NavProfile, NavLogo, NavSearch } from "../Navbar";
+import { NavContact, NavLogo, NavSearch } from "../Navbar";
 import "./HomeSideBar.css";
 import NavTemplates from "../NavTemplates/NavTemplates";
 
@@ -63,7 +60,7 @@ const HomeSideBar = ({ openSideBar }) => {
           onClick={() => setOpenTemplates(!openTemplates)}
         >
           <p>Templates</p>
-          <TiArrowSortedDown />
+          {openTemplates ? <TiArrowSortedUp /> : <TiArrowSortedDown />}
         </div>
         {openTemplates && <NavTemplates />}
       </div>

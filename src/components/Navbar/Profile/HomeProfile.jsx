@@ -1,7 +1,7 @@
 import React from "react";
 import { FaUserAlt, FaRegImage, FaUserEdit } from "react-icons/fa";
 import { MdHelpCenter } from "react-icons/md";
-import { TbDownloadOff, TbDownload } from "react-icons/tb";
+import { TbDownload } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import "./HomeProfile.css";
 

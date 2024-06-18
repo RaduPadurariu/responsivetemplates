@@ -15,9 +15,6 @@ const Navbar = () => {
   const [homeNavTemplate, setHomeNavTemplate] = useState(false);
   const [homeSideBar, setHomeSideBar] = useState(false);
 
-  const [menuOpen, setMenuOpen] = useState(false);
-  const handleClick = () => setMenuOpen(!menuOpen);
-
   const openNavTemplate = () => {
     if (!homeNavTemplate) {
       setHomeNavTemplate(true);
@@ -39,7 +36,6 @@ const Navbar = () => {
     }
   };
   const openProfile = () => {
-    console.log("test");
     if (!homeProfile) {
       setHomeProfile(true);
       setHomeNavTemplate(false);
@@ -130,7 +126,7 @@ const Navbar = () => {
 
 const NavLogo = () => {
   return (
-    <Link to="/" className="homeNav_logo">
+    <Link to="/home" className="homeNav_logo">
       <img src="/images/logo.svg" alt="no-logo" width={100} height={100} />
     </Link>
   );

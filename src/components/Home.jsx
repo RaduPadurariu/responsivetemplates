@@ -4,6 +4,7 @@ import "./Home.css";
 import { Template } from "./Template";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar/Navbar";
+import Footer from "./Footer/Footer";
 
 export const Home = () => {
   return (
@@ -27,8 +28,8 @@ export const Home = () => {
           path="/images/hotel.png"
         />
       </div>
-
-      <div className="contact" id="contact">
+      <Footer />
+      {/* <div className="contact" id="contact">
         <Link
           to={"https://radupadurariu.netlify.app"}
           title="Radu Padurariu Portfolio"
@@ -36,7 +37,7 @@ export const Home = () => {
         >
           &copy; copyright - Radu Padurariu 2023
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };
