@@ -1,14 +1,15 @@
 .homeFooter {
-  width: 100%;
-  padding-block: 1.5rem;
+  padding: 1.5rem 1rem;
   position: relative;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   color: var(--icons-color);
+  width: 90%;
+  max-width: 1366px;
+  margin: 0 auto;
 }
 
 .homeFooter_box {
-  width: 80%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1.3fr 1fr 2fr;
@@ -73,10 +74,11 @@
 }
 
 .homeFooter_subscribe_box_info {
-  padding: 1rem 2rem;
+  padding: 1rem 0;
+  padding-top: 3rem;
 }
 
-@media screen and (max-width: 45em) {
+@media screen and (max-width: 53em) {
   .homeFooter_box {
     width: 90%;
     grid-template-columns: 1fr;

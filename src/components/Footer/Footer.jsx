@@ -22,9 +22,10 @@ const Footer = () => {
         <div className="homeFooter_box_social">
           <NavLogo />
           <p>
-            The world’s first and largest digital marketplace for crypto
-            collectibles and non-fungible tokens (NFTs). Buy, sell, and discover
-            exclusive digital items.
+            Explore a diverse collection of React templates, all conveniently
+            built and available on a single website. Whether you need e-commerce
+            sites, landing pages or personal portfolios, our templates are
+            designed to meet your needs with modern UI/UX and responsive design.
           </p>
 
           <div className="homeFooter_social">
@@ -60,8 +61,19 @@ const Footer = () => {
           </div>
           <div className="homeFooter_subscribe_box_info">
             <p>
-              Discover, collect, and sell extraordinary NFTs OpenSea is the
-              world first and largest NFT marketplace
+              For more projects, you can visit my personal portfolio at&nbsp;
+              <span>
+                <Link
+                  to={"https://radupadurariu.netlify.app"}
+                  title="Radu Padurariu Portfolio"
+                  target="_blank"
+                >
+                  radupadurariu.netlify.app
+                </Link>
+              </span>
+              , where you'll find a comprehensive collection of my work,
+              including detailed case studies, client testimonials, and a blog
+              featuring industry insights.
             </p>
           </div>
         </div>

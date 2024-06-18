@@ -30,10 +30,10 @@ const HomeSideBar = ({ openSideBar }) => {
           <NavLogo />
         </div>
         <p>
-          Explore a diverse collection of React templates, all conveniently
-          built and available on a single website. Whether you need e-commerce
-          sites, landing pages or personal portfolios, our templates are
-          designed to meet your needs with modern UI/UX and responsive design.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit
+          amet dolor aliquet, posuere urna in, tincidunt mi. Curabitur imperdiet
+          lorem vel dolor venenatis, et tempor ex porttitor. Ut sed libero
+          mauris. Nulla facilisi. Phasellus a est a elit lacinia lacinia.
         </p>
         <div className="homeNav_sideBar_social">
           <a href="#">

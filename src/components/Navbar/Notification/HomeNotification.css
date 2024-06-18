@@ -55,7 +55,7 @@
 
 @media screen and (max-width: 500px) {
   .homeNav_notification_container {
-    width: 20rem;
+    width: 19rem;
     /* right: -0.3rem; */
   }
   .homeNav_notification_box {

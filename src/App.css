@@ -9,22 +9,24 @@
   --icons-light-color: #4c577341;
   --icons-bg-color: #e2e6e9;
   --shadow-dark-color: #d3dae7;
+  --bg-shadow-dark-color: #d3dae745;
   --shadow-light-color: #fff;
   --main-bg-color: #ecf0f3;
 
-  --box-shadow: 1rem 1rem 1rem var(--shadow-dark-color),
-    -1rem -1rem 1rem var(--shadow-light-color);
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
+    0 4px 12px var(--shadow-dark-color);
+  --box-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.2),
+    0 12px 24px var(--shadow-dark-color);
 
-  --box-shadow-2: 0rem 0rem 0rem var(--shadow-dark-color),
-    -0.3rem -0.3rem 1rem var(--shadow-dark-color);
+  /* --box-shadow-light: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --box-shadow-light-hover: 0 2px 4px rgba(0, 0, 0, 0.2); */
 }
 
 html,
 body {
-  padding: 0;
-  margin: 0;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
+  height: 100%;
 }
 
 a {
