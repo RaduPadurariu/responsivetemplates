@@ -97,14 +97,13 @@ const Navbar = () => {
 
             {/* Profile */}
             <li className="homeNav_li">
-              {" "}
               <NavProfile openProfile={openProfile} homeProfile={homeProfile} />
             </li>
 
             {/* MENU BUTTON */}
 
-            <li>
-              <div className="homeNav_li homeNav_menuBtn">
+            <li className="homeNav_menuBtn">
+              <div className="homeNav_li">
                 <CgMenuRight
                   className="homeNav_menuIcon"
                   onClick={() => openSideBar()}

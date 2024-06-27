@@ -5,3 +5,15 @@
   background-color: var(--main-bg-color);
   min-height: 100vh;
 }
+
+.homeHeader {
+  min-height: 100vh;
+  max-width: 1366px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: var(--icons-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

@@ -23,6 +23,7 @@ import BookDetails from "./components/Templates/BookSearch/components/BookDetail
 import BookAboutPage from "./components/Templates/BookSearch/components/pages/BookAboutPage";
 import BookDisplayPage from "./components/Templates/BookSearch/components/pages/BookDisplayPage";
 import BookMyBooksPage from "./components/Templates/BookSearch/components/pages/BookMyBooksPage";
+import Cooking from "./components/Templates/Cooking/Cooking";
 
 function App() {
   return (
@@ -92,7 +93,9 @@ function App() {
               element={<BookMyBooksPage />}
             ></Route>
           </Route>
-          <Route path="/cooking" element={<Financial />}></Route>
+
+          {/* Cooking */}
+          <Route path="/cooking/home" element={<Cooking />}></Route>
         </Routes>
       </div>
     </>

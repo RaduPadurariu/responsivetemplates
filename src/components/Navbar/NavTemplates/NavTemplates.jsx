@@ -15,6 +15,10 @@ const NavTemplates = () => {
       name: "BookHub",
       link: "/bookSearch/home",
     },
+    {
+      name: "Cooking",
+      link: "/cooking/home",
+    },
   ];
   return (
     <ul>

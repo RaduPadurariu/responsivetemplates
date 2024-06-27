@@ -1,13 +1,11 @@
 .home_heroSection {
-  min-height: calc(90vh - 80px);
-  width: 90%;
-  margin: 2rem auto;
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  color: var(--icons-color);
-  max-width: 1366px;
+  margin: auto;
+  margin-top: 80px;
+  /* margin: 0 auto; */
   display: flex;
   align-items: center;
+  flex: 1;
+  padding: 0 1rem;
 }
 
 .home_heroSection_box {
@@ -61,11 +59,14 @@
 
 @media screen and (max-width: 35em) {
   .home_heroSection {
-    width: 90%;
+    padding-top: 3rem;
   }
 }
 
 @media screen and (max-width: 53em) {
+  .home_heroSection {
+    padding-top: 3rem;
+  }
   .home_heroSection_box {
     flex-direction: column;
   }

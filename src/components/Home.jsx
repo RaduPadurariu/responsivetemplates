@@ -7,8 +7,10 @@ import HeroSection from "./HeroSection/HeroSection";
 export const Home = () => {
   return (
     <div className="homeContainer">
-      <Navbar />
-      <HeroSection />
+      <div className="homeHeader">
+        <Navbar />
+        <HeroSection />
+      </div>
       <Footer />
     </div>
   );

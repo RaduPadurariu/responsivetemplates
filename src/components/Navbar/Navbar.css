@@ -2,16 +2,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
   height: 80px;
-  width: 90%;
   max-width: 1366px;
   margin: 0 auto;
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  color: var(--icons-color);
   background-color: var(--main-bg-color);
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
 .active {
@@ -74,22 +74,6 @@
   list-style-type: none;
   font-size: 1rem;
   margin-left: 4rem;
-}
-
-.homeNav_menu {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 2.25rem;
-  height: 2rem;
-  cursor: pointer;
-}
-
-.homeNav_menu span {
-  height: 0.4rem;
-  width: 100%;
-  background-color: white;
-  border-radius: 0.2rem;
 }
 
 /* Templates */
@@ -160,7 +144,7 @@
   font-size: 2.5rem;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 55em) {
   .homeNav_li_show {
     display: none;
   }
@@ -170,8 +154,11 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 35em) {
   .homeNav_li {
     margin-left: 1rem;
+  }
+  .homeNav {
+    padding: 0 0.2rem;
   }
 }
