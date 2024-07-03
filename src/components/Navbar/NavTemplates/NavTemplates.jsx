@@ -16,8 +16,8 @@ const NavTemplates = () => {
       link: "/bookSearch/home",
     },
     {
-      name: "Cooking",
-      link: "/cooking/home",
+      name: "Music",
+      link: "/music/home",
     },
   ];
   return (

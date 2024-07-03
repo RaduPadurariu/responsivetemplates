@@ -1,0 +1,23 @@
+.musicNav_ul {
+  display: flex;
+  box-sizing: border-box;
+}
+
+.musicNav_ul_li {
+  list-style-type: none;
+  margin-right: 3em;
+  border-bottom: 2px solid transparent;
+  border-top: 2px solid transparent;
+}
+
+.musicNav_ul_li a:hover,
+.musicNav_ul_li .musicActive {
+  border-bottom: 3px solid #de4f33;
+}
+
+.musicNav_ul_li a {
+  font-size: 16px;
+  color: #ffffff;
+  font-family: "Futura", sans-serif;
+  padding: 0.6rem 1rem;
+}

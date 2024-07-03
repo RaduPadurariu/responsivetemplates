@@ -23,7 +23,14 @@ import BookDetails from "./components/Templates/BookSearch/components/BookDetail
 import BookAboutPage from "./components/Templates/BookSearch/components/pages/BookAboutPage";
 import BookDisplayPage from "./components/Templates/BookSearch/components/pages/BookDisplayPage";
 import BookMyBooksPage from "./components/Templates/BookSearch/components/pages/BookMyBooksPage";
-import Cooking from "./components/Templates/Cooking/Cooking";
+
+// Music
+import MusicAlbumsPage from "./components/Templates/Music/components/Pages/MusicAlbumsPage";
+import MusicHomePage from "./components/Templates/Music/components/Pages/MusicHomePage";
+import MusicNewsPage from "./components/Templates/Music/components/Pages/MusicNewsPage";
+import MusicContactPage from "./components/Templates/Music/components/Pages/MusicContactPage";
+import Music from "./components/Templates/Music/Music";
+import MusicApp from "./components/Templates/Music/MusicApp";
 
 function App() {
   return (
@@ -38,64 +45,54 @@ function App() {
 
           {/*  Hotel */}
           <Route path="/hotel" element={<Hotel />}>
-            <Route path="/hotel/home" element={<HotelHomePage />}></Route>
-            <Route path="/hotel/about" element={<HotelAboutPage />}></Route>
-            <Route path="/hotel/gallery" element={<HotelGalleryPage />}></Route>
+            <Route path="home" element={<HotelHomePage />}></Route>
+            <Route path="about" element={<HotelAboutPage />}></Route>
+            <Route path="gallery" element={<HotelGalleryPage />}></Route>
             <Route
-              path="/hotel/destinations"
+              path="destinations"
               element={<HotelDestinationsPage />}
             ></Route>
             <Route
-              path="/hotel/singlePages/:id"
+              path="singlePages/:id"
               element={<HotelSinglePages />}
             ></Route>
-            <Route path="/hotel/blog" element={<HotelBlogPage />}></Route>
+            <Route path="blog" element={<HotelBlogPage />}></Route>
             <Route
-              path="/hotel/blogPage/:id"
+              path="blogPage/:id"
               element={<HotelBlogSinglePage />}
             ></Route>
             <Route
-              path="/hotel/testimonial"
+              path="testimonial"
               element={<HotelTestimonialPage />}
             ></Route>
-            <Route path="/hotel/contact" element={<HotelContactPage />}></Route>
-            <Route path="/hotel/sign-in" element={<HotelLoginPage />}></Route>
-            <Route
-              path="/hotel/register"
-              element={<HotelRegisterPage />}
-            ></Route>
+            <Route path="contact" element={<HotelContactPage />}></Route>
+            <Route path="sign-in" element={<HotelLoginPage />}></Route>
+            <Route path="register" element={<HotelRegisterPage />}></Route>
             <Route path="/hotel/*" element={<Navigate to="/hotel/home" />} />
           </Route>
 
           {/* Book */}
           <Route path="/bookSearch" element={<BookSearch />}>
+            <Route path="home" element={<BookHomePage />}>
+              <Route path="book" element={<BookDisplayPage />}></Route>
+              <Route path="book/:id" element={<BookDetails />}></Route>
+              <Route path="about" element={<BookAboutPage />}></Route>
+            </Route>
+            <Route path="myBook" element={<BookMyBooksPage />}></Route>
             <Route
               path="/bookSearch/*"
               element={<Navigate to="/bookSearch/home" />}
             />
-            <Route path="/bookSearch/home" element={<BookHomePage />}>
-              <Route
-                path="/bookSearch/home/book"
-                element={<BookDisplayPage />}
-              ></Route>
-              <Route
-                path="/bookSearch/home/book/:id"
-                element={<BookDetails />}
-              ></Route>
-              <Route
-                path="/bookSearch/home/about"
-                element={<BookAboutPage />}
-              ></Route>
-            </Route>
-
-            <Route
-              path="/bookSearch/myBook"
-              element={<BookMyBooksPage />}
-            ></Route>
           </Route>
 
-          {/* Cooking */}
-          <Route path="/cooking/home" element={<Cooking />}></Route>
+          {/* Music */}
+          <Route path="/music" element={<MusicApp />}>
+            <Route path="home" element={<MusicHomePage />}></Route>
+            <Route path="albums" element={<MusicAlbumsPage />}></Route>
+            <Route path="news" element={<MusicNewsPage />}></Route>
+            <Route path="contact" element={<MusicContactPage />}></Route>
+            <Route path="/music/*" element={<Navigate to="/music/home" />} />
+          </Route>
         </Routes>
       </div>
     </>

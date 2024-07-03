@@ -1,0 +1,25 @@
+.musicAccount_ul {
+  display: flex;
+}
+
+.musicAccount_li {
+  list-style-type: none;
+}
+
+.musicAccount_li:not(:last-child)::after {
+  display: inline-block;
+  content: "/";
+  font-size: 14px;
+  color: #ffffff;
+  margin: 0 6px;
+}
+
+.musicAccount_li a {
+  font-family: "Futura", sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.musicAccount_li a:hover {
+  color: #de4f33;
+}

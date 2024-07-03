@@ -1,0 +1,214 @@
+.musicContact {
+  padding: 101px 51px;
+  background: #000;
+  display: flex;
+  font-family: "Futura";
+
+  font-size: 14px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.musicContact_container {
+  max-width: 1170px;
+  margin: 0 auto;
+  /* padding: 0 15px; */
+  display: flex;
+}
+
+/* Contact form */
+.musicContact_form_container {
+  flex: 1;
+  padding: 0 15px;
+}
+
+.musicContact_title {
+  font-size: 36px;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.musicContact_form {
+  display: block;
+  width: 100%;
+  margin-top: 59px;
+}
+
+.musicContact_input {
+  width: 100%;
+  height: 50px;
+  background: #343434;
+  border: none;
+  outline: none;
+  padding-left: 25px;
+  border-bottom: 3px solid transparent;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+  font-family: inherit;
+  color: #fff;
+}
+
+.musicContact_input:hover,
+.musicContact_input:focus {
+  border-bottom: 3px solid #de4f32;
+}
+
+.musicContact_textarea {
+  height: 161px;
+  padding-top: 18px;
+  overflow: auto;
+  resize: vertical;
+  width: 100%;
+}
+
+.musicContact_form input:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.musicContact_input::-webkit-input-placeholder {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  font-style: italic;
+  color: #ffffff !important;
+}
+
+.musicContact_input:-moz-placeholder {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  font-style: italic;
+  color: #ffffff !important;
+}
+
+.musicContact_input::-moz-placeholder {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  font-style: italic;
+  color: #ffffff !important;
+}
+
+.musicContact_input:-ms-input-placeholder {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  font-style: italic;
+  color: #ffffff !important;
+}
+
+.musicContact_input::input-placeholder {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  font-style: italic;
+  color: #ffffff !important;
+}
+
+.musicContact_button {
+  width: 173px;
+  height: 50px;
+  background: #de4f32;
+  color: #fff;
+  font-size: 14px;
+  border: 3px solid #de4f32;
+  outline: none;
+  cursor: pointer;
+  margin-top: 39px;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+  font-family: inherit;
+}
+
+.musicContact_button:hover {
+  background: transparent;
+  color: #de4f32;
+}
+
+/* Contact infos */
+
+.musicContact_infos {
+  flex: 1;
+  padding: 0 15px;
+}
+
+.musicContact_text {
+  margin-top: 30px;
+}
+
+.musicContact_text p {
+  line-height: 2.18;
+}
+
+.musicContact_info_list {
+  margin-top: 84px;
+  padding-left: 13px;
+}
+
+.musicContact_social_ul {
+  display: flex;
+  align-items: center;
+}
+
+.musicContact_info_ul li {
+  font-size: 16px;
+  color: #aaaaaa;
+  display: flex;
+}
+
+.musicContact_info_ul li:not(:last-of-type) {
+  margin-bottom: 24px;
+}
+
+.musicContact_info_ul li > div:first-child > div {
+  width: 96px;
+  color: #de4f32;
+}
+
+.musicContact_social {
+  margin-top: 42px;
+  left: -5px;
+  padding-left: 13px;
+}
+
+.musicContact_social_ul li:not(:last-of-type) {
+  margin-right: 26px;
+}
+.musicContact_social_ul li a i {
+  font-size: 15px;
+  padding: 5px;
+  color: #de4f32;
+}
+.musicContact_social_ul li a i:hover {
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 1000px) {
+  .musicContact_container {
+    flex-direction: column;
+  }
+
+  .musicContact_form_container,
+  .musicContact_infos {
+    padding: 0;
+  }
+
+  .musicContact_form_container {
+    margin-bottom: 60px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .musicContact {
+    padding: 101px 15px;
+  }
+  .musicContact_title {
+    font-size: 30px;
+  }
+
+  .musicContact_info_list,
+  .musicContact_social {
+    padding-left: 0;
+  }
+}

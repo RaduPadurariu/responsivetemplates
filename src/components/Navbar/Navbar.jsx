@@ -144,9 +144,9 @@ const NavTemplate = ({ openNavTemplate, homeNavTemplate }) => {
     <div className="homeNav_template">
       <p onClick={() => openNavTemplate()}>Templates</p>
       {homeNavTemplate && (
-        <ul className="homeNav_template_box">
+        <div className="homeNav_template_box">
           <NavTemplates />
-        </ul>
+        </div>
       )}
     </div>
   );

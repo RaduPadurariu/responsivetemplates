@@ -1,0 +1,48 @@
+.musicHeadTitle {
+  width: 100%;
+  height: 384px;
+  padding: 101px 51px 0 51px;
+  color: white;
+  background: #000;
+  font-family: "Futura";
+  position: relative;
+  overflow: hidden;
+}
+
+.musicHeadTitle_inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  background-image: var(--background-img);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.musicHeadTitle_subtitle {
+  font-size: 18px;
+}
+
+.musicHeadTitle_title {
+  font-size: 82px;
+  white-space: nowrap;
+}
+
+@media only screen and (max-width: 775px) {
+  .musicHeadTitle_title {
+    font-size: 56px;
+  }
+}
+
+@media only screen and (max-width: 578px) {
+  .musicHeadTitle_title {
+    font-size: 36px;
+  }
+
+  .musicHeadTitle {
+    padding: 101px 15px 0 15px;
+  }
+}

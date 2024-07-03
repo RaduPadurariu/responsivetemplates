@@ -1,0 +1,17 @@
+.musicContainer {
+  font-size: 14px;
+  font-weight: 400;
+  background: #000000;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
