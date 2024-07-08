@@ -8,6 +8,8 @@ const MusicNews_SinglePlayer = () => {
   const [volume, setVolume] = useState(0.5);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
+  const [loadError, setLoadError] = useState(false);
+  const [playError, setPlayError] = useState(false);
 
   const playerRef = useRef(null);
   const intervalRef = useRef(null);
@@ -27,11 +29,7 @@ const MusicNews_SinglePlayer = () => {
   }, [playing]);
 
   const handlePlay = () => {
-    setPlaying(true);
-  };
-
-  const handlePause = () => {
-    setPlaying(false);
+    setPlaying(!playing);
   };
 
   const handleMuteToggle = () => {
@@ -52,12 +50,39 @@ const MusicNews_SinglePlayer = () => {
   };
 
   const handleLoad = () => {
-    if (playerRef.current) {
-      setDuration(playerRef.current.duration());
+    const sound = playerRef.current?.howler;
+    if (sound) {
+      const loadedDuration = sound.duration();
+      if (!isNaN(loadedDuration) && loadedDuration !== Infinity) {
+        setDuration(loadedDuration);
+      }
     }
   };
 
-  const handleProgressColor = () => {};
+  const handleLoadError = (error) => {
+    console.log("aici avem eroare", error);
+    setLoadError(true);
+  };
+
+  const handlePlayError = (error) => {
+    console.log("aici avem eroare", error);
+    setPlayError(true);
+  };
+
+  const formatTime = (time) => {
+    const format = (time) => {
+      if (time >= 10) return time;
+      else return "0" + time;
+    };
+    const minutes = format(Math.floor(time / 60));
+    const seconds = format(Math.floor(time % 60));
+    return (
+      <div>
+        <span>{minutes}</span>:<span>{seconds}</span>
+      </div>
+    );
+  };
+
   return (
     <div className="musicNews_single_player_container">
       <ReactHowler
@@ -65,11 +90,13 @@ const MusicNews_SinglePlayer = () => {
         playing={playing}
         mute={muted}
         volume={volume}
+        duration={duration}
         ref={playerRef}
         onLoad={handleLoad}
+        onLoadError={handleLoadError}
+        onPlayError={handlePlayError}
       />
       <div className="musicNews_single_player">
-        {/* <div id="musicNews_jplayer_1" className="musicNews_jp-jplayer"></div> */}
         <div
           id="musicNews_jp_container_1"
           className="musicNews_jp-audio"
@@ -77,15 +104,18 @@ const MusicNews_SinglePlayer = () => {
           aria-label="media player"
         >
           <div className="musicNews_jp-type-single">
-            <div className="musicNews_player_details d-flex flex-row align-items-center justify-content-start">
-              <div className="musicNews_jp-details">
-                <div>playing</div>
-                <div className="musicNews_jp-title" aria-label="title">
-                  &nbsp;
-                </div>
+            <div className="musicNews_player_details">
+              <div className="musicNews_jp-title" aria-label="title">
+                Song Title
               </div>
-              <div className="musicNews_jp-controls-holder ml-auto">
-                <button className="musicNews_jp-play"></button>
+
+              <div className="musicNews_jp-controls-holder">
+                <button
+                  className={`musicNews_jp-player ${
+                    playing ? "musicNews_jp-pause" : "musicNews_jp-play"
+                  }`}
+                  onClick={handlePlay}
+                ></button>
               </div>
             </div>
 
@@ -99,7 +129,7 @@ const MusicNews_SinglePlayer = () => {
                       role="timer"
                       aria-label="time"
                     >
-                      {currentTime.toFixed(2)}
+                      {formatTime(currentTime)}
                     </div>
                   </div>
                   <div className="musicNews_jp-player_controls">
@@ -109,7 +139,7 @@ const MusicNews_SinglePlayer = () => {
                         type="range"
                         min={0}
                         max={duration}
-                        step="0.01"
+                        step="0.1"
                         value={currentTime}
                         onChange={handleSeekChange}
                         style={{
@@ -126,7 +156,7 @@ const MusicNews_SinglePlayer = () => {
                       role="timer"
                       aria-label="duration"
                     >
-                      {duration.toFixed(2)}
+                      {formatTime(duration)}
                     </div>
                   </div>
                 </div>
@@ -152,12 +182,14 @@ const MusicNews_SinglePlayer = () => {
                       className="musicNews_jp-volume-bar-value"
                       type="range"
                       min={0}
-                      max={100}
-                      step="1"
+                      max={1}
+                      step="0.1"
                       value={volume}
                       onChange={handleVolumeChange}
                       style={{
-                        background: `linear-gradient(90deg, #5f5f5f ${volume}%, #989898 ${volume}%`,
+                        background: `linear-gradient(90deg, #5f5f5f ${
+                          (volume / 1) * 100
+                        }%, #989898 ${(volume / 1) * 100}%`,
                       }}
                     />
                   </div>
@@ -165,14 +197,18 @@ const MusicNews_SinglePlayer = () => {
               </div>
             </div>
             {/* No solution */}
-            <div className="musicNews_jp-no-solution">
-              <span>Update Required</span>
-              To play the media you will need to either update your browser to a
-              recent version or update your{" "}
-              <a href="http://get.adobe.com/flashplayer/" target="_blank">
-                Flash plugin
-              </a>
-            </div>
+            {loadError || playError ? (
+              <div className="musicNews_jp-no-solution">
+                <span>Update Required</span>
+                <div>
+                  To play the media you will need to either update your browser
+                  to a recent version or update your{" "}
+                  <a href="http://get.adobe.com/flashplayer/" target="_blank">
+                    Flash plugin
+                  </a>
+                </div>
+              </div>
+            ) : null}
           </div>
         </div>
       </div>

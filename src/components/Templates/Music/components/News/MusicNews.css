@@ -16,12 +16,16 @@
 
 .musicBlog_subContainer {
   display: flex;
-  flex-wrap: wrap;
 }
 
 .musicBlog_blog_posts,
 .musicBlog_sideBar {
   position: relative;
+}
+
+.musicBlog_blog_posts {
+  flex: 3;
+  padding-right: 15px;
 }
 
 .musicBlog_blog_post:not(:last-child) {
@@ -115,6 +119,7 @@
 
 .musicBlog_blog_post_text {
   margin-top: 35px;
+  line-height: 2.18;
 }
 
 /* Load more button */
@@ -166,7 +171,62 @@
   padding-right: 52px;
 }
 
-.musicNews_jp-type-single .musicNews_jp-play {
+.musicNews_jp-controls-holder {
+  margin-left: auto;
+}
+
+.musicNews_player_details {
+  width: 100%;
+  height: 92px;
+  background: #2b2b2b;
+  display: flex;
+  align-items: center;
+  padding-left: 42px;
+  padding-right: 52px;
+}
+
+.musicNews_jp-title {
+  font-size: 16px !important;
+  color: #ffffff !important;
+  text-transform: none !important;
+}
+
+.musicNews_jp-player {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #de4f32;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  outline: none !important;
+}
+
+.musicNews_jp-player::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: "FontAwesome";
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.musicNews_jp-play::after {
+  content: "\f04b";
+}
+
+.musicNews_jp-pause::after {
+  content: "\f04c";
+}
+
+.musicNews_jp-play .musicNews_jp-type-single {
   -webkit-transform: translateY(7px);
   -moz-transform: translateY(7px);
   -ms-transform: translateY(7px);
@@ -184,80 +244,6 @@
   color: rgba(255, 255, 255, 0.5) !important;
   line-height: 38px;
   outline: none !important;
-}
-
-.musicNews_jp-details {
-  display: block !important;
-}
-
-.musicNews_player_details {
-  width: 100%;
-  height: 92px;
-  background: #2b2b2b;
-}
-
-.musicNews_jp-details > div {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
-  text-transform: uppercase;
-}
-
-.musicNews_jp-details > div:first-child {
-  display: none;
-}
-
-.musicNews_jp-state-playing .musicNews_jp-details > div:first-child {
-  display: block;
-}
-
-.musicNews_jp-type-single
-  .musicNews_jp-state-playing
-  .musicNews_jp-details
-  .musicNews_jp-title {
-  display: block;
-}
-
-.musicNews_jp-title {
-  font-size: 16px !important;
-  color: #ffffff !important;
-  text-transform: none !important;
-}
-
-.musicNews_jp-play {
-  position: relative;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: #de4f32;
-  border: none;
-  cursor: pointer;
-  text-align: center;
-  outline: none !important;
-}
-
-.musicNews_jp-play::after {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-family: "FontAwesome";
-  font-size: 20px;
-  color: #ffffff;
-  content: "\f04b";
-}
-
-.musicNews_jp-state-playing .jp-play::after {
-  content: "\f04c";
-}
-
-.musicNews_jp-play:active {
-  width: 46px;
-  height: 46px;
 }
 
 /* Controls */
@@ -384,20 +370,117 @@
   cursor: pointer;
 }
 
-@media only screen and (max-width: 1000px) {
-  .musicBlog_container {
-    max-width: 765px;
-  }
+.musicNews_jp-no-solution {
+  color: #fff;
+  background: #000;
+  font-family: inherit;
+  font-size: 14px;
+  width: 100%;
+  padding-top: 1rem;
 }
 
-@media only screen and (max-width: 775px) {
-  .musicBlog_container {
-    max-width: 576px;
+/* Side bar */
+
+.musicNews_sideBar_container {
+  padding: 0 15px;
+  flex: 1;
+}
+
+.musicNews_sideBar_section:not(:last-child) {
+  margin-bottom: 53px;
+}
+
+.musicNews_sideBar_title {
+  font-size: 24px;
+}
+
+.musicNews_sideBar_list {
+  padding-left: 40px;
+  margin-top: 34px;
+}
+
+.musicNews_sideBar_list ul li:not(:last-of-type) {
+  margin-bottom: 6px;
+  list-style: none;
+}
+
+.musicNews_sideBar_list ul li a {
+  font-size: 16px;
+  color: #de4f32;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+.musicNews_sideBar_list ul li a:hover {
+  color: #fff;
+}
+
+.musicNews_latest_news_list {
+  margin-top: 55px;
+}
+
+.musicNews_latest_news {
+  display: flex;
+}
+
+.musicNews_latest_news:not(:last-child) {
+  margin-bottom: 28px;
+}
+
+.musicNews_latest_news_image {
+  width: 55px;
+  height: 55px;
+}
+
+.musicNews_latest_news_content {
+  padding-left: 16px;
+}
+
+.musicNews_latest_news_date {
+  line-height: 0.75;
+}
+
+.musicNews_latest_news_date a {
+  font-size: 12px;
+  color: #de4f32;
+  line-height: 0.75;
+}
+
+.musicNews_latest_news_date a:hover {
+  color: #ffffff;
+}
+
+.musicNews_latest_news_title {
+  margin-top: 13px;
+}
+
+.musicNews_latest_news_title a {
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.musicNews_latest_news_title a:hover {
+  color: #de4f32;
+}
+
+@media only screen and (max-width: 1000px) {
+  .musicBlog_subContainer {
+    flex-direction: column;
+  }
+  .musicBlog_blog_posts {
+    flex: 1;
+  }
+
+  .musicNews_sideBar_container {
+    flex: 1;
+    padding-top: 125px;
   }
 }
 
 @media only screen and (max-width: 575px) {
   .musicBlog_container {
     max-width: 100%;
+    padding: 0 15px;
   }
 }
