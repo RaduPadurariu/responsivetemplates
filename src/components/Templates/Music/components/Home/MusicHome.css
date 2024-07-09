@@ -1,0 +1,227 @@
+.musicHome {
+  background: #000;
+  color: #ffffff;
+  font-family: "Futura";
+  font-weight: 400;
+}
+
+/* The Artist */
+
+.musicHome_artist {
+  padding-bottom: 106px;
+  background: #000;
+}
+
+.musicHome_artist_image_container {
+  flex: 0 0 33%;
+  position: relative;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.musicHome_artist_col {
+  flex: 0 0 58%;
+  margin-left: 9%;
+  padding: 0 15px;
+}
+
+.musicHome_artist_image {
+  width: calc(100% + 205px);
+  left: -185px;
+  padding-right: 20px;
+  position: relative;
+}
+
+.musicHome_artist_image img {
+  max-width: 100%;
+  vertical-align: middle;
+  height: 100%;
+  border-style: none;
+}
+
+.musicHome_artist_text {
+  margin-top: 39px;
+}
+
+.musicHome_artist_content {
+  padding-top: 175px;
+}
+
+.musicHome_section_subtitle {
+  font-size: 18px;
+  line-height: 0.75;
+}
+
+.musicHome_section_title {
+  margin-top: 7px;
+  margin-left: -2px;
+}
+
+.musicHome_section_title h1 {
+  font-size: 48px;
+  font-weight: 500;
+}
+
+.musicHome_artist_text p {
+  line-height: 2.1;
+}
+
+.musicHome_artist_text p:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.musicHome_artist_sig {
+  margin: 51px 0 62px 15px;
+}
+
+/* Extra */
+.musicHome_extra {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.musicHome_extra_container {
+  position: relative;
+}
+
+.musicHome_subContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  position: relative;
+}
+
+.musicHome_container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.musicHome_cols {
+  width: 100%;
+  padding: 0 15px;
+  flex: 0 0 75%;
+}
+
+.musicHome_background_image {
+  background-image: url("/images/Music/extra.jpg");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.musicHome_extra_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 448px;
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+
+.musicHome_extra_title h1 {
+  font-size: 60px;
+  font-weight: 400;
+}
+
+.musicHome_extra_text {
+  margin-top: 4px;
+  line-height: 2.1;
+}
+
+.musicHome_extra_button {
+  width: 161px;
+  height: 46px;
+  background: #000000;
+  margin-top: 35px;
+}
+
+.musicHome_extra_button:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.musicHome_extra_button a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 46px;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .musicHome_container {
+    max-width: 974px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .musicHome_container {
+    max-width: 720px;
+  }
+  .musicHome_extra_title h1 {
+    font-size: 48px;
+  }
+
+  .musicHome_cols {
+    flex: 1;
+  }
+
+  .musicHome_artist_image_container {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    top: 50px;
+    text-align: right;
+    flex: 1;
+  }
+
+  .musicHome_artist_image {
+    left: auto;
+    padding-right: 0;
+    width: 100%;
+  }
+
+  .musicHome_artist_image img {
+    max-width: 46%;
+    opacity: 0.5;
+  }
+
+  .musicHome_artist_col {
+    flex: 1;
+    position: relative;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 775px) {
+  .musicHome_container {
+    max-width: 540px;
+  }
+
+  .musicHome_artist_image_container {
+    top: 130px;
+  }
+
+  .musicHome_artist_image img {
+    max-width: 54%;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .musicHome_extra_title h1 {
+    font-size: 36px;
+  }
+  .musicHome_extra {
+    padding: 0 15px;
+  }
+}

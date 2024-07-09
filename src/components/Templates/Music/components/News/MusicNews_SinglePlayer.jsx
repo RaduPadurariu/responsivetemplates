@@ -2,7 +2,8 @@ import React, { useState, useRef, useEffect } from "react";
 import "./MusicNews.css";
 import ReactHowler from "react-howler";
 
-const MusicNews_SinglePlayer = () => {
+const MusicNews_SinglePlayer = ({ song, playerBackground, songTitle }) => {
+  const playerBackgroundStyle = { "--playerBackground": `${playerBackground}` };
   const [playing, setPlaying] = useState(false);
   const [muted, setMuted] = useState(false);
   const [volume, setVolume] = useState(0.5);
@@ -86,7 +87,7 @@ const MusicNews_SinglePlayer = () => {
   return (
     <div className="musicNews_single_player_container">
       <ReactHowler
-        src="http://goldfirestudios.com/proj/howlerjs/sound.ogg"
+        src={song}
         playing={playing}
         mute={muted}
         volume={volume}
@@ -104,9 +105,12 @@ const MusicNews_SinglePlayer = () => {
           aria-label="media player"
         >
           <div className="musicNews_jp-type-single">
-            <div className="musicNews_player_details">
+            <div
+              className="musicNews_player_details"
+              style={playerBackgroundStyle}
+            >
               <div className="musicNews_jp-title" aria-label="title">
-                Song Title
+                {songTitle}
               </div>
 
               <div className="musicNews_jp-controls-holder">
@@ -121,8 +125,8 @@ const MusicNews_SinglePlayer = () => {
 
             {/* Player Control */}
             <div className="musicNews_player_controls">
-              <div className="musicNews_jp-gui jp-interface">
-                <div className="musicNews_jp-controls-holder musicNews_time_controls">
+              <div className="musicNews_jp-gui musicNews_jp-interface">
+                <div className="musicNews_time_controls">
                   <div>
                     <div
                       className="musicNews_jp-current-time"

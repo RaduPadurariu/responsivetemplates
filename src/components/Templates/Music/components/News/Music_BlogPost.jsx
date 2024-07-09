@@ -26,7 +26,15 @@ const Music_BlogPost = ({
         ) : (
           <div className="musicBlog_noImg"></div>
         )}
-        {imgOn ? false : <MusicNews_SinglePlayer />}
+        {imgOn ? (
+          false
+        ) : (
+          <MusicNews_SinglePlayer
+            song="http://goldfirestudios.com/proj/howlerjs/sound.ogg"
+            playerBackground="#2b2b2b"
+            songTitle="Song Title"
+          />
+        )}
       </div>
       <div className="musicBlog_blog_post_title">
         <h2>
