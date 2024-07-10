@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./MusicHome.css";
 import MusicHeadTitle from "../../common/HeadTitle/MusicHeadTitle";
 import MusicNews_SinglePlayer from "../News/MusicNews_SinglePlayer";
+import MusicHome_shows from "./MusicHome_shows";
 const MusicHome = () => {
+  const [overlayMoved, setOverlayMoved] = useState(false);
+
+  const handleMouseEnter = () => {
+    console.log("test");
+    if (!overlayMoved) {
+      setOverlayMoved(true);
+    }
+  };
   return (
     <>
       <MusicHeadTitle
@@ -12,7 +21,46 @@ const MusicHome = () => {
       />
       <div className="musicHome">
         <div className="musicHome_feature_album"></div>
-        <div className="musicHome_shows"></div>
+
+        {/* Shows */}
+        <div className="musicHome_shows">
+          <div className="musicHome_container">
+            <div className="musicHome_subContainer musicHome_shows_index">
+              <div className="musicHome_shows_col">
+                <div className="musicHome_section_title_container">
+                  <div className="musicHome_section_subtitle">Events</div>
+                  <div className="musicHome_section_title">
+                    <h1>Upcoming Shows</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="musicHome_subContainer musicHome_shows_row">
+              <div className="musicHome_shows_cols musicHome_shows_list_col">
+                <div className="musicHome_shows_list_container">
+                  <ul className="musicHome_shows_list">
+                    <MusicHome_shows />
+                  </ul>
+                </div>
+              </div>
+
+              <div className="musicHome_shows_image_cols">
+                <div className="musicHome_shows_image">
+                  <div
+                    onMouseEnter={handleMouseEnter}
+                    className={`musicHome_image_overlay ${
+                      overlayMoved ? "overlay-moved" : ""
+                    }`}
+                  ></div>
+                  <img src="/images/Music/shows.jpg" alt="no-shows-img" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Artist */}
         <div className="musicHome_artist">
           <div className="musicHome_container">
             <div className="musicHome_subContainer">
@@ -63,13 +111,15 @@ const MusicHome = () => {
             </div>
           </div>
         </div>
+
+        {/* Extra */}
         <div className="musicHome_extra">
           <div className="musicHome_extra_container">
             <div className="musicHome_background_image"></div>
             <div className="musicHome_container">
               <div className="musicHome_subContainer">
-                <div className="musicHome_cols">
-                  <div className="musicHome_extra_content d-flex flex-column align-items-start justify-content-center">
+                <div className="musicHome_extra_cols">
+                  <div className="musicHome_extra_content">
                     <div className="musicHome_extra_title">
                       <h1>Get your tickets now!</h1>
                     </div>
