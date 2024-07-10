@@ -49,7 +49,9 @@ const MusicHome_shows = () => {
         </div>
         <div className="musicHome_show_ticket ml-auto">
           <div className="musicHome_show_shop">
-            <a href="#">Buy Tickets</a>
+            <a href="#">
+              Buy <span className="musicHome_show_shop_buy">Tickets</span>
+            </a>
           </div>
         </div>
       </li>

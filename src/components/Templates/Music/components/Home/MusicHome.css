@@ -5,6 +5,66 @@
   font-weight: 400;
 }
 
+/* Feature Album */
+.musicHome_featured_album {
+  padding-top: 107px;
+  position: relative;
+}
+
+.musicHome_featured_background {
+  background-image: url("/images/Music/featured.png");
+  top: auto;
+  bottom: -185px;
+  max-height: 489px;
+}
+
+.musicHome_album_featured_background {
+  background-image: url("/images/Music/featured_album.jpg");
+}
+
+.musicHome_background_image_album {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.musicHome_featured_col {
+  position: relative;
+  padding: 0 15px;
+  width: 100%;
+  margin-left: 50%;
+}
+
+.musicHome_section_title_container {
+  padding-left: 20px;
+}
+
+.musicHome_featured_row {
+  margin-top: 71px;
+}
+
+.musicHome_album_col {
+  width: 100%;
+  position: relative;
+  padding: 0 15px;
+  flex: 0 0 50%;
+}
+
+.musicHome_featured_album_image {
+  width: calc(100% + 42px);
+  height: 722px;
+}
+
+.musicHome_featured_album_col {
+  z-index: 1;
+}
+
+/* tre sa continuie de la Featured_album_player_container */
+
 /* Shows */
 
 .musicHome_shows {
@@ -73,7 +133,9 @@
   width: 78px;
   height: 60px;
   background: #de4f32;
-  line-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   margin-right: 23px;
 }
@@ -150,6 +212,7 @@
   height: 100%;
   background: #de4f32;
   transition: all 1200ms ease;
+  z-index: 1;
 }
 
 .overlay-moved {
@@ -333,6 +396,10 @@
     flex: 1;
   }
 
+  .musicHome_featured_col {
+    margin-left: 0;
+  }
+
   .musicHome_shows .musicHome_subContainer {
     margin-top: 71px;
   }
@@ -343,6 +410,11 @@
     transform: none;
     padding: 0 15px;
     position: relative;
+  }
+
+  .musicHome_featured_album_image {
+    width: calc(100% + 242px);
+    height: 722px;
   }
 
   .musicHome_shows_cols {
@@ -396,11 +468,21 @@
   .musicHome_extra_title h1 {
     font-size: 48px;
   }
+
+  /* Featured */
+  .musicHome_section_title_container {
+    padding-left: 0;
+  }
 }
 
 @media only screen and (max-width: 775px) {
   .musicHome_container {
     max-width: 540px;
+  }
+
+  .musicHome_featured_album_image {
+    width: 100%;
+    height: 722px;
   }
 
   .musicHome_artist_image_container {
@@ -413,14 +495,50 @@
 
   .musicHome_show_info {
     flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    justify-content: space-around;
+    padding-right: 0;
+  }
+
+  .musicHome_shows_list li {
+    font-size: 14px;
+  }
+
+  .musicHome_show_name,
+  .musicHome_show_location {
+    flex: 0;
+  }
+
+  .musicHome_album_col {
+    flex: 1;
   }
 }
 
 @media only screen and (max-width: 575px) {
-  .musicHome_extra_title h1 {
+  .musicHome_extra_title h1,
+  .musicHome_section_title h1 {
     font-size: 36px;
   }
+
   .musicHome_extra {
     padding: 0 15px;
+  }
+
+  .musicHome_show_shop {
+    width: 60px;
+  }
+
+  .musicHome_show_date {
+    font-size: 0.8rem;
+    width: 50px;
+    height: 25px;
+  }
+  .musicHome_shows_list li {
+    padding-right: 11px;
+  }
+
+  .musicHome_show_shop_buy {
+    display: none;
   }
 }

@@ -4,12 +4,18 @@ import MusicHeadTitle from "../../common/HeadTitle/MusicHeadTitle";
 import MusicNews_SinglePlayer from "../News/MusicNews_SinglePlayer";
 import MusicHome_shows from "./MusicHome_shows";
 const MusicHome = () => {
-  const [overlayMoved, setOverlayMoved] = useState(false);
+  const [overlayMovedFeatured, setOverlayMovedFeatured] = useState(false);
+  const [overlayMovedShows, setOverlayMovedShows] = useState(false);
 
-  const handleMouseEnter = () => {
-    console.log("test");
-    if (!overlayMoved) {
-      setOverlayMoved(true);
+  const handleMouseEnterFeatured = () => {
+    if (!overlayMovedFeatured) {
+      setOverlayMovedFeatured(true);
+    }
+  };
+
+  const handleMouseEnterShows = () => {
+    if (!overlayMovedShows) {
+      setOverlayMovedShows(true);
     }
   };
   return (
@@ -20,10 +26,60 @@ const MusicHome = () => {
         backImg="/images/Music/index.jpg"
       />
       <div className="musicHome">
-        <div className="musicHome_feature_album"></div>
+        <div
+          className="musicHome_featured_album"
+          onMouseEnter={handleMouseEnterFeatured}
+        >
+          <div className="musicHome_background_image_album musicHome_featured_background"></div>
+          <div className="musicHome_container">
+            <div className="musicHome_subContainer">
+              <div className="musicHome_featured_col">
+                <div className="musicHome_section_title_container">
+                  <div className="musicHome_section_subtitle">Events</div>
+                  <div className="musicHome_section_title">
+                    <h1>Featured Album</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="musicHome_subContainer musicHome_featured_row">
+              <div className="musicHome_album_col">
+                <div className="musicHome_featured_album_image">
+                  <div
+                    className={`musicHome_image_overlay ${
+                      overlayMovedFeatured ? "overlay-moved" : ""
+                    }`}
+                  ></div>
+                  <div className="musicHome_background_image_album musicHome_album_featured_background"></div>
+                </div>
+              </div>
+
+              <div className="musicHome_album_col musicHome_featured_album_col">
+                <div className="musicHome_featured_album_player_container">
+                  <div className="musicHome_featured_album_player">
+                    <div className="musicHome_featured_title_bar">
+                      <div className="musicHome_featured_album_title_container">
+                        <div className="musicHome_featured_album_artist">
+                          Maria Smith
+                        </div>
+                        <div className="musicHome_featured_album_title">
+                          Love is all Around
+                        </div>
+                      </div>
+                      <div className="musicHome_featured_album_link ml-auto">
+                        <a href="#">buy it on itunes</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Shows */}
-        <div className="musicHome_shows">
+        <div className="musicHome_shows" onMouseEnter={handleMouseEnterShows}>
           <div className="musicHome_container">
             <div className="musicHome_subContainer musicHome_shows_index">
               <div className="musicHome_shows_col">
@@ -48,9 +104,8 @@ const MusicHome = () => {
               <div className="musicHome_shows_image_cols">
                 <div className="musicHome_shows_image">
                   <div
-                    onMouseEnter={handleMouseEnter}
                     className={`musicHome_image_overlay ${
-                      overlayMoved ? "overlay-moved" : ""
+                      overlayMovedShows ? "overlay-moved" : ""
                     }`}
                   ></div>
                   <img src="/images/Music/shows.jpg" alt="no-shows-img" />
