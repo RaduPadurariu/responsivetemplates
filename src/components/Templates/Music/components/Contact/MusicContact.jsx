@@ -92,32 +92,32 @@ const MusicContact = () => {
               <ul className="musicContact_social_ul">
                 <li>
                   <a href="#">
-                    <i class="fa fa-pinterest" aria-hidden="true"></i>
+                    <i className="fa fa-pinterest" aria-hidden="true"></i>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                    <i className="fa fa-facebook" aria-hidden="true"></i>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <i className="fa fa-twitter" aria-hidden="true"></i>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <i class="fa fa-dribbble" aria-hidden="true"></i>
+                    <i className="fa fa-dribbble" aria-hidden="true"></i>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <i class="fa fa-behance" aria-hidden="true"></i>
+                    <i className="fa fa-behance" aria-hidden="true"></i>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    <i className="fa fa-linkedin" aria-hidden="true"></i>
                   </a>
                 </li>
               </ul>

@@ -4,6 +4,7 @@ import MusicHeadTitle from "../../common/HeadTitle/MusicHeadTitle";
 import MusicNews_SinglePlayer from "../News/MusicNews_SinglePlayer";
 import MusicHome_shows from "./MusicHome_shows";
 import MusicAlbumsTracks from "../Albums/MusicAlbumsTracks";
+
 const MusicHome = () => {
   const [overlayMovedFeatured, setOverlayMovedFeatured] = useState(false);
   const [overlayMovedShows, setOverlayMovedShows] = useState(false);
@@ -21,12 +22,11 @@ const MusicHome = () => {
   };
   return (
     <>
-      <MusicHeadTitle
-        subTitle="IN CONSTRUCTION !!!!!!"
-        title="Lucy Rider"
-        backImg="/images/Music/index.jpg"
-      />
       <div className="musicHome">
+        <div className="musicHome_hero">
+          <div className="musicHome_slide_container"></div>
+        </div>
+
         <div
           className="musicHome_featured_album"
           onMouseEnter={handleMouseEnterFeatured}
