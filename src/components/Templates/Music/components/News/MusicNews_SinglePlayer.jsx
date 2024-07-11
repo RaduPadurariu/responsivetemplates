@@ -2,8 +2,16 @@ import React, { useState, useRef, useEffect } from "react";
 import "./MusicNews.css";
 import ReactHowler from "react-howler";
 
-const MusicNews_SinglePlayer = ({ song, playerBackground, songTitle }) => {
-  const playerBackgroundStyle = { "--playerBackground": `${playerBackground}` };
+const MusicNews_SinglePlayer = ({
+  song,
+  playerBackground,
+  songTitle,
+  playerColor,
+}) => {
+  const playerBackgroundStyle = {
+    "--playerBackground": `${playerBackground}`,
+    color: `${playerColor}`,
+  };
   const [playing, setPlaying] = useState(false);
   const [muted, setMuted] = useState(false);
   const [volume, setVolume] = useState(0.5);

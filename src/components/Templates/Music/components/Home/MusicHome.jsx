@@ -3,6 +3,7 @@ import "./MusicHome.css";
 import MusicHeadTitle from "../../common/HeadTitle/MusicHeadTitle";
 import MusicNews_SinglePlayer from "../News/MusicNews_SinglePlayer";
 import MusicHome_shows from "./MusicHome_shows";
+import MusicAlbumsTracks from "../Albums/MusicAlbumsTracks";
 const MusicHome = () => {
   const [overlayMovedFeatured, setOverlayMovedFeatured] = useState(false);
   const [overlayMovedShows, setOverlayMovedShows] = useState(false);
@@ -55,25 +56,7 @@ const MusicHome = () => {
                 </div>
               </div>
 
-              <div className="musicHome_album_col musicHome_featured_album_col">
-                <div className="musicHome_featured_album_player_container">
-                  <div className="musicHome_featured_album_player">
-                    <div className="musicHome_featured_title_bar">
-                      <div className="musicHome_featured_album_title_container">
-                        <div className="musicHome_featured_album_artist">
-                          Maria Smith
-                        </div>
-                        <div className="musicHome_featured_album_title">
-                          Love is all Around
-                        </div>
-                      </div>
-                      <div className="musicHome_featured_album_link ml-auto">
-                        <a href="#">buy it on itunes</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <MusicAlbumsTracks />
             </div>
           </div>
         </div>
@@ -158,7 +141,8 @@ const MusicHome = () => {
                   </div>
                   <MusicNews_SinglePlayer
                     song="http://goldfirestudios.com/proj/howlerjs/sound.ogg"
-                    playerBackground="#2b2b2b"
+                    playerBackground="#fff"
+                    playerColor="#000"
                     songTitle="Song Title"
                   />
                 </div>

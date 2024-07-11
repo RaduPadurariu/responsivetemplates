@@ -20,7 +20,12 @@ const MusicNews = () => {
             <div className="musicBlog_blog_posts">
               <Music_BlogPost {...musicBlog_data[0]} />
               <Music_BlogPost {...musicBlog_data[1]}>
-                <MusicNews_SinglePlayer />
+                <MusicNews_SinglePlayer
+                  song="http://goldfirestudios.com/proj/howlerjs/sound.ogg"
+                  playerBackground="#2b2b2b"
+                  songTitle="Song Title"
+                  playerColor="#fff"
+                />
               </Music_BlogPost>
               <Music_BlogPost {...musicBlog_data[2]} />
               <div className="musicBlog_load_more">

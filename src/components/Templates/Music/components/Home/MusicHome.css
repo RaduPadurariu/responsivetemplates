@@ -47,24 +47,6 @@
   margin-top: 71px;
 }
 
-.musicHome_album_col {
-  width: 100%;
-  position: relative;
-  padding: 0 15px;
-  flex: 0 0 50%;
-}
-
-.musicHome_featured_album_image {
-  width: calc(100% + 42px);
-  height: 722px;
-}
-
-.musicHome_featured_album_col {
-  z-index: 1;
-}
-
-/* tre sa continuie de la Featured_album_player_container */
-
 /* Shows */
 
 .musicHome_shows {
@@ -412,6 +394,13 @@
     position: relative;
   }
 
+  .musicHome_featured_title_bar {
+    padding: 0 35px;
+  }
+
+  .musicHome_featured_album_link {
+    width: 167px;
+  }
   .musicHome_featured_album_image {
     width: calc(100% + 242px);
     height: 722px;

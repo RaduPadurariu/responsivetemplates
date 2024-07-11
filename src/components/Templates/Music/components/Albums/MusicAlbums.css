@@ -1,0 +1,162 @@
+.musicHome_album_col {
+  width: 100%;
+  position: relative;
+  padding: 0 15px;
+  flex: 0 0 50%;
+}
+
+.musicHome_featured_album_image {
+  width: calc(100% + 42px);
+  height: 722px;
+}
+
+.musicHome_featured_album_col {
+  z-index: 1;
+}
+
+.musicHome_featured_album_player {
+  width: 100%;
+  border: solid 1px #d3d3d3;
+  background: #333232;
+}
+
+.musicHome_featured_title_bar {
+  height: 146px;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+}
+
+.musicHome_featured_album_link {
+  width: 181px;
+  height: 42px;
+  background: #de4f32;
+  text-align: center;
+  margin-left: auto;
+  margin-top: -1rem;
+}
+
+.musicHome_featured_album_link a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  color: #ffffff;
+  text-transform: uppercase;
+  line-height: 42px;
+}
+
+.musicHome_featured_album_artist {
+  font-size: 30px;
+  color: #ffffff;
+  line-height: 1.2;
+  padding-bottom: 1rem;
+}
+
+.musicHome_featured_album_title {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.67);
+  margin-top: -2px;
+}
+
+/* Track list */
+.musicAlbums_jp_audio {
+  width: 100%;
+}
+
+.musicAlbums_jp_playlist {
+  background: #333232;
+  margin-bottom: 2rem;
+}
+
+.musicAlbums_jp_playlist_current {
+  position: relative;
+  height: 38px;
+  border-bottom: none;
+  padding-left: 55px;
+}
+
+.musicAlbums_jp_playlist_current::before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -4px;
+  width: calc(100% + 8px);
+  height: 100%;
+  opacity: 0;
+  content: "";
+  visibility: hidden;
+  background: #5c5c5c;
+  transition: all 200ms ease;
+}
+
+.musicAlbums_jp_playlist_current:hover::before {
+  visibility: visible;
+  opacity: 1;
+}
+
+.musicAlbums_jp_playlist_current:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.musicAlbums_jp_playlist_current > div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 35px;
+  padding-right: 45px;
+}
+
+.musicAlbums_jp_playlist_current a {
+  font-family: "Futura", sans-serif !important;
+  font-size: 16px !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  line-height: 38px;
+  outline: none !important;
+}
+
+.musicAlbums_jp_playlist_current > div::before {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-family: "FontAwesome";
+  content: "\f04b";
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.musicAlbums_song_duration {
+  font-family: "Futura", sans-serif !important;
+  font-size: 16px !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  line-height: 38px;
+  outline: none !important;
+  margin-left: auto;
+}
+
+/* Responsive */
+@media only screen and (max-width: 1000px) {
+  .musicHome_featured_title_bar {
+    padding: 0 35px;
+  }
+
+  .musicHome_featured_album_link {
+    width: 167px;
+  }
+
+  .musicAlbums_jp_playlist_current {
+    padding-left: 35px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .musicAlbums_jp_playlist_current {
+    padding-left: 25px;
+  }
+}
