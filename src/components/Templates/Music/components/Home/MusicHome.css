@@ -15,7 +15,141 @@
 .musicHome_slide_container {
   width: 100%;
   height: 100%;
-  background-color: white;
+  background: #000;
+  color: #fff;
+  font-family: "Futura";
+  position: relative;
+}
+
+.musicHome_slide_carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.musicHome_carousel_buttons {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 24px;
+  z-index: 10;
+  margin-top: 10px;
+}
+
+.musicHome_carousel_button {
+  width: 20px;
+  height: 20px;
+  background: #4d4d4d;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0 3px;
+  border-radius: 0;
+  transition: all 200ms ease;
+}
+
+.musicHome_activeButton,
+.musicHome_carousel_button:hover {
+  background: #eee;
+}
+
+/* ------------------------------ */
+
+.musicHome_carousel_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutToLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+.musicHome_slide_effect_out {
+  animation: slideOutToLeft 0.5s ease-out forwards;
+}
+
+.musicHome_slide_effect_in {
+  animation: slideInFromRight 0.5s ease-out forwards;
+}
+
+.musicHome_carousel_data_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 72px;
+}
+
+.musicHome_home_title {
+  font-size: 18px;
+}
+
+.musicHome_home_headerTitle {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.musicHome_home_headerTitle h1 {
+  font-size: 82px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.musicHome_home_titleLink {
+  margin-top: 21px;
+  background-color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all 400ms ease;
+  text-align: center;
+}
+
+.musicHome_home_titleLink:hover {
+  background-color: #de4f32;
+}
+
+.musicHome_home_titleLink a {
+  width: 100px;
+  padding-left: 17px;
+  padding-right: 12px;
+  font-size: 24px;
+  color: #ffffff;
+  transition: all 200ms ease;
 }
 
 /* Feature Album */
@@ -556,5 +690,9 @@
 
   .musicHome_show_shop_buy {
     display: none;
+  }
+
+  .musicHome_home_titleLink a {
+    font-size: 15px;
   }
 }

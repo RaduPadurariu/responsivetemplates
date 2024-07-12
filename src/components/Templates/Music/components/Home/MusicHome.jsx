@@ -1,14 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./MusicHome.css";
-import MusicHeadTitle from "../../common/HeadTitle/MusicHeadTitle";
 import MusicNews_SinglePlayer from "../News/MusicNews_SinglePlayer";
 import MusicHome_shows from "./MusicHome_shows";
 import MusicAlbumsTracks from "../Albums/MusicAlbumsTracks";
+import MusicHome_Carousel from "./MusicHome_Carousel";
 
 const MusicHome = () => {
   const [overlayMovedFeatured, setOverlayMovedFeatured] = useState(false);
   const [overlayMovedShows, setOverlayMovedShows] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [transition, setTransition] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
+  const handleIndex = (index) => {
+    setTransition(true);
+    setIsVisible(false); // Trigger slide-out animation
+    setTimeout(() => {
+      setActiveIndex(index);
+      setIsVisible(true); // Trigger slide-in animation after a short delay
+    }, 200);
+  };
   const handleMouseEnterFeatured = () => {
     if (!overlayMovedFeatured) {
       setOverlayMovedFeatured(true);
@@ -20,11 +31,50 @@ const MusicHome = () => {
       setOverlayMovedShows(true);
     }
   };
+
+  const items = [
+    {
+      backgroundImage: "url(/images/Music/index.jpg)",
+      title: "New single release",
+      headerTitle: "Love is all around",
+      listenLink: "#",
+    },
+    {
+      backgroundImage: "url(/images/Music/index2.jpg)",
+      title: "Popular song",
+      headerTitle: "Nine Million Bycicles",
+      listenLink: "#",
+    },
+    {
+      backgroundImage: "url(/images/Music/index3.jpg)",
+      title: "Last song",
+      headerTitle: "Love & Money: Special",
+      listenLink: "#",
+    },
+  ];
+
   return (
     <>
       <div className="musicHome">
         <div className="musicHome_hero">
-          <div className="musicHome_slide_container"></div>
+          <div className="musicHome_slide_container">
+            <MusicHome_Carousel
+              {...items[activeIndex]}
+              transition={transition}
+              isVisible={isVisible}
+            />
+            <div className="musicHome_carousel_buttons">
+              {items.map((item, index) => (
+                <button
+                  onClick={() => handleIndex(index)}
+                  key={index}
+                  className={`musicHome_carousel_button ${
+                    index === activeIndex ? "musicHome_activeButton" : ""
+                  }`}
+                ></button>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div
