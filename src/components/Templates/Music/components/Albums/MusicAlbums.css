@@ -1,14 +1,135 @@
-.musicHome_album_col {
-  width: 100%;
+.musicAlbums_discs {
+  padding-top: 105px;
+  padding-bottom: 78px;
+  background: #000;
+  color: #ffffff;
+  font-family: "Futura";
+  font-weight: 400;
   position: relative;
+}
+
+.musicAlbums_disc_rows {
+  position: relative;
+}
+
+.musicAlbums_album_li {
+  flex: 0 0 33%;
+  max-width: 33%;
+  margin-bottom: 30px;
+  position: relative;
+  width: 100%;
   padding: 0 15px;
-  flex: 0 0 50%;
+  position: relative;
+}
+
+.musicAlbums_disc {
+  overflow: hidden;
+}
+
+.musicAlbums_album_li a {
+  text-decoration: none;
+  transition: all 200ms ease;
+  font-size: 14px;
+  font-family: "Futura";
+  position: relative;
 }
 
 .musicHome_featured_album_image {
   width: calc(100% + 42px);
   position: relative;
   height: 722px;
+}
+
+.musicAlbums_disc:hover a::before {
+  -webkit-transform: translate(60%, 60%) rotate(45deg);
+  -moz-transform: translate(60%, 60%) rotate(45deg);
+  -ms-transform: translate(60%, 60%) rotate(45deg);
+  -o-transform: translate(60%, 60%) rotate(45deg);
+  transform: translate(60%, 60%) rotate(45deg);
+}
+
+.musicAlbums_album_li a::before {
+  position: absolute;
+  display: block;
+  top: -100%;
+  left: -200%;
+  transform-origin: right center;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background: rgba(222, 79, 50, 0.7);
+  width: 200%;
+  height: 200%;
+  content: "";
+  -webkit-transition: all 600ms ease;
+  -moz-transition: all 600ms ease;
+  -ms-transition: all 600ms ease;
+  -o-transition: all 600ms ease;
+  transition: all 600ms ease;
+}
+
+.musicAlbums_disc_image {
+  width: 100%;
+}
+
+.musicAlbums_disc_image img {
+  max-width: 100%;
+}
+
+.musicAlbums_disc_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.musicAlbums_disc_container > div {
+  width: 100%;
+  height: 100%;
+}
+
+/* .musicAlbums_disc_content {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 27px;
+  width: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: rgba(0, 0, 0, 0.48);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.musicAlbums_disc_title {
+  font-size: 25px;
+  font-family: "Futura_Bold", sans-serif;
+  color: #fff;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.musicAlbums_disc_subtitle {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #fff;
+  line-height: 2;
+  margin-top: 8px;
+  text-align: center;
+} */
+
+.musicHome_album_col {
+  width: 100%;
+  position: relative;
+  padding: 0 15px;
+  flex: 0 0 50%;
 }
 
 .musicHome_featured_album_col {
@@ -151,7 +272,124 @@
   margin-left: auto;
 }
 
+/* The Artist */
+
+.musicAlbums_artist {
+  padding-top: 7px;
+  padding-bottom: 134px;
+  position: relative;
+}
+
+.musicAlbums_artist_wallpaper {
+  top: 0;
+  background-image: url("/images/Music/artist_2.jpg");
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.musicAlbums_artist_container {
+  flex: 0 0 58.333%;
+  max-width: 58.3333%;
+  margin-left: 41.6666%;
+  position: relative;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.musicAlbums_artist_content {
+  font-size: 14px;
+  font-family: "Futura";
+  font-weight: 400;
+  position: relative;
+}
+
+/* Milestones */
+
+.musicAlbums_milestones {
+  padding: 108px 50px 0 50px;
+  font-size: 14px;
+  font-family: "Futura";
+  font-weight: 400;
+  color: #fff;
+  background: #000;
+}
+
+.musicAlbums_milestones_container {
+  padding-top: 180px;
+  padding-bottom: 107px;
+  position: relative;
+}
+
+.musicAlbums_milestones_wallpaper {
+  top: 0;
+  background-image: url("/images/Music/milestones.jpg");
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.musicAlbums_milestone_col {
+  margin-bottom: 80px;
+  flex: 0 0 25%;
+  max-width: 25%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.musicAlbums_milestone {
+  display: flex;
+  align-items: center;
+}
+
+.musicAlbums_milestone_icon {
+  width: 48px;
+  height: 48px;
+}
+
+.musicAlbums_milestone_icon img {
+  max-width: 100%;
+}
+
+.musicAlbums_milestone_content {
+  padding-left: 26px;
+}
+
+.musicAlbum_milestone_counter {
+  font-size: 60px;
+  color: #ffffff;
+  line-height: 0.75;
+}
+.musicAlbum_milestone_text {
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 0.75;
+  margin-top: 24px;
+}
+
 /* Responsive */
+
+@media only screen and (max-width: 1200px) {
+  .musicAlbums_album_li,
+  .musicAlbums_milestone_col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .musicAlbums_milestone {
+    padding-left: 100px;
+  }
+}
+
 @media only screen and (max-width: 1000px) {
   .musicHome_featured_title_bar {
     padding: 0 35px;
@@ -163,6 +401,39 @@
 
   .musicAlbums_jp_playlist_current {
     padding-left: 35px;
+  }
+
+  .musicAlbums_artist_container {
+    flex: 1;
+    max-width: 100%;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .musicAlbums_album_li {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .musicAlbums_milestone {
+    padding-left: 50px;
+  }
+}
+
+@media only screen and (max-width: 775px) {
+  .musicAlbums_album_li,
+  .musicAlbums_milestone_col {
+    flex: 1;
+    width: 100%;
+    max-width: 100%;
+  }
+  .musicAlbums_disc_rows,
+  .musicAlbums_milestones_row {
+    flex-direction: column;
+  }
+
+  .musicAlbums_milestone {
+    padding-left: 0px;
   }
 }
 
@@ -178,5 +449,13 @@
   .musicAlbums_jp_playlist_current a,
   .musicAlbums_song_duration {
     font-size: 14px;
+  }
+
+  .musicAlbums_milestones {
+    padding: 108px 15px 0 15px;
+  }
+
+  .musicAlbum_milestone_counter {
+    font-size: 48px;
   }
 }

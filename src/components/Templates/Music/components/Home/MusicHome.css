@@ -187,10 +187,6 @@
   margin-left: 50%;
 }
 
-.musicHome_section_title_container {
-  padding-left: 20px;
-}
-
 .musicHome_featured_row {
   margin-top: 71px;
 }
@@ -393,6 +389,11 @@
 
 .musicHome_artist_content {
   padding-top: 175px;
+  font-size: 14px;
+  font-family: "Futura";
+  color: #fff;
+  font-weight: 400;
+  line-height: 1.2;
 }
 
 .musicHome_section_subtitle {
