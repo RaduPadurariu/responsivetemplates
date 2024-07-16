@@ -5,7 +5,8 @@ import MusicHome_shows from "./MusicHome_shows";
 import MusicAlbumsTracks from "../Albums/MusicAlbumsTracks";
 import MusicHome_Carousel from "./MusicHome_Carousel";
 import MusicHome_Artist_content from "./MusicHome_Artist_content";
-
+import { musicAlbums } from "../Albums/MusicAlbumTrackList";
+import MusicNews_SinglePlayer from "../News/MusicNews_SinglePlayer";
 const MusicHome = () => {
   const [overlayMovedFeatured, setOverlayMovedFeatured] = useState(false);
   const [overlayMovedShows, setOverlayMovedShows] = useState(false);
@@ -107,7 +108,18 @@ const MusicHome = () => {
                 </div>
               </div>
 
-              <MusicAlbumsTracks />
+              <MusicAlbumsTracks
+                item={musicAlbums[0]}
+                position={"absolute"}
+                left={"-58px"}
+              >
+                <MusicNews_SinglePlayer
+                  song="http://goldfirestudios.com/proj/howlerjs/sound.ogg"
+                  playerBackground="#fff"
+                  songTitle="Song Title"
+                  playerColor="#000"
+                />
+              </MusicAlbumsTracks>
             </div>
           </div>
         </div>

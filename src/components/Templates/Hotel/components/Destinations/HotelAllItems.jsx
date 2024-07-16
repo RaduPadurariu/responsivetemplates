@@ -1,23 +1,18 @@
-import React from 'react'
-import { HotelDCard } from './HotelDCard'
-import {HotelSData} from './HotelSData'
-
+import React from "react";
+import { HotelDCard } from "./HotelDCard";
+import { HotelSData } from "./HotelSData";
 
 export const HotelAllItems = () => {
-    // Aici era un useState in caz ca nu o sa mearga altceva
-    const items = HotelSData
+  const items = HotelSData;
   return (
     <>
-        <section className="hotelGallery desi mtop">
-            <div className="container"> 
-                    {
-                        items.map((item) => {
-                            return (
-                            <HotelDCard key={item.id} item = {item}/>)
-                        })
-                    }
-            </div>
-        </section>
+      <section className="hotelGallery desi mtop">
+        <div className="container">
+          {items.map((item) => {
+            return <HotelDCard key={item.id} item={item} />;
+          })}
+        </div>
+      </section>
     </>
-  )
-}
+  );
+};

@@ -1,9 +1,8 @@
 .hotelError {
-    height: 50vh;
-  }
+  height: 50vh;
+}
 
-  .hotelError h1 {
-    font-size: 50px;
-    color: crimson;
-  }
-  
+.hotelError h1 {
+  font-size: 50px;
+  color: crimson;
+}

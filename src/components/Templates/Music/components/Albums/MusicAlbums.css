@@ -152,6 +152,17 @@
   position: absolute;
 }
 
+.musicHome_featured_album_player_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  left: auto;
+  height: 100%;
+  position: relative;
+  margin-left: -15px;
+}
+
 .musicHome_featured_title_bar {
   height: 146px;
   padding: 0 50px;
@@ -376,6 +387,12 @@
   line-height: 0.75;
   margin-top: 24px;
 }
+
+/* .musicHome_featured_album_player_relative {
+  position: relative;
+  left: auto;
+  padding: 0;
+} */
 
 /* Responsive */
 

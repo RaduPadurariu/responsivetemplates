@@ -1,0 +1,146 @@
+/* Error Empty Album */
+
+.musicAlbumError {
+  height: 50vh;
+}
+
+.musicAlbumError h1 {
+  font-size: 50px;
+  color: crimson;
+}
+
+/* Single Album */
+
+.musicSingleAlbum {
+  background: #000;
+  columns: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Futura";
+  padding-top: 102px;
+  padding-bottom: 122px;
+}
+
+.musicSingleAlbum_col_image,
+.musicSingleAlbum_col_description {
+  position: relative;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.musicSingleAlbum_col_image {
+  flex: 0 0 41.666%;
+  max-width: 41.666%;
+}
+
+.musicSingleAlbum_col_description {
+  flex: 0 0 58.3333%;
+  max-width: 58.3333%;
+}
+
+.musicSingleAlbum_info {
+  position: relative;
+  width: calc(100% + 115px);
+  left: -73px;
+}
+
+.musicSingleAlbum_single_image {
+  width: 100%;
+}
+
+.musicSingleAlbum_single_image img {
+  max-width: 100%;
+}
+
+.musicSingleAlbum_single_info_list {
+  margin-top: 59px;
+}
+
+.musicSingleAlbum_single_info_list ul li {
+  font-size: 16px;
+  color: #fff;
+  font-family: "Futura";
+}
+
+.musicSingleAlbum_single_info_list ul li:not(:last-of-type) {
+  margin-bottom: 25px;
+}
+
+.musicSingleAlbum_single_info_list ul li span {
+  color: #de4f32;
+}
+
+.musicSingleAlbum_single_logoList {
+  margin-top: 81px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.musicSingleAlbum_single_logoList > div:not(:last-child) {
+  margin-right: 46px;
+}
+
+.musicSingleAlbum_single_logoList > div {
+  margin-bottom: 25px;
+}
+
+.musicSingleAlbum_single_logoList > div img {
+  max-width: 100%;
+}
+
+.musicSingleAlbum_single_content {
+  left: 88px;
+  position: relative;
+}
+
+.musicSingleAlbum_single_text {
+  margin-top: -8px;
+  margin-bottom: 80px;
+}
+
+.musicSingleAlbum_single_text p:not(:last-of-type) {
+  margin-bottom: 30px;
+}
+
+.musicSingleAlbum_single_text p {
+  font-size: 14px;
+  line-height: 2.1;
+  font-family: "Futura";
+  color: #fff;
+  font-weight: 400;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 1375px) {
+  .musicSingleAlbum_info {
+    width: calc(100% - 35px);
+    left: auto;
+  }
+
+  .musicSingleAlbum_single_content {
+    left: auto;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .musicSingleAlbum_col_image,
+  .musicSingleAlbum_col_description {
+    flex: 1;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .musicSingleAlbum_col_description {
+    margin-top: 85px;
+  }
+  .musicSingleAlbum_info {
+    width: 100%;
+    left: auto;
+  }
+
+  .musicSingleAlbum_cols {
+    flex-direction: column;
+  }
+}

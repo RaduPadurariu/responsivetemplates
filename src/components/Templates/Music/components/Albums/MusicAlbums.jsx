@@ -3,6 +3,7 @@ import "./MusicAlbums.css";
 import MusicHeadTitle from "../../common/HeadTitle/MusicHeadTitle";
 import MusicAlbum from "./MusicAlbum";
 import MusicHome_Artist_content from "../Home/MusicHome_Artist_content";
+import { musicAlbums } from "./MusicAlbumTrackList";
 
 const MusicAlbums = () => {
   const milestonesList = [
@@ -78,7 +79,9 @@ const MusicAlbums = () => {
       <div className="musicAlbums_discs">
         <div className="musicHome_container">
           <ul className="musicHome_subContainer musicAlbums_disc_rows">
-            <MusicAlbum />
+            {musicAlbums.slice(1).map((item) => {
+              return <MusicAlbum key={item.id} item={item} />;
+            })}
           </ul>
         </div>
       </div>

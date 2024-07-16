@@ -1,9 +1,12 @@
-export const albums = [
+export const musicAlbums = [
   {
     id: 0,
     albumName: "Best song collection",
     albumYear: "2020",
     cover: "/images/Music/disc_1.jpg",
+    genres: "",
+    releaseDate: "",
+    producers: "",
     trackList: [
       {
         songName: "Call of the Search",
@@ -42,6 +45,9 @@ export const albums = [
     albumName: "Call Off the Search",
     albumYear: "2003",
     cover: "/images/Music/01-Call-Off-the-Search/coperta.jpg",
+    genres: "Jazz, Blues, Pop",
+    releaseDate: "3 November, 2003",
+    producers: "Mike Batt",
     trackList: [
       {
         id: 1,
@@ -458,6 +464,9 @@ Isn't that he, or am I going crazy, dear?
     albumName: "Piece by Piece",
     albumYear: "2005",
     cover: "/images/Music/02-Piece-by-Piece/coperta.jpg",
+    genres: "Pop, Jazz, Folk",
+    releaseDate: "26 September, 2005",
+    producers: "Mike Batt",
     trackList: [
       {
         id: 1,
@@ -898,6 +907,9 @@ But loving you
     albumName: "Pictures",
     albumYear: "2007",
     cover: "/images/Music/03-Pictures/coperta.jpg",
+    genres: "Pop, Jazz, Blues",
+    releaseDate: "1 October, 2007",
+    producers: "Mike Batt, Katie Melua",
     trackList: [
       {
         id: 1,
@@ -1310,6 +1322,9 @@ Of my secret life
     albumName: "The House",
     albumYear: "2010",
     cover: "/images/Music/04-The-House/coperta.jpg",
+    genres: "Pop, Jazz, Blues, Folk",
+    releaseDate: "24 May, 2010",
+    producers: "William Orbit",
     trackList: [
       {
         id: 1,
@@ -1757,6 +1772,9 @@ You found me unaware
     albumName: "Secret Symphony",
     albumYear: "2012",
     cover: "/images/Music/05-Secret-Symphony/coperta.jpg",
+    genres: "Pop, Jazz",
+    releaseDate: "5 March, 2012",
+    producers: "Mike Batt",
     trackList: [
       {
         id: 1,
@@ -2111,6 +2129,9 @@ Must have designed, must have planned it
     albumName: "Ketevan",
     albumYear: "2013",
     cover: "/images/Music/06-Ketevan/coperta.jpg",
+    genres: "Pop, Jazz, Folk",
+    releaseDate: "16 September, 2013",
+    producers: "Mike Batt, Katie Melua",
     trackList: [
       {
         id: 1,
@@ -2511,6 +2532,9 @@ Remember I will be there
     albumName: "In Winter",
     albumYear: "2016",
     cover: "/images/Music/07-In-Winter/coperta.jpg",
+    genres: "Folk, Classical, Seasonal",
+    releaseDate: "14 October, 2016",
+    producers: "Katie Melua",
     trackList: [
       {
         id: 1,
@@ -2830,6 +2854,9 @@ Oh night divine
     albumName: "Album No. 8",
     albumYear: "2020",
     cover: "/images/Music/08-Album-No-8/coperta.jpg",
+    genres: "Pop, Folk, Jazz",
+    releaseDate: "16 October, 2020",
+    producers: "Leo Abrahams",
     trackList: [
       {
         id: 1,
@@ -3181,6 +3208,9 @@ The leaves, they remind me to forget
     albumName: "Love & Money",
     albumYear: "2023",
     cover: "/images/Music/09-Love-&-Money/coperta.jpg",
+    genres: "Pop, Folk, Jazz",
+    releaseDate: "24 March, 2023",
+    producers: "Leo Abrahams",
     trackList: [
       {
         id: 1,

@@ -1,19 +1,30 @@
 import React from "react";
 import "./MusicAlbums.css";
-import { albums } from "./MusicAlbumTrackList";
-import MusicNews_SinglePlayer from "../News/MusicNews_SinglePlayer";
-const MusicAlbumsTracks = () => {
+import { useLocation } from "react-router-dom";
+
+const MusicAlbumsTracks = ({ item, children }) => {
+  const location = useLocation();
+  console.log(location);
+
+  const getClassName = () => {
+    if (location.pathname === "/music/home") {
+      return "musicHome_featured_album_player_container";
+    } else {
+      return "musicHome_featured_album_player_list";
+    }
+    return "";
+  };
   return (
     <div className="musicHome_album_col musicHome_featured_album_col">
-      <div className="musicHome_featured_album_player_container">
+      <div className={getClassName()}>
         <div className="musicHome_featured_album_player">
           <div className="musicHome_featured_title_bar">
             <div className="musicHome_featured_album_title_container">
               <div className="musicHome_featured_album_artist">
-                {albums[0].albumName}
+                {item.albumName}
               </div>
               <div className="musicHome_featured_album_title">
-                {albums[0].albumYear}
+                {item.albumYear}
               </div>
             </div>
             <div className="musicHome_featured_album_link ml-auto">
@@ -25,7 +36,7 @@ const MusicAlbumsTracks = () => {
             <div className="musicAlbums_jp_type_playlist">
               <div className="musicAlbums_jp_playlist">
                 <ul>
-                  {albums[0].trackList.map((el, i) => {
+                  {item.trackList.map((el, i) => {
                     return (
                       <li key={i} className="musicAlbums_jp_playlist_current">
                         <div>
@@ -41,13 +52,7 @@ const MusicAlbumsTracks = () => {
                   })}
                 </ul>
               </div>
-
-              <MusicNews_SinglePlayer
-                song="http://goldfirestudios.com/proj/howlerjs/sound.ogg"
-                playerBackground="#fff"
-                songTitle="Song Title"
-                playerColor="#000"
-              />
+              {children}
             </div>
           </div>
         </div>

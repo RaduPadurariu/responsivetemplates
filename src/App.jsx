@@ -31,6 +31,7 @@ import MusicNewsPage from "./components/Templates/Music/components/Pages/MusicNe
 import MusicContactPage from "./components/Templates/Music/components/Pages/MusicContactPage";
 import Music from "./components/Templates/Music/Music";
 import MusicApp from "./components/Templates/Music/MusicApp";
+import MusicSingleAlbum from "./components/Templates/Music/components/Albums/SingleAlbum/MusicSingleAlbum";
 
 function App() {
   return (
@@ -89,6 +90,7 @@ function App() {
           <Route path="/music" element={<MusicApp />}>
             <Route path="home" element={<MusicHomePage />}></Route>
             <Route path="albums" element={<MusicAlbumsPage />}></Route>
+            <Route path="albumPage/:id" element={<MusicSingleAlbum />}></Route>
             <Route path="news" element={<MusicNewsPage />}></Route>
             <Route path="contact" element={<MusicContactPage />}></Route>
             <Route path="/music/*" element={<Navigate to="/music/home" />} />
