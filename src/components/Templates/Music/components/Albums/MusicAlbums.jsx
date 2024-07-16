@@ -9,25 +9,25 @@ const MusicAlbums = () => {
     {
       id: 1,
       milestone: "Albums Sold",
-      counts: "298",
+      counts: "11",
       milestone_src: "/images/Music/icon_1.svg",
     },
     {
       id: 2,
       milestone: "Live Concerts",
-      counts: "183",
+      counts: "487",
       milestone_src: "/images/Music/icon_2.svg",
     },
     {
       id: 3,
       milestone: "Awards Won",
-      counts: "37",
+      counts: "5",
       milestone_src: "/images/Music/icon_3.svg",
     },
     {
       id: 4,
-      milestone: "New Singles",
-      counts: "14",
+      milestone: "Platinium Certificates",
+      counts: "56",
       milestone_src: "/images/Music/icon_4.svg",
     },
   ];
@@ -46,7 +46,7 @@ const MusicAlbums = () => {
     if (milestoneEnterFlag) {
       milestonesList.forEach((milestoneItem, index) => {
         const maxValue = parseInt(milestoneItem.counts);
-        const step = maxValue / (3000 / 100);
+        const step = maxValue / (2000 / 100);
         const timer = setInterval(() => {
           setMilestones((prevMilestones) => {
             const newMilestones = [...prevMilestones];
@@ -107,13 +107,13 @@ const MusicAlbums = () => {
                         <img src={el.milestone_src} alt="no-milestone-img" />
                       </div>
                       <div className="musicAlbums_milestone_content">
-                        <div
-                          className="musicAlbum_milestone_counter"
-                          data-end-value="298"
-                          data-sign-after="k"
-                        >
+                        <div className="musicAlbum_milestone_counter">
                           {Math.round(milestones[i])}
-                          {el.id === 1 ? "k" : ""}
+                          {el.id === 1 ? (
+                            <span style={{ fontSize: "22px" }}>millions</span>
+                          ) : (
+                            ""
+                          )}
                         </div>
                         <div className="musicAlbum_milestone_text">
                           {el.milestone}
