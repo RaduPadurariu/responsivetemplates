@@ -1,5 +1,5 @@
 import React from "react";
-import "./MusicSingleAlbum.css";
+import "./MusicSingle.css";
 const MusicSingleAlbumEmpty = () => {
   return (
     <>

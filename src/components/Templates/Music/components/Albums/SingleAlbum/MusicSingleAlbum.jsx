@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./MusicSingleAlbum.css";
+import "./MusicSingle.css";
 import { musicAlbums } from "../MusicAlbumTrackList";
 import MusicHeadTitle from "../../../common/HeadTitle/MusicHeadTitle";
 import { useParams } from "react-router-dom";
