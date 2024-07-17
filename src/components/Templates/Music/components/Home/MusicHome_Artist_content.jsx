@@ -32,10 +32,10 @@ const MusicHome_Artist_content = () => {
         <img src="/images/Music/sig.png" alt="no-sig" />
       </div>
       <MusicNews_SinglePlayer
-        song="http://goldfirestudios.com/proj/howlerjs/sound.ogg"
+        song="/files/Music/Katie-Melua_Nine-Million-Bicycles.mp4"
         playerBackground="#fff"
         playerColor="#000"
-        songTitle="Song Title"
+        songTitle="Nine Million Bicycles"
       />
     </div>
   );

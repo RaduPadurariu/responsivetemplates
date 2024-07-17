@@ -114,9 +114,9 @@ const MusicHome = () => {
                 left={"-58px"}
               >
                 <MusicNews_SinglePlayer
-                  song="http://goldfirestudios.com/proj/howlerjs/sound.ogg"
+                  song="/files/Music/Katie-Melua_Nine-Million-Bicycles.mp4"
                   playerBackground="#fff"
-                  songTitle="Song Title"
+                  songTitle="Nine Million Bicycles"
                   playerColor="#000"
                 />
               </MusicAlbumsTracks>

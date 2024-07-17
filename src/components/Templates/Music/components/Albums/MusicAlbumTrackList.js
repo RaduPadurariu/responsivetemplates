@@ -1,42 +1,42 @@
 export const musicAlbums = [
   {
     id: 0,
-    albumName: "Best song collection",
-    albumYear: "2020",
+    albumName: "Most Popular Songs",
+    albumYear: "2024",
     cover: "/images/Music/disc_1.jpg",
     genres: "",
     releaseDate: "",
     producers: "",
     trackList: [
       {
-        songName: "Call of the Search",
-        songDuration: "2:23",
-        songLyrics: "Tralalaal aslasadsadk sadjsadj",
+        songName: "Nine Million Bicycles",
+        songDuration: "3:15",
+        songLyrics: "",
       },
       {
-        songName: "Call of the Search",
-        songDuration: "2:23",
-        songLyrics: "Tralalaal aslasadsadk sadjsadj",
+        songName: "The Closest Thing to Crazy",
+        songDuration: "4:12",
+        songLyrics: "",
       },
       {
-        songName: "Call of the Search",
-        songDuration: "2:23",
-        songLyrics: "Tralalaal aslasadsadk sadjsadj",
+        songName: "If You Were a Sailboat",
+        songDuration: "4:02",
+        songLyrics: "",
       },
       {
-        songName: "Call of the Search",
-        songDuration: "2:23",
-        songLyrics: "Tralalaal aslasadsadk sadjsadj",
+        songName: "What a Wonderful World",
+        songDuration: "4:13",
+        songLyrics: "",
       },
       {
-        songName: "Call of the Search",
-        songDuration: "2:23",
-        songLyrics: "Tralalaal aslasadsadk sadjsadj",
+        songName: "Spider's Web",
+        songDuration: "3:58",
+        songLyrics: "",
       },
       {
-        songName: "Call Off the Search",
-        songDuration: "2:23",
-        songLyrics: "Tralalaal aslasadsadk sadjsadj",
+        songName: "Just Like Heaven",
+        songDuration: "3:35",
+        songLyrics: "",
       },
     ],
   },
@@ -52,7 +52,7 @@ export const musicAlbums = [
       {
         id: 1,
         songName: "Call of the Search",
-        songDuration: "2:23",
+        songDuration: "3:24",
         songLyrics: `<pre>
         [Verse 1]
           I won't spend my life, waiting for an angel to descend
@@ -84,7 +84,7 @@ export const musicAlbums = [
       {
         id: 2,
         songName: "Crawling Up a Hill",
-        songDuration: "2:23",
+        songDuration: "3:25",
         songLyrics: `<pre>
         [Verse 1]
         Every morning about half past eight
@@ -119,7 +119,7 @@ export const musicAlbums = [
       {
         id: 3,
         songName: "The Closest Thing to Crazy",
-        songDuration: "",
+        songDuration: "4:12",
         songLyrics: `<pre>
         [Verse 1]
 How can I think I'm standing strong
@@ -153,7 +153,7 @@ How can anyone feel so blue?
       {
         id: 4,
         songName: "My Aphrodisiac Is You",
-        songDuration: "",
+        songDuration: "3:34",
         songLyrics: `<pre>
         [Verse 1]
 Some people say
@@ -188,7 +188,7 @@ Because my aphrodisiac is you
       {
         id: 5,
         songName: "Learnin’ the Blues",
-        songDuration: "",
+        songDuration: "3:23",
         songLyrics: `<pre>
         [Verse 1]
 The tables are empty
@@ -224,7 +224,7 @@ The blues will haunt your memory
       {
         id: 6,
         songName: "Blame It on the Moon",
-        songDuration: "",
+        songDuration: "3:47",
         songLyrics: `<pre>
         [Verse 1]
 Gonna blame it on the moon
@@ -256,7 +256,7 @@ So I'll blame it on the moon
       {
         id: 7,
         songName: "Belfast (Penguins and Cats)",
-        songDuration: "",
+        songDuration: "3:21",
         songLyrics: `<pre>
         [Verse 1]
 I've got a ticket to the fast city
@@ -288,7 +288,7 @@ Aaaah, aaaah
       {
         id: 8,
         songName: "I Think It’s Going to Rain Today",
-        songDuration: "",
+        songDuration: "2:30",
         songLyrics: `<pre>
         [Verse 1]
 Broken windows and empty hallways
@@ -320,7 +320,7 @@ To help the needy and show them the way
       {
         id: 9,
         songName: "Mockingbird Song",
-        songDuration: "",
+        songDuration: "3:06",
         songLyrics: `<pre>
         [Verse 1]
 Now hush, now honey, here's the word
@@ -356,7 +356,7 @@ Whoa
       {
         id: 10,
         songName: "Tiger in the Night",
-        songDuration: "",
+        songDuration: "3:07",
         songLyrics: `<pre>
         [Verse 1]
 You are the tiger burning bright
@@ -390,7 +390,7 @@ You are the tiger burning bright
       {
         id: 11,
         songName: "Faraway Voice",
-        songDuration: "",
+        songDuration: "3:13",
         songLyrics: `<pre>
         [Verse 1]
 Faraway voice
@@ -426,7 +426,7 @@ Over here with me?
       {
         id: 12,
         songName: "Lilac Wine",
-        songDuration: "",
+        songDuration: "4:11",
         songLyrics: `<pre>
         [Verse 1]
 I lost myself on a cool damp night
@@ -471,7 +471,7 @@ Isn't that he, or am I going crazy, dear?
       {
         id: 1,
         songName: "Shy Boy",
-        songDuration: "",
+        songDuration: "3:22",
         songLyrics: `<pre>
         [Verse 1]
           I'm sittin' in the window of a street cafe
@@ -508,7 +508,7 @@ All you gotta do is ask me to
       {
         id: 2,
         songName: "Nine Million Bicycles",
-        songDuration: "",
+        songDuration: "3:15",
         songLyrics: `<pre>
         [Verse 1]
         [Chorus]
@@ -541,7 +541,7 @@ Of the love that you give me every night
       {
         id: 3,
         songName: "Piece by Piece",
-        songDuration: "",
+        songDuration: "3:24",
         songLyrics: `<pre>
         First of all must go
 Your scent upon my pillow
@@ -581,7 +581,7 @@ One at a time, one at a time
       {
         id: 4,
         songName: "Halfway Up the Hindu Kush",
-        songDuration: "",
+        songDuration: "3:06",
         songLyrics: `<pre>
         Ooh, the first time that I saw you
 I said, "For goodness sake, that man's got the power
@@ -614,7 +614,7 @@ From halfway up the Hindu Kush
       {
         id: 5,
         songName: "Blues in the Night",
-        songDuration: "",
+        songDuration: "4:12",
         songLyrics: `<pre>
         My mamma done told me
 When I was in pigtails
@@ -655,7 +655,7 @@ The blues in the night"
       {
         id: 6,
         songName: "Spider’s Web",
-        songDuration: "",
+        songDuration: "3:58",
         songLyrics: `<pre>
         If a black man is racist, is it okay
 If it's the white man's racism that made him that way
@@ -693,7 +693,7 @@ But they sound like a million colors in your mind
       {
         id: 7,
         songName: "Blue Shoes",
-        songDuration: "",
+        songDuration: "4:39",
         songLyrics: `<pre>
         These blue shoes seem to suit me well
 When I feel like hell
@@ -728,7 +728,7 @@ I've been wearing my new shoes
       {
         id: 8,
         songName: "On the Road Again",
-        songDuration: "",
+        songDuration: "4:38",
         songLyrics: `<pre>
         Well, I'm so tired of crying, but I'm out on the road again
 I'm on the road again
@@ -760,7 +760,7 @@ Don't you cry no more
       {
         id: 9,
         songName: "Thank You, Stars",
-        songDuration: "",
+        songDuration: "3:39",
         songLyrics: `<pre>
         Some call it faith, some call it love
 Some call it guidance from above
@@ -798,7 +798,7 @@ So thank you, stars
       {
         id: 10,
         songName: "Just Like Heaven",
-        songDuration: "",
+        songDuration: "3:35",
         songLyrics: `<pre>
         "Show me how you do that trick?
 The one that makes me scream", he said
@@ -837,7 +837,7 @@ And drowned him deep inside of me
       {
         id: 11,
         songName: "I Cried for You",
-        songDuration: "",
+        songDuration: "3:38",
         songLyrics: `<pre>
         [Verse 1]
 You're beautiful so silently
@@ -871,7 +871,7 @@ To me
       {
         id: 12,
         songName: "I Do Believe in Love",
-        songDuration: "",
+        songDuration: "3:00",
         songLyrics: `<pre>
         They say we never landed on the moon
 There's no wind there, they assume
@@ -914,7 +914,7 @@ But loving you
       {
         id: 1,
         songName: "Mary Pickford",
-        songDuration: "",
+        songDuration: "3:12",
         songLyrics: `<pre>
         Mary Pickford used to eat roses
 Thought that they'd make her beautiful and they did
@@ -947,7 +947,7 @@ When these artists became united
       {
         id: 2,
         songName: "It’s All in My Head",
-        songDuration: "2:23",
+        songDuration: "4:03",
         songLyrics: `<pre>
         Every night we fall into bed
 But it’s all in my head
@@ -982,7 +982,7 @@ Just me and my hopeless heart
       {
         id: 3,
         songName: "If the Lights Go Out",
-        songDuration: "",
+        songDuration: "3:14",
         songLyrics: `<pre>
         They say the world must end somehow
 They say the end's not far from now
@@ -1017,7 +1017,7 @@ I'll go down with you
       {
         id: 4,
         songName: "What I Miss About You",
-        songDuration: "",
+        songDuration: "3:48",
         songLyrics: `<pre>
         Missing the train every morning at 8:52
 Sipping coffee from the same cup as you
@@ -1053,7 +1053,7 @@ That's what I don't miss about you
       {
         id: 5,
         songName: "Spellbound",
-        songDuration: "",
+        songDuration: "3:00",
         songLyrics: `<pre>
         I heard that lately
 You've gone through a mysterious change
@@ -1086,7 +1086,7 @@ I don't know how to get down
       {
         id: 6,
         songName: "What It Says on the Tin",
-        songDuration: "",
+        songDuration: "3:44",
         songLyrics: `<pre>
         How can I say it? Where do I begin
 Everything you are is just what it says on the tin
@@ -1118,7 +1118,7 @@ Just what it says on the tin
       {
         id: 7,
         songName: "Scary Films",
-        songDuration: "",
+        songDuration: "4:02",
         songLyrics: `<pre>
         Scary films don't scare me now
 That you're around
@@ -1151,7 +1151,7 @@ Hey baby, thanks for clearing my dreams
       {
         id: 8,
         songName: "Perfect Circle",
-        songDuration: "",
+        songDuration: "4:01",
         songLyrics: `<pre>
         A mask is easily placed
 On a betrayed and broken face
@@ -1188,7 +1188,7 @@ The more you scratch the more you itch
       {
         id: 9,
         songName: "Ghost Town",
-        songDuration: "",
+        songDuration: "3:31",
         songLyrics: `<pre>
         The thing that makes me feel the most down
 Is the feeling that I'm living in a ghost town
@@ -1221,7 +1221,7 @@ An old ghost town
       {
         id: 10,
         songName: "If You Were a Sailboat",
-        songDuration: "",
+        songDuration: "4:02",
         songLyrics: `<pre>
         If you're a cowboy I would trail you
 If you're a piece of wood I'd nail you to the floor
@@ -1254,7 +1254,7 @@ If I was a book I know you'd read me every night
       {
         id: 11,
         songName: "Dirty Dice",
-        songDuration: "",
+        songDuration: "3:39",
         songLyrics: `<pre>
         Got an angel, on one shoulder and a devil on the other
 And it's his good advice that I take
@@ -1286,7 +1286,7 @@ But I never cheat at cards
       {
         id: 12,
         songName: "In My Secret Life",
-        songDuration: "",
+        songDuration: "4:23",
         songLyrics: `<pre>
         I saw you this morning
 You were moving so fast
@@ -1329,7 +1329,7 @@ Of my secret life
       {
         id: 1,
         songName: "I’d Love to Kill You",
-        songDuration: "",
+        songDuration: "2:57",
         songLyrics: `<pre>
         [Verse 1]
 I'd love to kill you with a kiss
@@ -1364,7 +1364,7 @@ Ooh
       {
         id: 2,
         songName: "The Flood",
-        songDuration: "",
+        songDuration: "4:04",
         songLyrics: `<pre>
         [Verse 1]
 Broken people get recycled
@@ -1411,7 +1411,7 @@ That free you from your doubts
       {
         id: 3,
         songName: "A Happy Place",
-        songDuration: "",
+        songDuration: "3:27",
         songLyrics: `<pre>
         [Intro]
 I'm going to find a happy
@@ -1452,7 +1452,7 @@ Rising like a giant tower
       {
         id: 4,
         songName: "A Moment of Madness",
-        songDuration: "",
+        songDuration: "3:46",
         songLyrics: `<pre>
         [Verse 1]
 A moment of madness
@@ -1491,7 +1491,7 @@ Resistance is thin
       {
         id: 5,
         songName: "Red Balloons",
-        songDuration: "",
+        songDuration: "3:00",
         songLyrics: `<pre>
         [Verse 1]
 I put my heart in a red balloon
@@ -1526,7 +1526,7 @@ Broken hearts are floatin' by a chance
       {
         id: 6,
         songName: "Tiny Alien",
-        songDuration: "",
+        songDuration: "4:35",
         songLyrics: `<pre>
         [Verse 1]
 Who are you, my tiny alien?
@@ -1560,7 +1560,7 @@ And never feel any pain?
       {
         id: 7,
         songName: "No Fear of Heights",
-        songDuration: "",
+        songDuration: "2:53",
         songLyrics: `<pre>
         [Verse 1]
 I never walked near the edge
@@ -1592,7 +1592,7 @@ When you give me love
       {
         id: 8,
         songName: "The One I Love Is Gone",
-        songDuration: "",
+        songDuration: "3:37",
         songLyrics: `<pre>
         [Verse 1]
 I don't know, I don't know
@@ -1627,7 +1627,7 @@ For the one I love is gone
       {
         id: 9,
         songName: "Plague of Love",
-        songDuration: "",
+        songDuration: "3:28",
         songLyrics: `<pre>
         [Verse 1]
 My father is a doctor, he never told me
@@ -1662,7 +1662,7 @@ Is it me or is the medicine working?
       {
         id: 10,
         songName: "God on Drums, Devil on the Bass",
-        songDuration: "",
+        songDuration: "3:41",
         songLyrics: `<pre>
         [Chorus]
 Got God on the drums and the Devil on the bass
@@ -1696,7 +1696,7 @@ But it never began and it will never end
       {
         id: 11,
         songName: "Twisted",
-        songDuration: "",
+        songDuration: "3:39",
         songLyrics: `<pre>
         [Intro / Chorus]
 Ooh, baby, I'm twisted
@@ -1732,7 +1732,7 @@ We're near my home
       {
         id: 12,
         songName: "The House",
-        songDuration: "",
+        songDuration: "4:58",
         songLyrics: `<pre>
         [Intro]
 
@@ -1779,7 +1779,7 @@ You found me unaware
       {
         id: 1,
         songName: "Gold in Them Hills",
-        songDuration: "",
+        songDuration: "3:31",
         songLyrics: `<pre>
         I know it doesn't seem that way
 But maybe it's the perfect day
@@ -1816,7 +1816,7 @@ A word or two, my friend
       {
         id: 2,
         songName: "Better Than a Dream",
-        songDuration: "",
+        songDuration: "3:10",
         songLyrics: `<pre>
 I used to dream myself to somewhere else each night
 I dreamed in colour
@@ -1848,7 +1848,7 @@ And better than a dream
       {
         id: 3,
         songName: "The Bit That I Don’t Get",
-        songDuration: "",
+        songDuration: "3:12",
         songLyrics: `<pre>
         Chorus:
 The bit that I don't get
@@ -1883,7 +1883,7 @@ Forever now means never!
       {
         id: 4,
         songName: "Moonshine",
-        songDuration: "",
+        songDuration: "2:41",
         songLyrics: `<pre>
         Well my eyes are closed, but my heart's on fire
 Because the clock is approaching the midnight hour
@@ -1915,7 +1915,7 @@ Moonshine, moonshine, moonshine, moonshine moon
       {
         id: 5,
         songName: "Forgetting All My Troubles",
-        songDuration: "",
+        songDuration: "3:22",
         songLyrics: `<pre>
         There's a secret, the golden flower knows
 When you're falling in love
@@ -1943,7 +1943,7 @@ I'm forgetting all my troubles
       {
         id: 6,
         songName: "All Over the World",
-        songDuration: "",
+        songDuration: "2:56",
         songLyrics: `<pre>
         All over the world
 People must meet and part
@@ -1975,7 +1975,7 @@ I´m wanting you to know
       {
         id: 7,
         songName: "Nobody Knows You When You’re Down and Out",
-        songDuration: "",
+        songDuration: "4:33",
         songLyrics: `<pre>
         Once I lived the life of a millionaire
 Spending all my money, I didn´t care
@@ -2009,7 +2009,7 @@ Nobody knows you when you're down and out
       {
         id: 8,
         songName: "The Cry of the Lone Wolf",
-        songDuration: "",
+        songDuration: "3:59",
         songLyrics: `<pre>
         Everybody told me to walk away
 Though you made me feel good
@@ -2038,7 +2038,7 @@ To the cry of the lone wolf
       {
         id: 9,
         songName: "Heartstrings",
-        songDuration: "",
+        songDuration: "2:53",
         songLyrics: `<pre>
         [Verse 1]
 Is it a game, or is it a show?
@@ -2071,7 +2071,7 @@ And asked my daddy for my hand
       {
         id: 10,
         songName: "The Walls of the World",
-        songDuration: "",
+        songDuration: "3:25",
         songLyrics: `<pre>
         The sun is only shining like it always does
 But I never noticed it in the sky before
@@ -2100,7 +2100,7 @@ I love you
       {
         id: 11,
         songName: "Secret Symphony",
-        songDuration: "",
+        songDuration: "3:51",
         songLyrics: `<pre>
         You’re like a secret symphony that was created just for me
 Some knowing mind some guiding hand
@@ -2136,7 +2136,7 @@ Must have designed, must have planned it
       {
         id: 1,
         songName: "Never Felt Less Like Dancing",
-        songDuration: "",
+        songDuration: "4:12",
         songLyrics: `<pre>
         Never felt less like dancing
 Never felt more like hiding myself away
@@ -2171,7 +2171,7 @@ You were falling for somebody else
       {
         id: 2,
         songName: "Sailing Ships from Heaven",
-        songDuration: "",
+        songDuration: "5:01",
         songLyrics: `<pre>
        And she played the harmonium down by the sea
 Singing “God save the USA and God save me”
@@ -2207,7 +2207,7 @@ That’s my love
       {
         id: 3,
         songName: "Love Is a Silent Thief",
-        songDuration: "",
+        songDuration: "3:00",
         songLyrics: `<pre>
         Love is a deep wound
 Love is a sharp knife
@@ -2243,7 +2243,7 @@ Love is a silent thief
       {
         id: 4,
         songName: "Shiver and Shake",
-        songDuration: "",
+        songDuration: "2:59",
         songLyrics: `<pre>
         This party’s done, everybody’s going home
 Just you and I standing here all alone
@@ -2277,7 +2277,7 @@ Now I wanna make you shiver and shake
       {
         id: 5,
         songName: "The Love I’m Frightened Of",
-        songDuration: "",
+        songDuration: "3:35",
         songLyrics: `<pre>
         If I wait
 Don’t move a muscle
@@ -2311,7 +2311,7 @@ To the warmth you give
       {
         id: 6,
         songName: "Where Does the Ocean Go?",
-        songDuration: "",
+        songDuration: "3:37",
         songLyrics: `<pre>
         Through a cloudy haze on the sun lit sea
 We waved them away from the southern key
@@ -2344,7 +2344,7 @@ My lost man in the moon du sauvage
       {
         id: 7,
         songName: "Idiot School",
-        songDuration: "",
+        songDuration: "3:35",
         songLyrics: `<pre>
         If there was an idiot school
 I would be the top of the class
@@ -2387,7 +2387,7 @@ I must’ve been to idiot school
       {
         id: 8,
         songName: "Mad, Mad Men",
-        songDuration: "",
+        songDuration: "3:21",
         songLyrics: `<pre>
         Mad, mad men
 Wild, wild women
@@ -2421,7 +2421,7 @@ She went up in flames and down in history
       {
         id: 9,
         songName: "Chase Me",
-        songDuration: "",
+        songDuration: "3:41",
         songLyrics: `<pre>
         If you chase me
 I’ll be a firefly
@@ -2456,7 +2456,7 @@ And you’ll believe I’m too good to be true
       {
         id: 10,
         songName: "I Never Fall",
-        songDuration: "",
+        songDuration: "2:46",
         songLyrics: `<pre>
         When you fall in love t
 Too careless and too fast
@@ -2492,7 +2492,7 @@ I never fall, I always jump
       {
         id: 11,
         songName: "I Will Be There",
-        songDuration: "",
+        songDuration: "4:18",
         songLyrics: `<pre>
         [Verse 1]
 She is like the lady down the road
@@ -2539,7 +2539,7 @@ Remember I will be there
       {
         id: 1,
         songName: "The Little Swallow",
-        songDuration: "",
+        songDuration: "1:46",
         songLyrics: `<pre>
         Shchedryk shchedryk
 Shchedrivochka
@@ -2584,7 +2584,7 @@ Pryletila lastivochka
       {
         id: 2,
         songName: "River",
-        songDuration: "",
+        songDuration: "3:25",
         songLyrics: `<pre>
         It's coming on Christmas
 They're cutting down trees
@@ -2619,7 +2619,7 @@ I wish I had a river I could skate away on
       {
         id: 3,
         songName: "Perfect World",
-        songDuration: "",
+        songDuration: "4:24",
         songLyrics: `<pre>
         You're precious
 I can't stand seeing you cry
@@ -2648,7 +2648,7 @@ You should have a perfect world
       {
         id: 4,
         songName: "Cradle Song",
-        songDuration: "",
+        songDuration: "1:43",
         songLyrics: `<pre>
         Colo-n sus pe-un deal frumos
 Unde-I cerul luminos
@@ -2684,7 +2684,7 @@ Tot din lemn de paltinel
       {
         id: 5,
         songName: "A Time to Buy",
-        songDuration: "",
+        songDuration: "3:31",
         songLyrics: `<pre>
         [Chorus]
 It's a time to buy, a time for shopping
@@ -2718,7 +2718,7 @@ Have it all"
       {
         id: 6,
         songName: "Plane Song",
-        songDuration: "",
+        songDuration: "4:07",
         songLyrics: `<pre>
         [Verse 1]
 The seats were all dusty, the side doors were open
@@ -2750,7 +2750,7 @@ Hey, why the sad face? Can't you feel this cabin soar?
       {
         id: 7,
         songName: "If You Are So Beautiful (Tu ase turpa ikavi)",
-        songDuration: "",
+        songDuration: "3:43",
         songLyrics: `<pre>
         Tu ase turpa ikavi
 Rad ver gamchnevdi iao
@@ -2770,7 +2770,7 @@ Kaltazed damartsiao
       {
         id: 8,
         songName: "Dreams on Fire",
-        songDuration: "",
+        songDuration: "4:05",
         songLyrics: `<pre>
         [Verse 1]
 Busy man, where am I on your list?
@@ -2802,7 +2802,7 @@ Should I be afraid?
       {
         id: 9,
         songName: "All Night Vigil - Nunc Dimittis",
-        songDuration: "",
+        songDuration: "4:15",
         songLyrics: `<pre>
         Ны́не отпуща́еши раба́ Твоего́, Влады́ко
 По глаго́лу Твоему́, съ ми́ромъ
@@ -2815,7 +2815,7 @@ Should I be afraid?
       {
         id: 10,
         songName: "O Holy Night",
-        songDuration: "",
+        songDuration: "4:23",
         songLyrics: `<pre>
         O holy night!
 The stars are brightly shining
@@ -2861,7 +2861,7 @@ Oh night divine
       {
         id: 1,
         songName: "A Love Like That",
-        songDuration: "",
+        songDuration: "3:07",
         songLyrics: `<pre>
        [Verse 1]
 I'm taken in by what you've told me
@@ -2893,7 +2893,7 @@ Do-do-do-do-do-do-do
       {
         id: 2,
         songName: "English Manner",
-        songDuration: "",
+        songDuration: "4:27",
         songLyrics: `<pre>
         We would walk out on a golden clifftop
 The wind rolled up from the sea below
@@ -2925,7 +2925,7 @@ He loves me
       {
         id: 3,
         songName: "Leaving the Mountain",
-        songDuration: "",
+        songDuration: "3:36",
         songLyrics: `<pre>
         [Verse 1]
 We were leaving the mountain, it needed the day
@@ -2965,7 +2965,7 @@ But you can't understand
       {
         id: 4,
         songName: "Joy",
-        songDuration: "",
+        songDuration: "3:35",
         songLyrics: `<pre>
         You're like moonlight on the river
 And I'm looking for that silver
@@ -2997,7 +2997,7 @@ And I haven't felt the sun for days
       {
         id: 5,
         songName: "Voices in the Night",
-        songDuration: "",
+        songDuration: "4:55",
         songLyrics: `<pre>
         Getting dark at 4 pm
 It's feeling like the dead of night
@@ -3030,7 +3030,7 @@ Hey did we really get it so wrong
       {
         id: 6,
         songName: "Maybe I Dreamt It",
-        songDuration: "",
+        songDuration: "3:19",
         songLyrics: `<pre>
         Took my heart and lifted it
 To the stars, to the sky
@@ -3066,7 +3066,7 @@ And moved us on
       {
         id: 7,
         songName: "Heading Home",
-        songDuration: "",
+        songDuration: "3:46",
         songLyrics: `<pre>
         When I'm there I'll call your name
 A good long look at how you've changed
@@ -3102,7 +3102,7 @@ I'm heading home
       {
         id: 8,
         songName: "Your Longing Is Gone",
-        songDuration: "",
+        songDuration: "3:25",
         songLyrics: `<pre>
         [Verse 1]
 It used to really feel like we were high, flying
@@ -3138,7 +3138,7 @@ I just got used to it being all mine
       {
         id: 9,
         songName: "Airtime",
-        songDuration: "",
+        songDuration: "3:26",
         songLyrics: `<pre>
         [Verse 1]
 I think we've given love too much airtime
@@ -3170,7 +3170,7 @@ When you finally sit
       {
         id: 10,
         songName: "Remind Me to Forget",
-        songDuration: "",
+        songDuration: "3:36",
         songLyrics: `<pre>
         Might be going down in flames
 The Ashes, the Silver Birches rain
@@ -3215,7 +3215,7 @@ The leaves, they remind me to forget
       {
         id: 1,
         songName: "Golden Record",
-        songDuration: "",
+        songDuration: "3:33",
         songLyrics: `<pre>
         [Verse 1]
 All your friends are gonna leave you
@@ -3255,7 +3255,7 @@ Maybe it's heaven and you just haven't been here before
       {
         id: 2,
         songName: "Quiet Moves",
-        songDuration: "",
+        songDuration: "3:58",
         songLyrics: `<pre>
         [Verse 1]
 Rhythm pounds and ascending cords are all I hear
@@ -3291,7 +3291,7 @@ Growing up in England made you who you are
       {
         id: 3,
         songName: "14 Windows",
-        songDuration: "",
+        songDuration: "3:45",
         songLyrics: `<pre>
         [Verse 1]
 You'd say what's on your mind needs to come through
@@ -3324,7 +3324,7 @@ It's good to let a little flow unwind you
       {
         id: 4,
         songName: "Lie In the Heat",
-        songDuration: "",
+        songDuration: "2:48",
         songLyrics: `<pre>
         [Intro]
 Ooh, ooh, ooh
@@ -3356,7 +3356,7 @@ Giving us a beautiful day
       {
         id: 5,
         songName: "Darling Star",
-        songDuration: "",
+        songDuration: "3:11",
         songLyrics: `<pre>
         [Verse 1]
 When I look into your eyes, there's nothing you need to say
@@ -3388,7 +3388,7 @@ You should take me for life
       {
         id: 6,
         songName: "Reefs",
-        songDuration: "",
+        songDuration: "4:36",
         songLyrics: `<pre>
         [Verse 1]
 Mary's written on the forum
@@ -3424,7 +3424,7 @@ And by the grand and cloudy tales, they weave
       {
         id: 7,
         songName: "First Date",
-        songDuration: "",
+        songDuration: "3:35",
         songLyrics: `<pre>
         [Verse 1]
 He said, "Everyone is getting married"
@@ -3457,7 +3457,7 @@ The tempos and the songs and all that overthinking?
       {
         id: 8,
         songName: "Pick Me Up",
-        songDuration: "",
+        songDuration: "3:39",
         songLyrics: `<pre>
         [Verse 1]
 I had a day, wasn't inspired
@@ -3489,7 +3489,7 @@ We turn our phones off for the day
       {
         id: 9,
         songName: "Those Sweet Days",
-        songDuration: "",
+        songDuration: "3:25",
         songLyrics: `<pre>
         [Verse 1]
 Sometimes I need to sit quietly, all on my own
@@ -3521,7 +3521,7 @@ Oh, it's thosе sweet days I live for
       {
         id: 10,
         songName: "Love & Money",
-        songDuration: "",
+        songDuration: "3:20",
         songLyrics: `<pre>
         [Verse 1]
 You didn't have to ask me if I was free today

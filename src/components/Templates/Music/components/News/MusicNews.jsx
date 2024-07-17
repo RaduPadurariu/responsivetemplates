@@ -21,9 +21,9 @@ const MusicNews = () => {
               <Music_BlogPost {...musicBlog_data[0]} />
               <Music_BlogPost {...musicBlog_data[1]}>
                 <MusicNews_SinglePlayer
-                  song="http://goldfirestudios.com/proj/howlerjs/sound.ogg"
+                  song="/files/Music/Katie-Melua_Nine-Million-Bicycles.mp4"
                   playerBackground="#2b2b2b"
-                  songTitle="Song Title"
+                  songTitle="Nine Million Bicycles"
                   playerColor="#fff"
                 />
               </Music_BlogPost>
