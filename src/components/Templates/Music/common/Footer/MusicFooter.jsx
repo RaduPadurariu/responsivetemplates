@@ -19,6 +19,8 @@ const MusicFooter = () => {
               className="musicFooter_newsletter_input"
               placeholder="Your E-mail"
               required="required"
+              name="footer_email"
+              id="footer_email"
             />
             <button className="musicFooter_newsletter_button">Subscribe</button>
           </form>

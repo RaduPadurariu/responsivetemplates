@@ -24,23 +24,29 @@ const MusicContact = () => {
                 className="musicContact_input"
                 placeholder="Name"
                 required="required"
+                name="contact_name"
+                id="contact_name"
               />
               <input
                 type="email"
                 className="musicContact_input"
                 placeholder="E-mail"
                 required="required"
+                name="contact_email"
+                id="contact_email"
               />
               <input
                 type="text"
                 className="musicContact_input"
                 placeholder="Subject"
                 required="required"
+                name="contact_subject"
+                id="contact_subject"
               />
               <textarea
                 style={{ height: "161px", width: "100%" }}
-                name=""
-                id=""
+                name="contact_textarea"
+                id="contact_textarea"
                 className="musicContact_input musicContact_textarea"
                 placeholder="Message"
                 required="required"

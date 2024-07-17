@@ -4,7 +4,6 @@ import { useLocation } from "react-router-dom";
 
 const MusicAlbumsTracks = ({ item, children }) => {
   const location = useLocation();
-  console.log(location);
 
   const getClassName = () => {
     if (location.pathname === "/music/home") {
