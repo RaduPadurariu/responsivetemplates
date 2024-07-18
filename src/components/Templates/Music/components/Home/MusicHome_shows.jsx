@@ -3,34 +3,34 @@ import "./MusicHome.css";
 
 const shows = [
   {
-    date: "18/07",
-    festival: "Electric Castle Festival",
-    location: "Cluj, Romania",
+    date: "22/11",
+    festival: "Metropol Theater Bremen",
+    location: "Bremen, Germany",
   },
   {
-    date: "20/07",
-    festival: "Ultra Music Festival",
-    location: "Miami, USA",
+    date: "28/11",
+    festival: "Congress Center Hamburg",
+    location: "Hamburg, Germany",
   },
   {
-    date: "03/08",
-    festival: "Untold Festival",
-    location: "Cluj, Romania",
-  },
-  {
-    date: "11/08",
-    festival: "Electric Castle Festival",
-    location: "Cluj, Romania",
-  },
-  {
-    date: "18/08",
-    festival: "Electric Castle Festival",
-    location: "Cluj, Romania",
+    date: "29/08",
+    festival: "Roundhouse",
+    location: "London, England",
   },
   {
     date: "25/08",
-    festival: "Electric Castle Festival",
-    location: "Cluj, Romania",
+    festival: "Borggården",
+    location: "Trondheim, Norway",
+  },
+  {
+    date: "23/08",
+    festival: "Botanical Gardens",
+    location: "Girona, Spain",
+  },
+  {
+    date: "23/02",
+    festival: "Palais des Congres",
+    location: "Paris, France",
   },
 ];
 

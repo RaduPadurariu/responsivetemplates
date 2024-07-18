@@ -1,6 +1,6 @@
 import React from "react";
 import "./MusicAlbums.css";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const MusicAlbumsTracks = ({ item, children }) => {
   const location = useLocation();
@@ -11,7 +11,6 @@ const MusicAlbumsTracks = ({ item, children }) => {
     } else {
       return "musicHome_featured_album_player_list";
     }
-    return "";
   };
   return (
     <div className="musicHome_album_col musicHome_featured_album_col">
@@ -39,9 +38,12 @@ const MusicAlbumsTracks = ({ item, children }) => {
                     return (
                       <li key={i} className="musicAlbums_jp_playlist_current">
                         <div>
-                          <a href="#" className="musicAlbums_jp_playlist_item">
+                          <Link
+                            to={`/music/albumPage/${item.id.toString()}/${el.id?.toString()}`}
+                            className="musicAlbums_jp_playlist_item"
+                          >
                             {el.songName}
-                          </a>
+                          </Link>
                           <div className="musicAlbums_song_duration">
                             {el.songDuration}
                           </div>

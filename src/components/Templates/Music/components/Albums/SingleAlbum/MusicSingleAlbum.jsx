@@ -24,7 +24,7 @@ const MusicSingleAlbum = () => {
           <MusicHeadTitle
             subTitle="Katie Melua"
             title={item.albumName}
-            backImg={item.cover}
+            backImg={"/images/Music/single.jpg"}
           />
           <div className="musicSingleAlbum">
             <div className="musicHome_container">
