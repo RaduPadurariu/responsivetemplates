@@ -33,8 +33,8 @@ const MusicAlbumLyrics = () => {
         <div className="musicAlbums_lyrics">
           <MusicHeadTitle
             subTitle="Katie Melua"
-            title={song.songName}
-            backImg={album.cover}
+            title={"Lyrics"}
+            backImg={"/images/Music/lyrics.jpg"}
           />
           <div className="musicHome_container">
             <div className="musicAlbums_lyrics_btn_container">
@@ -48,6 +48,9 @@ const MusicAlbumLyrics = () => {
 
             <div className="musicHome_subContainer musicAlbums_lyrics_container">
               <div className="musicAlbums_col_lyrics">
+                <div className="musicHome_section_title">
+                  <h1>{song.songName}</h1>
+                </div>
                 <p>{song.songLyrics}</p>
               </div>
               <div className="musicAlbums_col_albumPicture">

@@ -9,34 +9,219 @@ export const musicAlbums = [
     producers: "",
     trackList: [
       {
+        id: 1,
         songName: "Nine Million Bicycles",
         songDuration: "3:15",
-        songLyrics: "",
+        songLyrics: `  
+[Verse 1]
+[Chorus]
+There are nine million bicycles in Beijing
+That's a fact
+It's a thing we can't deny
+Like the fact that I will love you till I die
+
+[Verse 1]
+We are twelve billion light years from the edge
+That's a guess
+No one can ever say it's true
+But I know that I will always be with you
+
+[Verse 2]
+I'm warmed by the fire of your love everyday
+So don't call me a liar
+Just believe everything that I say
+There are six billion people in the world
+More or less, and it makes me feel quite small
+But you're the one I love the most of all
+
+[Bridge]
+We're high on the wire
+With the world in our sight
+And I'll never tire
+Of the love that you give me every night
+                  `,
       },
       {
+        id: 2,
         songName: "The Closest Thing to Crazy",
         songDuration: "4:12",
-        songLyrics: "",
+        songLyrics: `
+[Verse 1]
+How can I think I'm standing strong
+Yet feel the air beneath my feet?
+How can happiness feel so wrong?
+How can misery feel so sweet?
+How can you let me watch you sleep
+Then break my dreams the way you do?
+How can I have got in so deep?
+Why did I fall in love with you?
+
+[Chorus]
+This is the closest thing to crazy I have ever been
+Feeling twenty-two, acting seventeen
+This is the nearest thing to crazy I have ever known
+I was never crazy on my own
+And now I know that there's a link between the two
+Being close to craziness and being close to you
+
+[Verse 2]
+How can you make me fall apart
+Then break my fall with loving lies?
+It's so easy to break a heart
+It's so easy to close your eyes
+How can you treat me like a child
+Yet like a child I yearn for you?
+How can anyone feel so wild?
+How can anyone feel so blue?`,
       },
       {
+        id: 3,
         songName: "If You Were a Sailboat",
         songDuration: "4:02",
-        songLyrics: "",
+        songLyrics: `  
+        If you're a cowboy I would trail you
+If you're a piece of wood I'd nail you to the floor
+If you're a sailboat I would sail you to the shore
+If you're a river I would swim you
+If you're a house I would live in you all my days
+If you're a preacher I'd begin to change my ways
+
+Sometimes I believe in fate
+But the chances we create
+Always seem to ring more true
+You took a chance on loving me
+I took a chance on loving you
+
+If I was in jail I know you'd spring me
+If I was a telephone you'd ring me all day long
+If was in pain I know you'd sing me soothing songs
+
+Sometimes I believe in fate
+But the chances we create
+Always seem to ring more true
+You took a chance on loving me
+I took a chance on loving you
+
+If I was hungry you would feed me
+If I was in darkness you would lead me to the light
+If I was a book I know you'd read me every night
+          `,
       },
       {
-        songName: "What a Wonderful World",
-        songDuration: "4:13",
-        songLyrics: "",
+        id: 4,
+        songName: "Wonderful Life",
+        songDuration: "4:04",
+        songLyrics: `
+[Verse 1]
+Here I go out to sea again
+The sunshine fills my hair
+And dreams hang in the air
+Gulls in the sky and in my blue eyes
+You know it feels unfair
+There's magic everywhere
+
+[Chorus]
+Look at me standing
+Here on my own again
+Up straight in the sunshine
+No need to run and hide
+It's a wonderful wonderful life
+No need to laugh or cry
+It's a wonderful wonderful life
+
+[Verse 2]
+The sun's in your eyes
+The heat is in your hair
+They seem to hate you because you're there
+And I need a friend
+Oh I need a friend to make me happy
+Not stand here on my own
+
+[Chorus]
+Look at me standing
+Here on my own again
+Up straight in the sunshine
+No need to run and hide
+It's a wonderful wonderful life
+No need to laugh or cry
+It's a wonderful wonderful life`,
       },
       {
+        id: 5,
         songName: "Spider's Web",
         songDuration: "3:58",
-        songLyrics: "",
+        songLyrics: `  
+        If a black man is racist, is it okay
+If it's the white man's racism that made him that way
+Because the bully's the victim they say
+By some sense they're all the same
+
+'Cause the line between wrong and right
+Is the width of a thread from a spider's web
+The piano keys are black and white
+But they sound like a million colors in your mind
+
+I could tell you to go to war
+Or I could march for peace and fighting no more
+How do I know which is right
+And I hope he does when he sends you to fight
+
+'Cause the line between wrong and right
+Is the width of a thread from a spider's web
+The piano keys are black and white
+But they sound like a million colors in your mind
+
+Should we act on a play
+Or should we chase the moments away
+Should we live, should we give
+Remember forever the guns and the feathers in time
+
+'Cause the line between wrong and right
+Is the width of a thread from a spider's web
+The piano keys are black and white
+But they sound like a million colors in your mind
+The piano keys are black and white
+But they sound like a million colors in your mind
+          `,
       },
       {
+        id: 6,
         songName: "Just Like Heaven",
         songDuration: "3:35",
-        songLyrics: "",
+        songLyrics: `  
+        "Show me how you do that trick?
+The one that makes me scream", he said
+"The one that makes me laugh", he said
+And threw his arms around my neck
+"Show me how you do it
+And I promise you, I promise
+That I'll run away with you
+I'll run away with you"
+Spinning on that dizzy edge
+I kissed his face and I kissed his head
+And dreamed of all the different ways
+I had to make him glow
+"Why are you so far away?", he said
+"Why won't you ever know that I'm in love with you?
+That I'm in love with you?"
+
+You, soft and only
+You, lost and lonely
+You, strange as angels
+Dancing in the deepest oceans
+Twisting in the water
+You're just like a dream
+You're just like a dream
+
+Daylight licked me into shape
+I must have been asleep for days
+And moving lips to breathe his name
+I opened up my eyes
+I found myself alone, alone
+Alone above the raging sea
+That stole the only boy I loved
+And drowned him deep inside of me
+          `,
       },
     ],
   },

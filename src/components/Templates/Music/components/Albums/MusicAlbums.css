@@ -456,9 +456,11 @@
 
 @media only screen and (max-width: 575px) {
   .musicAlbums_jp_playlist_current {
-    padding-left: 25px;
+    padding-left: 10px;
   }
-
+  .musicAlbums_jp_playlist_current > div {
+    padding-right: 10px;
+  }
   .musicHome_featured_album_artist {
     font-size: 22px;
   }
@@ -466,6 +468,7 @@
   .musicAlbums_jp_playlist_current a,
   .musicAlbums_song_duration {
     font-size: 14px;
+    padding-right: 0;
   }
 
   .musicAlbums_milestones {

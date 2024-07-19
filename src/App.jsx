@@ -33,11 +33,13 @@ import Music from "./components/Templates/Music/Music";
 import MusicApp from "./components/Templates/Music/MusicApp";
 import MusicSingleAlbum from "./components/Templates/Music/components/Albums/SingleAlbum/MusicSingleAlbum";
 import MusicAlbumLyrics from "./components/Templates/Music/components/Albums/SingleAlbum/MusicAlbumLyrics";
+import GoToTop from "./components/Templates/Hotel/common/GotToTop";
 
 function App() {
   return (
     <>
       <div className="app">
+        <GoToTop />
         <Routes>
           <Route path="*" element={<Navigate to="/" />}></Route>
           <Route path="/" element={<Home />}></Route>

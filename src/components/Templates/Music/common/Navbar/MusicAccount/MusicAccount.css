@@ -18,6 +18,7 @@
   font-family: "Futura", sans-serif;
   font-size: 14px;
   color: #ffffff;
+  transition: all 200ms ease;
 }
 
 .musicAccount_li a:hover {

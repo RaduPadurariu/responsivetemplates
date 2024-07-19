@@ -1,7 +1,7 @@
 import React from "react";
 import "./MusicNavLinks.css";
 import { NavLink } from "react-router-dom";
-const MusicNavLinks = () => {
+const MusicNavLinks = ({ closeMenu }) => {
   let navLinks = [
     {
       name: "Home",
@@ -31,6 +31,7 @@ const MusicNavLinks = () => {
           <NavLink
             to={el.link}
             className={({ isActive }) => (isActive ? "musicActive" : "")}
+            onClick={closeMenu}
           >
             {el.name}
           </NavLink>

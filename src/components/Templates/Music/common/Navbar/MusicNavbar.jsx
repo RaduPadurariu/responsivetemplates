@@ -5,7 +5,12 @@ import MusicAccount from "./MusicAccount/MusicAccount";
 import { Link } from "react-router-dom";
 const MusicNavbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
+  const closeMenu = () => setClick(false);
+  useEffect(() => {
+    console.log(click);
+  }, [click]);
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 91) {
@@ -29,20 +34,39 @@ const MusicNavbar = () => {
         <Link to="/music/home">Katie Melua</Link>
       </div>
       <nav className="musicNav">
-        <ul className="musicNav_main_ul">
+        <div className="musicNav_main_ul">
           <MusicNavLinks />
-        </ul>
+        </div>
       </nav>
 
       <div className="musicAccount_container">
         <MusicAccount />
       </div>
 
-      <div className="musicHamburger">
+      <div className="musicHamburger" onClick={handleClick}>
         <div className="musicHamburger_container">
           <div className="musicHamburger_div ham1"></div>
           <div className="musicHamburger_div ham2"></div>
           <div className="musicHamburger_div ham3"></div>
+        </div>
+      </div>
+      <div
+        className={click ? "musicMenu_bar musicMenu_active" : "musicMenu_bar"}
+      >
+        <div>
+          <div className="musicMenu_overlay"></div>
+          <div className="musicMenu_container">
+            <div className="musicMenu_log_reg">
+              <div className="musicMenu_login_ul">
+                <MusicAccount />
+              </div>
+            </div>
+            <nav className="musicMenu_nav">
+              <ul className="musicMenu_links_ul">
+                <MusicNavLinks closeMenu={closeMenu} />
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
     </header>
