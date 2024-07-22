@@ -37,14 +37,14 @@ const MusicHome = () => {
   const items = [
     {
       backgroundImage: "url(/images/Music/index.jpg)",
-      title: "New single release",
-      headerTitle: "Love is all around",
+      title: "Popular song",
+      headerTitle: "Nine Million Bycicles",
       listenLink: "#",
     },
     {
       backgroundImage: "url(/images/Music/index2.jpg)",
-      title: "Popular song",
-      headerTitle: "Nine Million Bycicles",
+      title: "Best Album",
+      headerTitle: "Piece by Piece",
       listenLink: "#",
     },
     {

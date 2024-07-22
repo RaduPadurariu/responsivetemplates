@@ -10,6 +10,8 @@
   width: 100%;
   height: 892px;
   padding: 0 51px;
+
+  margin: 0 auto;
 }
 
 .musicHome_slide_container {
@@ -19,9 +21,10 @@
   color: #fff;
   font-family: "Futura";
   position: relative;
+  overflow: hidden;
 }
 
-.musicHome_slide_carousel {
+/* .musicHome_slide_carousel {
   position: absolute;
   top: 0;
   left: 0;
@@ -30,7 +33,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-}
+} */
 
 .musicHome_carousel_buttons {
   display: flex;
@@ -64,17 +67,32 @@
   background: #eee;
 }
 
-/* ------------------------------ */
-
 .musicHome_carousel_item {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   position: absolute;
+  z-index: 0;
+}
+
+/* ------------------------------ */
+
+.musicHome_carousel_item::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.1;
+  z-index: 1;
+  background: #000;
 }
 
 @keyframes slideInFromRight {
@@ -113,6 +131,7 @@
   justify-content: center;
   align-items: center;
   padding-top: 72px;
+  z-index: 3;
 }
 
 .musicHome_home_title {

@@ -15,20 +15,36 @@
   align-items: center;
   width: 100%;
   height: 100%;
-
+  z-index: 0;
   background-image: var(--background-img);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.musicHeadTitle_inner::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  z-index: 1;
+  background: #000;
+}
+
 .musicHeadTitle_subtitle {
   font-size: 18px;
+  z-index: 3;
+  position: relative;
 }
 
 .musicHeadTitle_title {
   font-size: 82px;
   white-space: nowrap;
+  z-index: 3;
+  position: relative;
 }
 
 @media only screen and (max-width: 775px) {
