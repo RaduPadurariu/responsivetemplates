@@ -1,10 +1,15 @@
-.musicAlbums_discs {
-  padding-top: 105px;
-  padding-bottom: 78px;
+.musicAlbums {
   background: #000;
   color: #ffffff;
   font-family: "Futura";
   font-weight: 400;
+  overflow-x: hidden;
+}
+
+.musicAlbums_discs {
+  padding-top: 105px;
+  padding-bottom: 78px;
+
   position: relative;
 }
 

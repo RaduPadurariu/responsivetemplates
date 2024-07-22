@@ -3,7 +3,7 @@ import "./MusicContact.css";
 import MusicHeadTitle from "../../common/HeadTitle/MusicHeadTitle";
 const MusicContact = () => {
   return (
-    <>
+    <div className="musicContact_body">
       <MusicHeadTitle
         subTitle="Katie Melua"
         title="Contact"
@@ -131,7 +131,7 @@ const MusicContact = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

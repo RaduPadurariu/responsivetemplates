@@ -3,6 +3,7 @@
   color: #ffffff;
   font-family: "Futura";
   font-weight: 400;
+  overflow-x: hidden;
 }
 
 /* Home Hero */
@@ -90,7 +91,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  opacity: 0.1;
+  opacity: 0.2;
   z-index: 1;
   background: #000;
 }

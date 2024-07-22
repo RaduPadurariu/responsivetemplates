@@ -1,11 +1,15 @@
-.musicContact {
-  padding: 101px 51px;
-  background: #000000;
-  display: flex;
+.musicContact_body {
   font-family: "Futura";
-  font-size: 14px;
+  background: #000000;
   color: #fff;
   font-weight: 400;
+  overflow-x: hidden;
+}
+
+.musicContact {
+  padding: 101px 51px;
+  display: flex;
+  font-size: 14px;
 }
 
 .musicContact_container {

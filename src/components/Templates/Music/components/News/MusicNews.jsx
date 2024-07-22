@@ -6,7 +6,7 @@ import musicBlog_data from "./MusicNews_data";
 import MusicNews_SinglePlayer from "./MusicNews_SinglePlayer";
 const MusicNews = () => {
   return (
-    <div>
+    <div className="musicNews">
       <MusicHeadTitle
         subTitle="Katie Melua"
         title="The Blog"

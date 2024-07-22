@@ -1,8 +1,13 @@
-.musicBlog {
+.musicNews {
   font-family: "Futura";
   font-size: 14px;
   color: #fff;
   background: #000;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+.musicBlog {
   padding-top: 102px;
   padding-bottom: 25px;
 }

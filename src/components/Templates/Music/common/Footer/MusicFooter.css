@@ -6,6 +6,7 @@
   font-family: "Futura";
   color: #fff;
   /* border-top: 1px solid white; */
+  overflow-x: hidden;
 }
 
 .musicFooter_container {

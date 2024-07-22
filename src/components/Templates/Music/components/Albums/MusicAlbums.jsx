@@ -70,7 +70,7 @@ const MusicAlbums = () => {
   }, [milestoneEnterFlag, milestonesList]);
 
   return (
-    <div>
+    <div className="musicAlbums">
       <MusicHeadTitle
         subTitle="Katie Melua"
         title="Discography"
