@@ -13,9 +13,11 @@ import {
 import { NavContact, NavLogo, NavSearch } from "../Navbar";
 import "./HomeSideBar.css";
 import NavTemplates from "../NavTemplates/NavTemplates";
+import NavHobbies from "../NavTemplates/NavHobbies";
 
 const HomeSideBar = ({ openSideBar }) => {
   const [openTemplates, setOpenTemplates] = useState(false);
+  const [openHobbies, setOpenHobbies] = useState(false);
   return (
     <div className={"homeNav_sideBar"}>
       <div className="homeNav_sideBar_box">
@@ -55,6 +57,7 @@ const HomeSideBar = ({ openSideBar }) => {
       </div>
 
       <div className="homeNav_sideBar_menu">
+        {/* Templates */}
         <div
           className="homeNav_sideBar_menu_box"
           onClick={() => setOpenTemplates(!openTemplates)}
@@ -63,6 +66,16 @@ const HomeSideBar = ({ openSideBar }) => {
           {openTemplates ? <TiArrowSortedUp /> : <TiArrowSortedDown />}
         </div>
         {openTemplates && <NavTemplates />}
+
+        {/* Hobbies */}
+        <div
+          className="homeNav_sideBar_menu_box"
+          onClick={() => setOpenHobbies(!openHobbies)}
+        >
+          <p>Hobbies</p>
+          {openHobbies ? <TiArrowSortedUp /> : <TiArrowSortedDown />}
+        </div>
+        {openHobbies && <NavHobbies />}
       </div>
       <div className="homeNav_sideBar_contact_container">
         <NavSearch />

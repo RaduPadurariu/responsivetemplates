@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import { CgMenuLeft, CgMenuRight } from "react-icons/cg";
+import { CgMenuRight } from "react-icons/cg";
 import { Link } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 import { MdNotifications } from "react-icons/md";
@@ -8,16 +8,19 @@ import HomeProfile from "./Profile/HomeProfile";
 import HomeNotification from "./Notification/HomeNotification";
 import NavTemplates from "./NavTemplates/NavTemplates";
 import HomeSideBar from "./SideBar/HomeSideBar";
+import NavHobbies from "./NavTemplates/NavHobbies";
 
 const Navbar = () => {
   const [homeProfile, setHomeProfile] = useState(false);
   const [homeNotification, setHomeNotification] = useState(false);
   const [homeNavTemplate, setHomeNavTemplate] = useState(false);
+  const [homeNavHobby, setHomeNavHobby] = useState(false);
   const [homeSideBar, setHomeSideBar] = useState(false);
 
   const openNavTemplate = () => {
     if (!homeNavTemplate) {
       setHomeNavTemplate(true);
+      setHomeNavHobby(false);
       setHomeNotification(false);
       setHomeProfile(false);
       setHomeSideBar(false);
@@ -25,10 +28,23 @@ const Navbar = () => {
       setHomeNavTemplate(false);
     }
   };
+
+  const openNavHobbies = () => {
+    if (!homeNavHobby) {
+      setHomeNavHobby(true);
+      setHomeNavTemplate(false);
+      setHomeNotification(false);
+      setHomeProfile(false);
+      setHomeSideBar(false);
+    } else {
+      setHomeNavHobby(false);
+    }
+  };
   const openNotification = () => {
     if (!homeNotification) {
       setHomeNotification(true);
       setHomeNavTemplate(false);
+      setHomeNavHobby(false);
       setHomeProfile(false);
       setHomeSideBar(false);
     } else {
@@ -39,6 +55,7 @@ const Navbar = () => {
     if (!homeProfile) {
       setHomeProfile(true);
       setHomeNavTemplate(false);
+      setHomeNavHobby(false);
       setHomeNotification(false);
       setHomeSideBar(false);
     } else {
@@ -51,6 +68,7 @@ const Navbar = () => {
       setHomeSideBar(true);
       setHomeProfile(false);
       setHomeNavTemplate(false);
+      setHomeNavHobby(false);
       setHomeNotification(false);
     } else {
       setHomeSideBar(false);
@@ -78,6 +96,12 @@ const Navbar = () => {
               <NavTemplate
                 openNavTemplate={openNavTemplate}
                 homeNavTemplate={homeNavTemplate}
+              />
+            </li>
+            <li className="homeNav_li homeNav_li_show">
+              <NavHobby
+                openNavHobbies={openNavHobbies}
+                homeNavHobby={homeNavHobby}
               />
             </li>
 
@@ -146,6 +170,19 @@ const NavTemplate = ({ openNavTemplate, homeNavTemplate }) => {
       {homeNavTemplate && (
         <div className="homeNav_template_box">
           <NavTemplates />
+        </div>
+      )}
+    </div>
+  );
+};
+
+const NavHobby = ({ openNavHobbies, homeNavHobby }) => {
+  return (
+    <div className="homeNav_template">
+      <p onClick={() => openNavHobbies()}>Hobbies</p>
+      {homeNavHobby && (
+        <div className="homeNav_template_box">
+          <NavHobbies />
         </div>
       )}
     </div>

@@ -30,10 +30,17 @@ import MusicHomePage from "./components/Templates/Music/components/Pages/MusicHo
 import MusicNewsPage from "./components/Templates/Music/components/Pages/MusicNewsPage";
 import MusicContactPage from "./components/Templates/Music/components/Pages/MusicContactPage";
 import Music from "./components/Templates/Music/Music";
-import MusicApp from "./components/Templates/Music/MusicApp";
 import MusicSingleAlbum from "./components/Templates/Music/components/Albums/SingleAlbum/MusicSingleAlbum";
 import MusicAlbumLyrics from "./components/Templates/Music/components/Albums/SingleAlbum/MusicAlbumLyrics";
 import GoToTop from "./components/Templates/Hotel/common/GotToTop";
+
+// Movies
+
+import MoviesMyMoviesPage from "./components/Templates/Movies/components/Pages/MoviesMyMoviesPage";
+import MoviesApiPage from "./components/Templates/Movies/components/Pages/MoviesApiPage";
+import MoviesSearchPage from "./components/Templates/Movies/components/Pages/MoviesSearchPage";
+import Movies from "./components/Templates/Movies/Movies";
+import MoviesSeriesPage from "./components/Templates/Movies/components/Pages/MoviesSeriesPage";
 
 function App() {
   return (
@@ -90,7 +97,7 @@ function App() {
           </Route>
 
           {/* Music */}
-          <Route path="/music" element={<MusicApp />}>
+          <Route path="/music" element={<Music />}>
             <Route path="home" element={<MusicHomePage />}></Route>
             <Route path="albums" element={<MusicAlbumsPage />}></Route>
             <Route path="albumPage/:id" element={<MusicSingleAlbum />}></Route>
@@ -101,6 +108,16 @@ function App() {
             <Route path="news" element={<MusicNewsPage />}></Route>
             <Route path="contact" element={<MusicContactPage />}></Route>
             <Route path="/music/*" element={<Navigate to="/music/home" />} />
+          </Route>
+
+          {/* Movies */}
+          <Route path="/movies" element={<Movies />}>
+            <Route path="home" element={<MoviesApiPage />}></Route>
+            <Route path="series" element={<MoviesSeriesPage />}></Route>
+            <Route path="search" element={<MoviesSearchPage />}></Route>
+            <Route path="favorites" element={<MoviesMyMoviesPage />}></Route>
+
+            <Route path="/movies/*" element={<Navigate to="/movies/home" />} />
           </Route>
         </Routes>
       </div>

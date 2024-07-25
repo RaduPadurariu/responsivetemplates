@@ -1,0 +1,10 @@
+.movies_genres {
+  padding: "12px 0";
+  display: "flex";
+  justify-content: "center";
+  flex-wrap: "wrap";
+}
+
+.movies_chip {
+  margin: 2px;
+}

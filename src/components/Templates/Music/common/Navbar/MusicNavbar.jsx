@@ -31,7 +31,7 @@ const MusicNavbar = () => {
       className={isScrolled ? "musicNavbar musicIsScrolled" : "musicNavbar"}
     >
       <div className="musicLogo">
-        <Link to="/music/home">Katie Melua</Link>
+        <Link to="/music/home">Katie Melua Fans</Link>
       </div>
       <nav className="musicNav">
         <div className="musicNav_main_ul">

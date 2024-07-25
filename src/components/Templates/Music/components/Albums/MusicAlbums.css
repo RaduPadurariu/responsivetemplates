@@ -294,6 +294,8 @@
   padding-top: 7px;
   padding-bottom: 134px;
   position: relative;
+  max-width: 1170px;
+  margin: 0 auto;
 }
 
 .musicAlbums_artist_wallpaper {

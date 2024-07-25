@@ -1,0 +1,16 @@
+.movies_carouselItem {
+  display: flex;
+  flex-direction: column;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.movies_carouselItem__img {
+  border-radius: 10px;
+  margin-bottom: 5px;
+  box-shadow: 0px 0px 5px black;
+}
+
+.movies_carouselItem__txt {
+  font-weight: bold;
+}
