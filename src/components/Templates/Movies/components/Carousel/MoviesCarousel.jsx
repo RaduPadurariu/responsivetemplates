@@ -49,12 +49,12 @@ const MoviesCarousel = ({ id, media_type }) => {
   return (
     <AliceCarousel
       mouseTracking
-      infinite
+      // infinite
       disableDotsControls
       disableButtonsControls
       responsive={responsive}
       items={items}
-      autoPlay
+      // autoPlay
     />
   );
 };

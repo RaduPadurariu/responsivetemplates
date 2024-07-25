@@ -11,6 +11,15 @@ const MoviesSingleContent = ({
   media_type,
   vote_average,
 }) => {
+  const getYearFromDate = (date) => {
+    if (date && typeof date === "string") {
+      const parts = date.split("-");
+      if (parts.length > 0) {
+        return parts[0];
+      }
+    }
+    return "Unknown"; // or any default value you prefer
+  };
   return (
     <MoviesContentModal media_type={media_type} id={id}>
       <Badge
@@ -26,7 +35,7 @@ const MoviesSingleContent = ({
         <div className="movies_title">{title}</div>
         <div className="movies_subTitle">
           <div>{media_type === "tv" ? "TV Series" : "Movie"}</div>
-          <div>{date.split("-")[0]}</div>
+          <div>{getYearFromDate(date)}</div>
         </div>
       </div>
     </MoviesContentModal>

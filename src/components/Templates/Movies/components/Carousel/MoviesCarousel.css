@@ -14,3 +14,15 @@
 .movies_carouselItem__txt {
   font-weight: bold;
 }
+
+.alice-carousel__wrapper {
+  max-height: 22rem;
+}
+
+.alice-carousel__wrapper ul li img {
+  max-width: 10rem;
+}
+
+.alice-carousel__wrapper ul {
+  justify-content: flex-start;
+}

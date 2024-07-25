@@ -16,14 +16,19 @@ const NavTemplates = () => {
       link: "/bookSearch/home",
     },
     {
-      name: "Music",
-      link: "/music/home",
+      name: "Cooking (soon)",
+      link: "/cooking/home",
+      soon: true,
     },
   ];
   return (
     <ul>
       {navTemplate.map((el, i) => (
-        <li key={i + 1} className="homeNav_templates">
+        <li
+          key={i + 1}
+          className="homeNav_templates"
+          style={{ opacity: `${el.soon ? "0.6" : "1"}` }}
+        >
           <Link to={el.link}>{el.name}</Link>
         </li>
       ))}

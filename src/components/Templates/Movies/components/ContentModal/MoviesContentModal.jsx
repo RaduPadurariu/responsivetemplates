@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 // import { makeStyles } from "@mui/system";
 import { Modal } from "@mui/material";
-import { Backdrop } from "@mui/material";
 import { Fade } from "@mui/material";
 import axios from "axios";
 import "./MoviesContentModal.css";

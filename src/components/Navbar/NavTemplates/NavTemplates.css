@@ -21,10 +21,6 @@
   cursor: pointer;
 }
 
-.homeNav_templates_opacity {
-  opacity: 0.5;
-}
-
 @media (max-width: 55em) {
   .homeNav_templates:last-child {
     margin-bottom: 1.5rem;
