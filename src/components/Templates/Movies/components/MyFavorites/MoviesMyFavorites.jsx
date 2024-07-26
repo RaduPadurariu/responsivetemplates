@@ -22,6 +22,9 @@ const MoviesMyFavorites = () => {
   const [searchText, setSearchText] = useState("");
   const [content, setContent] = useState([]);
 
+  const [sortOption, setSortOption] = useState("");
+  const [filterOption, setFilterOption] = useState("");
+
   const darkTheme = createTheme({
     palette: {
       type: "dark",
@@ -30,6 +33,16 @@ const MoviesMyFavorites = () => {
       },
     },
   });
+
+  const handleSortChange = (event) => {
+    setSortOption(event.target.value);
+    // Add sorting functionality here
+  };
+
+  const handleFilterChange = (event) => {
+    setFilterOption(event.target.value);
+    // Add filter functionality here
+  };
 
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
@@ -135,13 +148,23 @@ const MoviesMyFavorites = () => {
                   label="Age"
                   style={{ color: "white" }}
                   className="movies_selector"
+                  MenuProps={{
+                    PaperProps: {
+                      style: {
+                        backgroundColor: "#4a5568",
+                        color: "white",
+                      },
+                    },
+                  }}
+                  value={filterOption}
+                  onChange={handleFilterChange}
                 >
                   <MenuItem value="allMovies">
                     <em>All Movies</em>
                   </MenuItem>
-                  <MenuItem value={10}>Action-crime</MenuItem>
-                  <MenuItem value={20}>Drama</MenuItem>
-                  <MenuItem value={30}>Western</MenuItem>
+                  <MenuItem value={"action-crime"}>Action-crime</MenuItem>
+                  <MenuItem value={"drama"}>Drama</MenuItem>
+                  <MenuItem value={"western"}>Western</MenuItem>
                 </Select>
               </FormControl>
               <FormControl
@@ -173,6 +196,16 @@ const MoviesMyFavorites = () => {
                   label="sort"
                   style={{ color: "white" }}
                   className="movies_selector"
+                  value={sortOption}
+                  onChange={handleSortChange}
+                  MenuProps={{
+                    PaperProps: {
+                      style: {
+                        backgroundColor: "#4a5568",
+                        color: "white",
+                      },
+                    },
+                  }}
                 >
                   <MenuItem value="ratingAsc">
                     <em>Rating Asc</em>
