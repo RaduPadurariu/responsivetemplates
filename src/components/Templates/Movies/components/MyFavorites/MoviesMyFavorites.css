@@ -1,0 +1,24 @@
+.movies_search {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.movies_search_filter_container {
+  display: flex;
+}
+.movies_favorite_searchBox {
+  width: 100%;
+}
+
+.movies_selector svg {
+  color: #fff;
+}
+@media (max-width: 575px) {
+  .movies_search {
+    flex-direction: column;
+  }
+  .movies_search_filter_container {
+    width: 100%;
+  }
+}

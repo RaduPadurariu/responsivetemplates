@@ -8,9 +8,7 @@ const MusicNavbar = () => {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   const closeMenu = () => setClick(false);
-  useEffect(() => {
-    console.log(click);
-  }, [click]);
+  useEffect(() => {}, [click]);
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 91) {

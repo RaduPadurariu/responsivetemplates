@@ -9,7 +9,6 @@ import {
   unavailable,
   unavailableLandscape,
 } from "../config/config.js";
-import "./MoviesContentModal.css";
 import { Button } from "@mui/material";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import MoviesCarousel from "../Carousel/MoviesCarousel";
