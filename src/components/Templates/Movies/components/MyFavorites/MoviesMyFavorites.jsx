@@ -3,7 +3,6 @@ import "./MoviesMyFavorites.css";
 import {
   createTheme,
   FormControl,
-  FormHelperText,
   InputLabel,
   MenuItem,
   Select,
@@ -20,10 +19,10 @@ const MoviesMyFavorites = () => {
   const [page, setPage] = useState(1);
   const [numOfPages, setNumOfPages] = useState();
   const [searchText, setSearchText] = useState("");
-  const [content, setContent] = useState([]);
+  const [content, setContent] = useState(movies);
 
   const [sortOption, setSortOption] = useState("");
-  const [filterOption, setFilterOption] = useState("");
+  const [filterOption, setFilterOption] = useState("All movies");
 
   const darkTheme = createTheme({
     palette: {
@@ -44,12 +43,6 @@ const MoviesMyFavorites = () => {
     // Add filter functionality here
   };
 
-  const handleKeyDown = (event) => {
-    if (event.key === "Enter") {
-      fetchSearch();
-    }
-  };
-
   const fetchFavorites = () => {
     // const startIndex = (page - 1) * 20;
     // const endIndex = startIndex + 20;
@@ -58,14 +51,25 @@ const MoviesMyFavorites = () => {
     setNumOfPages(Math.ceil(movies.length / 20));
   };
 
-  const fetchSearch = () => {
-    setContent(data.results);
-    setNumOfPages(Math.ceil(movies.length / 20));
-  };
-
   useEffect(() => {
     fetchFavorites();
-  }, [page, movies]);
+  }, [page]);
+
+  useEffect(() => {
+    setContent(() => {
+      if (filterOption === "All movies")
+        return movies.filter((el) => {
+          return el.title.toLowerCase().includes(searchText);
+        });
+      else
+        return movies.filter((el) => {
+          return (
+            filterOption === el.category &&
+            el.title.toLowerCase().includes(searchText)
+          );
+        });
+    });
+  }, [filterOption, searchText]);
 
   // useEffect(() => {
   //   window.scroll(0, 0);
@@ -76,14 +80,7 @@ const MoviesMyFavorites = () => {
   return (
     <div className="movies_container">
       <span className="movies_page_title">Personal Favorites</span>
-      <div
-        className="movies_filter_data_container"
-        // style={{
-        //   padding: "20px",
-        //   backgroundColor: "#2d3748",
-        //   borderRadius: "10px",
-        // }}
-      >
+      <div className="movies_filter_data_container">
         <ThemeProvider theme={darkTheme}>
           <div
             className="movies_search"
@@ -100,25 +97,19 @@ const MoviesMyFavorites = () => {
               label="Search"
               variant="filled"
               onChange={(e) => setSearchText(e.target.value)}
-              onKeyDown={handleKeyDown}
               InputProps={{
                 style: { color: "white" }, // Text color
               }}
               InputLabelProps={{
                 style: { color: "white" }, // Label color
               }}
+              value={searchText}
             />
-            {/* <Button
-              onClick={fetchSearch}
-              variant="contained"
-              style={{ marginLeft: 10 }}
-            >
-              <SearchIcon fontSize="large" />
-            </Button> */}
             <div
               className="movies_search_filter_container"
               style={{ display: "flex", alignItems: "center", gap: "10px" }}
             >
+              {/* Filter */}
               <FormControl
                 style={{
                   color: "white",
@@ -143,8 +134,6 @@ const MoviesMyFavorites = () => {
                 <Select
                   labelId="demo-simple-select-standard-label"
                   id="demo-simple-select-standard"
-                  // value={age}
-                  // onChange={handleChange}
                   label="Age"
                   style={{ color: "white" }}
                   className="movies_selector"
@@ -159,14 +148,34 @@ const MoviesMyFavorites = () => {
                   value={filterOption}
                   onChange={handleFilterChange}
                 >
-                  <MenuItem value="allMovies">
-                    <em>All Movies</em>
-                  </MenuItem>
-                  <MenuItem value={"action-crime"}>Action-crime</MenuItem>
-                  <MenuItem value={"drama"}>Drama</MenuItem>
-                  <MenuItem value={"western"}>Western</MenuItem>
+                  {locationItems.map((el, i) => {
+                    return (
+                      <MenuItem
+                        value={el.name}
+                        key={el.id}
+                        name={el.name}
+                        onClick={() => setFilterOption(el.name)}
+                      >
+                        {el.name} (
+                        {
+                          movies.filter((e) => {
+                            if (el.name === "All movies")
+                              return e.title.toLowerCase().includes(searchText);
+                            else
+                              return (
+                                el.name === e.category &&
+                                e.title.toLowerCase().includes(searchText)
+                              );
+                          }).length
+                        }
+                        )
+                      </MenuItem>
+                    );
+                  })}
                 </Select>
               </FormControl>
+
+              {/* Sort */}
               <FormControl
                 style={{
                   color: "white",
@@ -238,7 +247,7 @@ const MoviesMyFavorites = () => {
               actors={c.actors}
             />
           ))}
-        {searchText && !content && <h2>No Movies Found</h2>}
+        {searchText && content.length === 0 && <h2>No Movies Found</h2>}
       </div>
       {/* {numOfPages > 1 && (
         <MoviesCustomPagination setPage={setPage} numOfPages={numOfPages} />
@@ -248,3 +257,10 @@ const MoviesMyFavorites = () => {
 };
 
 export default MoviesMyFavorites;
+
+const locationItems = [
+  { id: 0, name: "All movies" },
+  { id: 1, name: "Action-Crime" },
+  { id: 2, name: "Drama" },
+  { id: 3, name: "Western" },
+];

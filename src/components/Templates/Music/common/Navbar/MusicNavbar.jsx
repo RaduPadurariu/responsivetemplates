@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./MusicNavbar.css";
 import MusicNavLinks from "./MusicNavLinks/MusicNavLinks";
 import MusicAccount from "./MusicAccount/MusicAccount";
@@ -8,7 +8,21 @@ const MusicNavbar = () => {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   const closeMenu = () => setClick(false);
-  useEffect(() => {}, [click]);
+  const navbarRef = useRef(null);
+
+  const handleClickOutside = (event) => {
+    if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+      setClick(false);
+    }
+  };
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [click]);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 91) {
@@ -22,6 +36,7 @@ const MusicNavbar = () => {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
   return (
@@ -53,7 +68,7 @@ const MusicNavbar = () => {
       >
         <div>
           <div className="musicMenu_overlay"></div>
-          <div className="musicMenu_container">
+          <div className="musicMenu_container" ref={navbarRef}>
             <div className="musicMenu_log_reg">
               <div className="musicMenu_login_ul">
                 <MusicAccount />

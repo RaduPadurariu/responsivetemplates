@@ -188,4 +188,8 @@
   .musicMenu_log_reg {
     display: block;
   }
+
+  .musicLogo a {
+    font-size: 20px;
+  }
 }
