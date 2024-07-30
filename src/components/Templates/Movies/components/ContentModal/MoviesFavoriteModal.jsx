@@ -154,7 +154,7 @@ const MoviesFavoriteModal = ({
 
                 <div>
                   <div className="movies_contentModal_related">
-                    Realated or How to watch
+                    Realated and How to watch
                   </div>
                   {
                     <MoviesFavoriteCarousel

@@ -35,7 +35,11 @@ const MoviesFavoriteCarousel = ({ id, related, related_id }) => {
   };
 
   const fetchCredits = async () => {
-    setCredits(movies.filter((el) => el.related === related));
+    setCredits(
+      movies
+        .filter((el) => el.related === related)
+        .sort((x, y) => x.related_id - y.related_id)
+    );
   };
 
   useEffect(() => {
@@ -52,7 +56,7 @@ const MoviesFavoriteCarousel = ({ id, related, related_id }) => {
       disableDotsControls
       disableButtonsControls
       responsive={responsive}
-      items={related ? items : []}
+      items={items.length > 1 ? items : []}
       // autoPlay
     />
   );

@@ -9,11 +9,63 @@ import {
   TextField,
   ThemeProvider,
 } from "@mui/material";
-import MoviesCustomPagination from "../CustomPagination/MoviesCustomPagination";
-import SearchIcon from "@mui/icons-material/Search";
 
 import { movies } from "./MoviesFavoritesCollection";
 import MoviesFavoriteContent from "../SingleContent/MoviesFavoriteContent";
+
+const locationItems = [
+  { id: 0, name: "All movies" },
+  { id: 1, name: "Action-Crime" },
+  { id: 2, name: "Drama" },
+  { id: 3, name: "Western" },
+  { id: 4, name: "Mafia" },
+  { id: 5, name: "War" },
+];
+
+const sortItems = [
+  {
+    id: 0,
+    name: "ID",
+    sortFunction: (a, b) => (a.id ?? 0) - (b.id ?? 0),
+    value: "ID",
+  },
+  {
+    id: 1,
+    name: "Rating Desc",
+    sortFunction: (a, b) => (b.rating ?? 0) - (a.rating ?? 0),
+    value: "ratingDesc",
+  },
+  {
+    id: 2,
+    name: "Rating Asc",
+    sortFunction: (a, b) => (a.rating ?? 0) - (b.rating ?? 0),
+    value: "ratingAsc",
+  },
+  {
+    id: 3,
+    name: "Year Desc",
+    sortFunction: (a, b) => (b.year ?? 0) - (a.year ?? 0),
+    value: "yearDesc",
+  },
+  {
+    id: 4,
+    name: "Year Asc",
+    sortFunction: (a, b) => (a.year ?? 0) - (b.year ?? 0),
+    value: "yearAsc",
+  },
+  {
+    id: 5,
+    name: "Name Desc",
+    sortFunction: (a, b) => (b.title ?? "").localeCompare(a.title ?? ""),
+    value: "nameDesc",
+  },
+  {
+    id: 6,
+    name: "Name Asc",
+    sortFunction: (a, b) => (a.title ?? "").localeCompare(b.title ?? ""),
+    value: "nameAsc",
+  },
+];
 
 const MoviesMyFavorites = () => {
   const [page, setPage] = useState(1);
@@ -21,7 +73,8 @@ const MoviesMyFavorites = () => {
   const [searchText, setSearchText] = useState("");
   const [content, setContent] = useState(movies);
 
-  const [sortOption, setSortOption] = useState("");
+  const [sortOption, setSortOption] = useState(sortItems[0].value);
+
   const [filterOption, setFilterOption] = useState("All movies");
 
   const darkTheme = createTheme({
@@ -34,13 +87,16 @@ const MoviesMyFavorites = () => {
   });
 
   const handleSortChange = (event) => {
-    setSortOption(event.target.value);
-    // Add sorting functionality here
+    const selectedSort = sortItems.find(
+      (item) => item.value === event.target.value
+    );
+    if (selectedSort) {
+      setSortOption(selectedSort.value);
+    }
   };
 
   const handleFilterChange = (event) => {
     setFilterOption(event.target.value);
-    // Add filter functionality here
   };
 
   const fetchFavorites = () => {
@@ -57,19 +113,20 @@ const MoviesMyFavorites = () => {
 
   useEffect(() => {
     setContent(() => {
-      if (filterOption === "All movies")
-        return movies.filter((el) => {
-          return el.title.toLowerCase().includes(searchText);
-        });
-      else
-        return movies.filter((el) => {
-          return (
-            filterOption === el.category &&
-            el.title.toLowerCase().includes(searchText)
-          );
-        });
+      const filteredMovies = movies
+        .filter((el) => {
+          const matchesCategory =
+            filterOption === "All movies" || el.category === filterOption;
+          const matchesSearch = el.title
+            .toLowerCase()
+            .includes(searchText.toLowerCase());
+          return matchesCategory && matchesSearch;
+        })
+        .sort(sortItems.find((el) => el.value == sortOption).sortFunction);
+
+      return filteredMovies;
     });
-  }, [filterOption, searchText]);
+  }, [filterOption, searchText, sortOption, content, movies]);
 
   // useEffect(() => {
   //   window.scroll(0, 0);
@@ -132,9 +189,9 @@ const MoviesMyFavorites = () => {
                   NAS Location
                 </InputLabel>
                 <Select
-                  labelId="demo-simple-select-standard-label"
-                  id="demo-simple-select-standard"
-                  label="Age"
+                  labelId="filter-label"
+                  id="filter-select"
+                  label="Filter"
                   style={{ color: "white" }}
                   className="movies_selector"
                   MenuProps={{
@@ -150,12 +207,7 @@ const MoviesMyFavorites = () => {
                 >
                   {locationItems.map((el, i) => {
                     return (
-                      <MenuItem
-                        value={el.name}
-                        key={el.id}
-                        name={el.name}
-                        onClick={() => setFilterOption(el.name)}
-                      >
+                      <MenuItem value={el.name} key={el.id} name={el.name}>
                         {el.name} (
                         {
                           movies.filter((e) => {
@@ -198,10 +250,8 @@ const MoviesMyFavorites = () => {
                   Sort
                 </InputLabel>
                 <Select
-                  labelId="demo-simple-select-standard-label"
-                  id="demo-simple-select-standard"
-                  // value={age}
-                  // onChange={handleChange}
+                  labelId="sort-label"
+                  id="sort-select"
                   label="sort"
                   style={{ color: "white" }}
                   className="movies_selector"
@@ -216,14 +266,14 @@ const MoviesMyFavorites = () => {
                     },
                   }}
                 >
-                  <MenuItem value="ratingAsc">
-                    <em>Rating Asc</em>
-                  </MenuItem>
-                  <MenuItem value="ratingDesc">Rating Desc</MenuItem>
-                  <MenuItem value="yearAsc">Year Asc</MenuItem>
-                  <MenuItem value="yearDesc">Year Desc</MenuItem>
-                  <MenuItem value="nameAsc">Name Asc</MenuItem>
-                  <MenuItem value="nameDesc">Name Desc</MenuItem>
+                  {sortItems.map((el, i) => {
+                    return (
+                      <MenuItem key={el.id} value={el.value} name={el.name}>
+                        {" "}
+                        {el.name}
+                      </MenuItem>
+                    );
+                  })}
                 </Select>
               </FormControl>
             </div>
@@ -257,10 +307,3 @@ const MoviesMyFavorites = () => {
 };
 
 export default MoviesMyFavorites;
-
-const locationItems = [
-  { id: 0, name: "All movies" },
-  { id: 1, name: "Action-Crime" },
-  { id: 2, name: "Drama" },
-  { id: 3, name: "Western" },
-];

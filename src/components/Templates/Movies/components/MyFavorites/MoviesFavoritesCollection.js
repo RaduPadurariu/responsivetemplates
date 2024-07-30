@@ -6,7 +6,7 @@ export const movies = [
     rating: 9.3, // Actual IMDb rating
     year: 1994, // Corrected year
     category: "Drama", // Corrected category
-    related: "fight_club",
+    related: "The Shawshank Redemption",
     related_id: "1",
     director: "Frank Darabont", // Corrected director
     actors: [
@@ -18,13 +18,13 @@ export const movies = [
     ],
   },
   {
-    poster: "/images/Movies/Posters/02.01_The Godfather 1.jpg",
+    poster: "/images/Movies/Posters/02.01_The Godfather.jpg",
     id: "2.01",
-    title: "The Godfather 1",
+    title: "The Godfather",
     rating: 9.2, // Actual IMDb rating
     year: 1972, // Corrected year
-    category: "Crime-Drama", // Corrected category
-    related: "fight_club",
+    category: "Mafia", // Corrected category
+    related: "The Godfather",
     related_id: "1",
     director: "Francis Ford Coppola", // Corrected director
     actors: [
@@ -36,14 +36,14 @@ export const movies = [
     ],
   },
   {
-    poster: "/images/Movies/Posters/02.02_The Gadfather 2.jpg",
+    poster: "/images/Movies/Posters/02.02_The Gadfather Part II.jpg",
     id: "2.02",
     title: "The Godfather Part II",
-    rating: 9.0, // Actual IMDb rating
+    rating: 9, // Actual IMDb rating
     year: 1974, // Corrected year
-    category: "Crime-Drama", // Corrected category
-    related: "fight_club",
-    related_id: "1",
+    category: "Mafia", // Corrected category
+    related: "The Godfather",
+    related_id: "2",
     director: "Francis Ford Coppola", // Corrected director
     actors: [
       { id: 1, actor: "Al Pacino" },
@@ -54,14 +54,14 @@ export const movies = [
     ],
   },
   {
-    poster: "/images/Movies/Posters/02.03_The Godfather 3.jpg",
+    poster: "/images/Movies/Posters/02.03_The Godfather Part III.jpg",
     id: "2.03",
     title: "The Godfather Part III",
     rating: 7.6, // Actual IMDb rating
     year: 1990, // Corrected year
-    category: "Crime-Drama", // Corrected category
-    related: "fight_club",
-    related_id: "1",
+    category: "Mafia", // Corrected category
+    related: "The Godfather",
+    related_id: "3",
     director: "Francis Ford Coppola", // Corrected director
     actors: [
       { id: 1, actor: "Al Pacino" },
@@ -75,10 +75,10 @@ export const movies = [
     poster: "/images/Movies/Posters/03.01_Batman Begins.jpg",
     id: "3.01",
     title: "Batman Begins",
-    rating: 8.2, // Actual IMDb rating
+    rating: 8.3, // Actual IMDb rating
     year: 2005, // Corrected year
-    category: "Action-Adventure", // Corrected category
-    related: "fight_club",
+    category: "Action-Crime", // Corrected category
+    related: "Batman Nolan",
     related_id: "1",
     director: "Christopher Nolan", // Corrected director
     actors: [
@@ -93,11 +93,11 @@ export const movies = [
     poster: "/images/Movies/Posters/03.02_The Dark Knight.jpg",
     id: "3.02",
     title: "The Dark Knight",
-    rating: 9.0, // Actual IMDb rating
+    rating: 9, // Actual IMDb rating
     year: 2008, // Corrected year
     category: "Action-Crime", // Corrected category
-    related: "fight_club",
-    related_id: "1",
+    related: "Batman Nolan",
+    related_id: "2",
     director: "Christopher Nolan", // Corrected director
     actors: [
       { id: 1, actor: "Christian Bale" },
@@ -113,9 +113,9 @@ export const movies = [
     title: "The Dark Knight Rises",
     rating: 8.4, // Actual IMDb rating
     year: 2012, // Corrected year
-    category: "Action-Adventure", // Corrected category
-    related: "fight_club",
-    related_id: "1",
+    category: "Action-Crime", // Corrected category
+    related: "Batman Nolan",
+    related_id: "3",
     director: "Christopher Nolan", // Corrected director
     actors: [
       { id: 1, actor: "Christian Bale" },
@@ -129,10 +129,10 @@ export const movies = [
     poster: "/images/Movies/Posters/05_12 Angry Men.jpg",
     id: "5",
     title: "12 Angry Men",
-    rating: 9.0, // Actual IMDb rating
+    rating: 9, // Actual IMDb rating
     year: 1957, // Corrected year
     category: "Drama", // Corrected category
-    related: "fight_club",
+    related: "12 Angry Men",
     related_id: "1",
     director: "Sidney Lumet", // Corrected director
     actors: [
@@ -147,10 +147,10 @@ export const movies = [
     poster: "/images/Movies/Posters/06_Schindler's List.jpg",
     id: "6",
     title: "Schindler's List",
-    rating: 9.0, // Actual IMDb rating
+    rating: 9, // Actual IMDb rating
     year: 1993, // Corrected year
-    category: "Biography-Drama", // Corrected category
-    related: "fight_club",
+    category: "War", // Corrected category
+    related: "Schindler's List",
     related_id: "1",
     director: "Steven Spielberg", // Corrected director
     actors: [
