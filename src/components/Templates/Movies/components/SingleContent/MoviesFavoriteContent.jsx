@@ -26,6 +26,7 @@ const MoviesFavoriteContent = ({
       actors={actors}
       related={related}
       related_id={related_id}
+      category={category}
     >
       <Badge
         badgeContent={vote_average.toFixed(1)}

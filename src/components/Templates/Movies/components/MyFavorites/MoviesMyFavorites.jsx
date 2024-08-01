@@ -9,9 +9,9 @@ import {
   TextField,
   ThemeProvider,
 } from "@mui/material";
-
 import { movies } from "./MoviesFavoritesCollection";
 import MoviesFavoriteContent from "../SingleContent/MoviesFavoriteContent";
+import MoviesCustomPagination from "../CustomPagination/MoviesCustomPagination";
 
 const locationItems = [
   { id: 0, name: "All movies" },
@@ -71,10 +71,9 @@ const MoviesMyFavorites = () => {
   const [page, setPage] = useState(1);
   const [numOfPages, setNumOfPages] = useState();
   const [searchText, setSearchText] = useState("");
-  const [content, setContent] = useState(movies);
-
+  const [filteredMovies, setFilteredMovies] = useState(movies);
+  const [displayMovies, setDisplayMovies] = useState([]);
   const [sortOption, setSortOption] = useState(sortItems[0].value);
-
   const [filterOption, setFilterOption] = useState("All movies");
 
   const darkTheme = createTheme({
@@ -87,52 +86,34 @@ const MoviesMyFavorites = () => {
   });
 
   const handleSortChange = (event) => {
-    const selectedSort = sortItems.find(
-      (item) => item.value === event.target.value
-    );
-    if (selectedSort) {
-      setSortOption(selectedSort.value);
-    }
+    setSortOption(event.target.value);
   };
 
   const handleFilterChange = (event) => {
     setFilterOption(event.target.value);
   };
 
-  const fetchFavorites = () => {
-    // const startIndex = (page - 1) * 20;
-    // const endIndex = startIndex + 20;
-    // setContent(movies.slice(startIndex, endIndex));
-    setContent(movies);
-    setNumOfPages(Math.ceil(movies.length / 20));
-  };
+  useEffect(() => {
+    const filtered = movies
+      .filter((el) => {
+        const matchesCategory =
+          filterOption === "All movies" || el.category === filterOption;
+        const matchesSearch = el.title
+          .toLowerCase()
+          .includes(searchText.toLowerCase());
+        return matchesCategory && matchesSearch;
+      })
+      .sort(sortItems.find((el) => el.value === sortOption).sortFunction);
+    setFilteredMovies(filtered);
+    setNumOfPages(Math.ceil(filtered.length / 18));
+    setPage(1);
+  }, [filterOption, searchText, sortOption]);
 
   useEffect(() => {
-    fetchFavorites();
-  }, [page]);
-
-  useEffect(() => {
-    setContent(() => {
-      const filteredMovies = movies
-        .filter((el) => {
-          const matchesCategory =
-            filterOption === "All movies" || el.category === filterOption;
-          const matchesSearch = el.title
-            .toLowerCase()
-            .includes(searchText.toLowerCase());
-          return matchesCategory && matchesSearch;
-        })
-        .sort(sortItems.find((el) => el.value == sortOption).sortFunction);
-
-      return filteredMovies;
-    });
-  }, [filterOption, searchText, sortOption, content, movies]);
-
-  // useEffect(() => {
-  //   window.scroll(0, 0);
-  //   fetchSearch();
-  //   // eslint-disable-next-line
-  // }, [type, page]);
+    const startIndex = (page - 1) * 18;
+    const endIndex = startIndex + 18;
+    setDisplayMovies(filteredMovies.slice(startIndex, endIndex));
+  }, [page, filteredMovies]);
 
   return (
     <div className="movies_container">
@@ -155,10 +136,10 @@ const MoviesMyFavorites = () => {
               variant="filled"
               onChange={(e) => setSearchText(e.target.value)}
               InputProps={{
-                style: { color: "white" }, // Text color
+                style: { color: "white" },
               }}
               InputLabelProps={{
-                style: { color: "white" }, // Label color
+                style: { color: "white" },
               }}
               value={searchText}
             />
@@ -166,7 +147,6 @@ const MoviesMyFavorites = () => {
               className="movies_search_filter_container"
               style={{ display: "flex", alignItems: "center", gap: "10px" }}
             >
-              {/* Filter */}
               <FormControl
                 style={{
                   color: "white",
@@ -178,7 +158,7 @@ const MoviesMyFavorites = () => {
                 sx={{ minWidth: 120 }}
               >
                 <InputLabel
-                  id="demo-simple-select-standard-label"
+                  id="filter-label"
                   style={{
                     color: "white",
                     textAlign: "left",
@@ -205,29 +185,30 @@ const MoviesMyFavorites = () => {
                   value={filterOption}
                   onChange={handleFilterChange}
                 >
-                  {locationItems.map((el, i) => {
-                    return (
-                      <MenuItem value={el.name} key={el.id} name={el.name}>
-                        {el.name} (
-                        {
-                          movies.filter((e) => {
-                            if (el.name === "All movies")
-                              return e.title.toLowerCase().includes(searchText);
-                            else
-                              return (
-                                el.name === e.category &&
-                                e.title.toLowerCase().includes(searchText)
-                              );
-                          }).length
-                        }
-                        )
-                      </MenuItem>
-                    );
-                  })}
+                  {locationItems.map((el) => (
+                    <MenuItem value={el.name} key={el.id}>
+                      {el.name} (
+                      {
+                        movies.filter((e) => {
+                          if (el.name === "All movies")
+                            return e.title
+                              .toLowerCase()
+                              .includes(searchText.toLowerCase());
+                          else
+                            return (
+                              el.name === e.category &&
+                              e.title
+                                .toLowerCase()
+                                .includes(searchText.toLowerCase())
+                            );
+                        }).length
+                      }
+                      )
+                    </MenuItem>
+                  ))}
                 </Select>
               </FormControl>
 
-              {/* Sort */}
               <FormControl
                 style={{
                   color: "white",
@@ -239,7 +220,7 @@ const MoviesMyFavorites = () => {
                 sx={{ minWidth: 120 }}
               >
                 <InputLabel
-                  id="demo-simple-select-standard-label"
+                  id="sort-label"
                   style={{
                     color: "white",
                     textAlign: "left",
@@ -252,7 +233,7 @@ const MoviesMyFavorites = () => {
                 <Select
                   labelId="sort-label"
                   id="sort-select"
-                  label="sort"
+                  label="Sort"
                   style={{ color: "white" }}
                   className="movies_selector"
                   value={sortOption}
@@ -266,14 +247,11 @@ const MoviesMyFavorites = () => {
                     },
                   }}
                 >
-                  {sortItems.map((el, i) => {
-                    return (
-                      <MenuItem key={el.id} value={el.value} name={el.name}>
-                        {" "}
-                        {el.name}
-                      </MenuItem>
-                    );
-                  })}
+                  {sortItems.map((el) => (
+                    <MenuItem key={el.id} value={el.value}>
+                      {el.name}
+                    </MenuItem>
+                  ))}
                 </Select>
               </FormControl>
             </div>
@@ -281,27 +259,30 @@ const MoviesMyFavorites = () => {
         </ThemeProvider>
       </div>
       <div className="movies_subContainer">
-        {content &&
-          content.map((c) => (
-            <MoviesFavoriteContent
-              key={c.id}
-              id={c.id}
-              poster={c.poster}
-              title={c.title}
-              date={c.year}
-              vote_average={c.rating}
-              category={c.category}
-              related={c.related}
-              related_id={c.related_id}
-              director={c.director}
-              actors={c.actors}
-            />
-          ))}
-        {searchText && content.length === 0 && <h2>No Movies Found</h2>}
+        {displayMovies.map((c) => (
+          <MoviesFavoriteContent
+            key={c.id}
+            id={c.id}
+            poster={c.poster}
+            title={c.title}
+            date={c.year}
+            vote_average={c.rating}
+            category={c.category}
+            related={c.related}
+            related_id={c.related_id}
+            director={c.director}
+            actors={c.actors}
+          />
+        ))}
+        {searchText && displayMovies.length === 0 && <h2>No Movies Found</h2>}
       </div>
-      {/* {numOfPages > 1 && (
-        <MoviesCustomPagination setPage={setPage} numOfPages={numOfPages} />
-      )} */}
+      {numOfPages > 1 && (
+        <MoviesCustomPagination
+          setPage={setPage}
+          numOfPages={numOfPages}
+          page={page} // Pass the current page to the pagination component
+        />
+      )}
     </div>
   );
 };

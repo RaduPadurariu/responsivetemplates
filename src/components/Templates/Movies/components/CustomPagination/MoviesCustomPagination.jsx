@@ -19,10 +19,9 @@ const darkTheme = createTheme({
   },
 });
 
-export default function MoviesCustomPagination({ setPage, numOfPages = 10 }) {
-  // Scroll to top when page changes
-  const handlePageChange = (page) => {
-    setPage(page);
+export default function MoviesCustomPagination({ setPage, numOfPages, page }) {
+  const handlePageChange = (event, value) => {
+    setPage(value);
     window.scroll(0, 0);
   };
 
@@ -37,8 +36,9 @@ export default function MoviesCustomPagination({ setPage, numOfPages = 10 }) {
     >
       <ThemeProvider theme={darkTheme}>
         <Pagination
-          onChange={(e) => handlePageChange(e.target.textContent)}
           count={numOfPages}
+          page={page}
+          onChange={handlePageChange}
           color="primary"
           hideNextButton
           hidePrevButton

@@ -23,6 +23,7 @@ const MoviesFavoriteModal = ({
   director,
   related,
   related_id,
+  category,
 }) => {
   const [open, setOpen] = useState(false);
   //   const [content, setContent] = useState(true);
@@ -138,6 +139,12 @@ const MoviesFavoriteModal = ({
                             </Link>
                           );
                         })}
+                      </span>{" "}
+                    </div>
+                    <div className="">
+                      My Category / Location:{" "}
+                      <span className="movies_contentModal_team_member">
+                        {category}
                       </span>{" "}
                     </div>
                     <div className="movies_contentModal_movieAbout">
