@@ -15,11 +15,23 @@ import MoviesCustomPagination from "../CustomPagination/MoviesCustomPagination";
 
 const locationItems = [
   { id: 0, name: "All movies" },
-  { id: 1, name: "Action-Crime" },
-  { id: 2, name: "Drama" },
-  { id: 3, name: "Western" },
-  { id: 4, name: "Mafia" },
-  { id: 5, name: "War" },
+  { id: 1, name: "Action-Adventure" },
+  { id: 2, name: "Action-Crime" },
+  { id: 3, name: "Animation" },
+  { id: 4, name: "Comedy-Romance" },
+  { id: 5, name: "Drama" },
+  { id: 6, name: "Drama Real Cases" },
+  { id: 7, name: "Fantasy" },
+  { id: 8, name: "History" },
+  { id: 9, name: "Mafia" },
+  { id: 10, name: "Mind Fuck" },
+  { id: 11, name: "Musical" },
+  { id: 12, name: "Post-apocalyptic" },
+  { id: 13, name: "Sci-Fi-Future" },
+  { id: 14, name: "Space" },
+  { id: 15, name: "Super Hero" },
+  { id: 16, name: "War" },
+  { id: 17, name: "Western" },
 ];
 
 const sortItems = [
