@@ -46,7 +46,6 @@ const MoviesFavoriteCarousel = ({ id, related, related_id }) => {
     if (related) {
       fetchCredits();
     }
-    // eslint-disable-next-line
   }, [related]);
 
   return (

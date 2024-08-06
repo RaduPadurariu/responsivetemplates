@@ -4,11 +4,7 @@ import { Modal } from "@mui/material";
 import { Fade } from "@mui/material";
 import "./MoviesContentModal.css";
 import MovieIcon from "@mui/icons-material/Movie";
-import {
-  img_500,
-  unavailable,
-  unavailableLandscape,
-} from "../config/config.js";
+import { unavailable } from "../config/config.js";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import MoviesFavoriteCarousel from "../Carousel/MoviesFavoriteCarousel.jsx";
@@ -26,7 +22,6 @@ const MoviesFavoriteModal = ({
   category,
 }) => {
   const [open, setOpen] = useState(false);
-  //   const [content, setContent] = useState(true);
 
   const handleOpen = () => {
     setOpen(true);
@@ -35,20 +30,6 @@ const MoviesFavoriteModal = ({
   const handleClose = () => {
     setOpen(false);
   };
-
-  //   const fetchData = async () => {
-  //     const { data } = await axios.get(
-  //       `https://api.themoviedb.org/3/${media_type}/${id}?api_key=4cf2e086a755f5725dba725e4b360de8&language=en-US`
-  //     );
-
-  //     setContent(data);
-  //     // console.log(data);
-  //   };
-
-  useEffect(() => {
-    // fetchData();
-    // eslint-disable-next-line
-  }, []);
 
   const actorNames = actors.map((el) => el.actor);
   const formattedActors = actorNames.join(", ").replace(/, ([^,]*)$/, ". $1");
@@ -105,15 +86,11 @@ const MoviesFavoriteModal = ({
                 alt={"no-img"}
                 className="movies_contentModal__portrait"
               />
-              {/* <img
-                  src={
-                    content.backdrop_path
-                      ? `${img_500}/${content.backdrop_path}`
-                      : unavailableLandscape
-                  }
-                  alt={content.name || content.title}
-                  className="movies_contentModal__landscape"
-                /> */}
+              <img
+                src={poster ? `${poster}` : unavailable}
+                alt={"no-img"}
+                className="movies_contentModal__landscape movies_contentModal__favoriteImg"
+              />
               <div className="movies_contentModal__about">
                 <span className="movies_contentModal__title">
                   {title} ({date})
@@ -159,7 +136,7 @@ const MoviesFavoriteModal = ({
                   </div>
                 </div>
 
-                <div>
+                <div className="movies_contentModal_carousel_container">
                   <div className="movies_contentModal_related">
                     Realated and How to watch
                   </div>

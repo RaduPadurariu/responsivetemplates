@@ -5,7 +5,7 @@ const MoviesHeader = () => {
   return (
     <div>
       <div onClick={() => window.scroll(0, 0)} className="moviesHeader">
-        🎬 My Favorite Movies 🎥
+        🎬 Movie Database 🎥
       </div>
     </div>
   );
