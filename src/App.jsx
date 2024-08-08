@@ -42,6 +42,14 @@ import MoviesSearchPage from "./components/Templates/Movies/components/Pages/Mov
 import Movies from "./components/Templates/Movies/Movies";
 import MoviesSeriesPage from "./components/Templates/Movies/components/Pages/MoviesSeriesPage";
 
+// Games
+import Games from "./components/Templates/Games/Games";
+import GamesHomePage from "./components/Templates/Games/components/pages/GamesHomePage";
+import GamesCreatorsPage from "./components/Templates/Games/components/Pages/GamesCreatorsPage";
+import GamesStoresPage from "./components/Templates/Games/components/Pages/GamesStoresPage";
+import GamesAllGamesPage from "./components/Templates/Games/components/Pages/GamesAllGamesPage";
+import GamesMyGamesPage from "./components/Templates/Games/components/Pages/GamesMyGamesPage";
+
 function App() {
   return (
     <>
@@ -118,6 +126,15 @@ function App() {
             <Route path="favorites" element={<MoviesMyMoviesPage />}></Route>
 
             <Route path="/movies/*" element={<Navigate to="/movies/home" />} />
+          </Route>
+          <Route path="/games" element={<Games />}>
+            <Route path="home" element={<GamesHomePage />}></Route>
+            <Route path="creators" element={<GamesCreatorsPage />}></Route>
+            <Route path="stores" element={<GamesStoresPage />}></Route>
+            <Route path="allGames" element={<GamesAllGamesPage />}></Route>
+            <Route path="myGames" element={<GamesMyGamesPage />}></Route>
+
+            <Route path="/games/*" element={<Navigate to="/movies/home" />} />
           </Route>
         </Routes>
       </div>

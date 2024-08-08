@@ -1,0 +1,206 @@
+.games_navbar_container {
+  display: flex;
+  align-items: center;
+  min-height: 78px;
+  background: #090624;
+  color: white;
+  width: 100%;
+}
+
+.games_navbar_container a {
+  text-decoration: none;
+}
+
+.games_brand-and-toggler {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.games_navbar-brand {
+  font-weight: 700;
+  font-size: 32px;
+  color: white;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+}
+
+.games_navbar-brand span {
+  color: var(--clr-green-normal);
+}
+
+.games_nav-item {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.games_nav-link {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+  transition: var(--transition-default);
+}
+
+.games_nav-link:hover {
+  color: var(--clr-pink-normal);
+}
+
+.games_connect-text {
+  letter-spacing: 2px;
+}
+
+.games_connect-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2px;
+  margin-left: 2px;
+}
+
+.games_connect-link {
+  padding: 6px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-default);
+}
+
+.games_connect_btn {
+  width: 100%;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.games_connect-link:hover {
+  color: var(--clr-pink-normal);
+}
+
+.games_navbar-collapse {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 280px;
+  height: 100%;
+  background-color: var(--clr-white);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 60px 20px 16px;
+  text-align: center;
+  transform: translateX(100%);
+  transition: var(--transition-default);
+  z-index: 999;
+  color: black;
+}
+/* after the show sidebar is triggered */
+.games_navbar-collapse.show {
+  transform: translateX(0);
+}
+
+.games_navbar-hide-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: var(--transition-default);
+}
+
+.games_navbar-hide-btn:hover {
+  transform: scale(1.2);
+}
+
+.games_navbar-show-btn {
+  transition: var(--transition-default);
+  color: white;
+}
+
+.games_navbar-show-btn:hover {
+  transform: scale(1.2);
+}
+
+.games_connect-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 48px;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 992px) {
+  .games_navbar-show-btn,
+  .games_navbar-hide-btn {
+    display: none;
+    color: white;
+  }
+
+  .games_navbar-collapse {
+    transform: translateX(0);
+    position: relative;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .games_navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .games_nav-item {
+    margin-left: 6px;
+    font-size: 1.2rem;
+  }
+
+  .games_navbar-nav {
+    display: flex;
+  }
+
+  .games_navbar-hide-btn {
+    display: none;
+  }
+
+  .games_nav-link {
+    color: var(--clr-white);
+    padding: 1px 10px;
+  }
+
+  .games_connect-list {
+    margin-top: 0;
+    color: var(--clr-white);
+    margin-left: 40px;
+    flex-wrap: nowrap;
+  }
+
+  .games_connect-list .connect-link {
+    color: var(--clr-white);
+  }
+
+  .games_connect-list .games_connect-text {
+    width: auto;
+    margin-bottom: 0;
+    margin-right: 22px;
+    /* display: none; */
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .games_nav-link {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .games_connect-list {
+    margin-left: 88px;
+  }
+
+  .games_connect-list .games_connect-text {
+    display: inline-block;
+  }
+}

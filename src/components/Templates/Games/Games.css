@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Righteous&display=swap");
+
+.games_main_container {
+  --clr-white: #fff;
+  --clr-black: #000;
+  --clr-dark: #04020e;
+  --clr-violet-normal: #0f0a3c;
+  --clr-violet-dark-hover: #090624;
+  --clr-violet-dark-active: rgb(7, 5, 27);
+  --clr-violet-darker: #050415;
+  --clr-violet-light: #100e2b;
+  --clr-green-normal: #009f9d;
+  --clr-pink-normal: #b9198e;
+  --font-family-barlow: "Barlow", sans-serif;
+  --font-family-poppins: "Poppins", sans-serif;
+  --font-family-right: "Righteous", cursive;
+  --transition-default: all 300ms ease-in-out;
+
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-family: var(--font-family-barlow);
+  color: var(--clr-black);
+}
+
+.games_main_container ul {
+  list-style-type: none;
+}
+
+.games_main_container a,
+.games_main_container .nav-link {
+  text-decoration: none;
+}
+
+.games_main_container img {
+  width: 100%;
+  display: block;
+}
+
+.games_main_container .img-fit-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.games_main_container button {
+  cursor: pointer;
+  outline: 0;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  transition: var(--transition-default);
+}
+
+.games_main_container input,
+textarea,
+select {
+  outline: 0;
+  border: none;
+  resize: none;
+  font-family: inherit;
+  font-size: 1.6rem;
+}
+
+.games_main_container .games_subContainer {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.6rem;
+  width: 100%;
+}
