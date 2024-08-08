@@ -2,6 +2,9 @@ import React from "react";
 import "./MusicContact.css";
 import MusicHeadTitle from "../../common/HeadTitle/MusicHeadTitle";
 const MusicContact = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
   return (
     <div className="musicContact_body">
       <MusicHeadTitle
@@ -15,6 +18,7 @@ const MusicContact = () => {
           <div className="musicContact_form_container">
             <div className="musicContact_title">Send us a message</div>
             <form
+              onSubmit={handleSubmit}
               action="#"
               className="musicContact_form"
               id="musicContact_form"
@@ -51,7 +55,9 @@ const MusicContact = () => {
                 placeholder="Message"
                 required="required"
               ></textarea>
-              <button className="musicContact_button">Send Message</button>
+              <button type="submit" className="musicContact_button">
+                Send Message
+              </button>
             </form>
           </div>
 

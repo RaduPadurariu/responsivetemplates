@@ -62,7 +62,7 @@ const MoviesNavbar = () => {
       />
       <BottomNavigationAction
         style={{ color: "white", minWidth: minWidth }}
-        label="Favorites"
+        label="Personal"
         icon={<FavoriteIcon />}
       />
       <BottomNavigationAction

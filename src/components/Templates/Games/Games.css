@@ -46,7 +46,6 @@
   cursor: pointer;
   outline: 0;
   border: none;
-  background-color: transparent;
   font-family: inherit;
   transition: var(--transition-default);
 }
@@ -58,7 +57,7 @@ select {
   border: none;
   resize: none;
   font-family: inherit;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 
 .games_main_container .games_subContainer {

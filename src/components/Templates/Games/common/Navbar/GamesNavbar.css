@@ -70,7 +70,6 @@
   width: 100%;
   margin-bottom: 2rem;
   text-transform: uppercase;
-
   margin-bottom: 8px;
   font-weight: 700;
 }
@@ -104,6 +103,7 @@
   top: 20px;
   right: 20px;
   transition: var(--transition-default);
+  background: transparent;
 }
 
 .games_navbar-hide-btn:hover {
@@ -113,6 +113,7 @@
 .games_navbar-show-btn {
   transition: var(--transition-default);
   color: white;
+  background: transparent;
 }
 
 .games_navbar-show-btn:hover {

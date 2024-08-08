@@ -8,7 +8,7 @@ const MusicNavLinks = ({ closeMenu }) => {
       link: "home",
     },
     {
-      name: "Albums",
+      name: "Personal",
       link: "albums",
     },
     {

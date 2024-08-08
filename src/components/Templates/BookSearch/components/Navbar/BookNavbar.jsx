@@ -63,7 +63,7 @@ const BookNavbar = () => {
                 className="nav-link text-uppercase text-white fs-22 fw-6 ls-1"
                 onClick={handleNavbar}
               >
-                My Books
+                Personal
               </NavLink>
             </li>
             <li className="nav-item">
